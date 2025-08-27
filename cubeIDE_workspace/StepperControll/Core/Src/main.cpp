@@ -122,7 +122,6 @@ int main(void)
   int j = 0;
   while (1)
   {
-	  //teszt
 	  HAL_Delay(150);
 	  if(j<=20)
 	  {
