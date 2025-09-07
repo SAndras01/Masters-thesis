@@ -1,5 +1,7 @@
 Core/Modules/SSD1305/SSD1305.o: ../Core/Modules/SSD1305/SSD1305.cpp \
  ../Core/Modules/SSD1305/SSD1305.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1306/fonts.h \
+ ../Core/Modules/SSD1305/test_bitmaps.hpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,6 +31,8 @@ Core/Modules/SSD1305/SSD1305.o: ../Core/Modules/SSD1305/SSD1305.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ../Core/Modules/SSD1305/SSD1305.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1306/fonts.h:
+../Core/Modules/SSD1305/test_bitmaps.hpp:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

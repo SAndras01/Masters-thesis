@@ -9,6 +9,8 @@
 #define MODULES_SSD1305_SSD1305_HPP_
 
 #include <stdint.h>
+#include "fonts.h"
+#include "test_bitmaps.hpp"
 #include "stm32f4xx_hal.h"
 
 
@@ -156,7 +158,6 @@ enum VcomhDeselectLevel
 	VCCx0p83 = 0x3C
 };
 
-
 class SSD1305
 {
 private:
@@ -168,11 +169,9 @@ private:
 
     uint16_t currentX;
     uint16_t currentY;
-    uint8_t inverted;
-    uint8_t initialized;
 
     uint8_t commandBuffer[5];
-    uint8_t Buffer[DISPLAY_WIDTH * DISPLAY_HEIGHT / 8];
+    uint8_t bitmapBuffer[DISPLAY_WIDTH * DISPLAY_HEIGHT / 8];
 
 
     HAL_StatusTypeDef SendCommand(uint8_t commandSize);
@@ -186,14 +185,19 @@ public:
 
     bool Init();
 
-    HAL_StatusTypeDef UpdateScreen();
+    HAL_StatusTypeDef WriteBitmapToScreen();
+    HAL_StatusTypeDef WriteBitmapToScreen(uint8_t* bitmap, size_t size);
 
-    bool Fill(SSD1305_COLOR color_p);
+    HAL_StatusTypeDef Fill(SSD1305_COLOR color_p);
+
     bool DrawPixel(uint8_t x, uint8_t y, SSD1305_COLOR color_p);
-    //bool WriteChar(char ch, FontDef Font, SSD1305_COLOR color);
-    //bool WriteString(const char* str, FontDef Font, SSD1305_COLOR color);
-    bool SetCursor(uint8_t x, uint8_t y);
-    bool InvertColors(void);
+    char WriteChar(char ch, FontDef Font, SSD1305_COLOR color);
+    bool WriteString(const char* str, FontDef Font, SSD1305_COLOR color);
+
+    void SetCursor(uint8_t x, uint8_t y);
+
+    uint8_t GetHeight();
+    uint8_t GetWidth();
 
     //IC functions
 

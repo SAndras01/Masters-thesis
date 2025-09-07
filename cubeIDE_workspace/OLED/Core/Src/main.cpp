@@ -115,6 +115,16 @@ int main(void)
 
   SSD1305 OLED(&hi2c1, 0x3C, 128, 32);
   OLED.Init();
+  //OLED.WriteBitmapToScreen(Misato_sfw, sizeof(Misato_sfw));
+
+  FontDef font = Font_7x10;
+  OLED.SetCursor(0, 0);
+  OLED.WriteString("thequickbrownfox", Font_7x10, White);
+  OLED.SetCursor(0, font.FontHeight+1);
+  OLED.WriteString("jumpedover", Font_7x10, White);
+  OLED.SetCursor(0, OLED.GetHeight()-font.FontHeight);
+  OLED.WriteString("thelazyfrog", Font_7x10, White);
+  OLED.WriteBitmapToScreen();
 
   /* USER CODE END 2 */
 
