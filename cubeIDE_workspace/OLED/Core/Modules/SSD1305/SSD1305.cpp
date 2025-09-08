@@ -21,7 +21,7 @@ SSD1305::SSD1305(
 
 bool SSD1305::Init()
 {
-    uint8_t v_offset = 4;
+
 
     int status = 0;
 

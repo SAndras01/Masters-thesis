@@ -113,19 +113,60 @@ int main(void)
 
   available_devices(devices);
 
-  SSD1305 OLED(&hi2c1, 0x3C, 128, 32);
-  OLED.Init();
-  //OLED.WriteBitmapToScreen(Misato_sfw, sizeof(Misato_sfw));
+  SSD1305 display(&hi2c1, 0x3C, 128, 32);
+  display.Init();
 
+  //display.WriteBitmapToScreen(Misato_sfw, sizeof(Misato_sfw));
+
+  // 2) Kapcsoljuk a kijelzőt area color módba
+
+  uint8_t bitmapBuffer[512];
+  for(int i = 0; i < 512; i++){bitmapBuffer[i] = 0;}
+  display.SetColorAndPowerMode(colorMode, normalPowerMode);
+
+  // 3) LUT beállítása (32–63 közötti értékek)
+  // Például: Bank0 nagyon halvány, ColorA közepes, ColorB erősebb, ColorC maximális
+  display.SetLUT(35, 45, 55, 63);
+
+  // 4) Fényerő finomhangolása (0x00–0xFF)
+  display.SetBrightnessForAreaColorBanks(0x80);
+
+  // 5) RAM kitöltése tesztmintával:
+  // 4 függőleges sáv (mind más bankhoz tartozzon)
+  for (uint8_t x = 0; x < display.GetWidth(); x++) {
+	  for (uint8_t y = 0; y < display.GetHeight(); y++) {
+
+		  SSD1305_COLOR pixelColor = White;
+
+		  if (x < 32) {
+			  // Bank0 → halvány
+			  bitmapBuffer[x + (y / 8) * display.GetWidth()] |= (1 << (y % 8));
+		  } else if (x < 64) {
+			  // Color A
+			  bitmapBuffer[x + (y / 8) * display.GetWidth()] |= (1 << (y % 8));
+		  } else if (x < 96) {
+			  // Color B
+			  bitmapBuffer[x + (y / 8) * display.GetWidth()] |= (1 << (y % 8));
+		  } else {
+			  // Color C
+			  bitmapBuffer[x + (y / 8) * display.GetWidth()] |= (1 << (y % 8));
+		  }
+	  }
+  }
+
+  // 6) Kiírás a kijelzőre
+  display.WriteBitmapToScreen(bitmapBuffer, sizeof(bitmapBuffer));
+
+  /*
   FontDef font = Font_7x10;
-  OLED.SetCursor(0, 0);
-  OLED.WriteString("thequickbrownfox", Font_7x10, White);
-  OLED.SetCursor(0, font.FontHeight+1);
-  OLED.WriteString("jumpedover", Font_7x10, White);
-  OLED.SetCursor(0, OLED.GetHeight()-font.FontHeight);
-  OLED.WriteString("thelazyfrog", Font_7x10, White);
-  OLED.WriteBitmapToScreen();
-
+  display.SetCursor(0, 0);
+  display.WriteString("thequickbrownfox", Font_7x10, White);
+  display.SetCursor(0, font.FontHeight+1);
+  display.WriteString("jumpedover", Font_7x10, White);
+  display.SetCursor(0, OLED.GetHeight()-font.FontHeight);
+  display.WriteString("thelazyfrog", Font_7x10, White);
+  display.WriteBitmapToScreen();
+*/
   /* USER CODE END 2 */
 
   /* Infinite loop */
