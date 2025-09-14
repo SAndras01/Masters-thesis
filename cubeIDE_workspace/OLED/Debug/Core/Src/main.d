@@ -27,9 +27,9 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/SSD1305.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1306/fonts.h \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/test_bitmaps.hpp
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/SSD1305.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1306/fonts.h \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/test_bitmaps.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -59,6 +59,6 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/SSD1305.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1306/fonts.h:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/test_bitmaps.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/SSD1305.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1306/fonts.h:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/OLED/Core/Modules/SSD1305/test_bitmaps.hpp:

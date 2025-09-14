@@ -1,0 +1,22 @@
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM3)
+    {
+
+    	if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+    	{
+    		if(btncnt < 10)
+    		{
+				btncnt++;
+				if(btncnt == 10)
+				{
+					HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+				}
+    		}
+    	}
+    	else
+    	{
+    		if(btncnt > 0)
+    		{btncnt--;}
+    	}
+    }
+}
