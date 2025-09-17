@@ -1,0 +1,4 @@
+numpad.cpp:17:19:HAL_StatusTypeDef numpadEnable()	1
+numpad.cpp:23:19:HAL_StatusTypeDef numpadDisable()	1
+numpad.cpp:29:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
+numpad.cpp:42:9:uint8_t adcValue2Digit()	4

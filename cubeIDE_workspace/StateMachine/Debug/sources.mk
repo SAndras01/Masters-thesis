@@ -32,7 +32,12 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Core/Modules/Accelerometer \
+Core/Modules/GUI \
+Core/Modules/Memory \
+Core/Modules/Numpad \
 Core/Modules/SSD1305 \
+Core/Modules/StateMachine \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \

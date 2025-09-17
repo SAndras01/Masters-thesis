@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "SSD1305.hpp"
+#include "state_machine.hpp"
 #include <stdio.h>
 /* USER CODE END Includes */
 
@@ -34,12 +35,7 @@ enum states
 	setNum3 = 2
 };
 
-enum axes
-{
-	x,
-	y,
-	z
-};
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -64,11 +60,7 @@ TIM_HandleTypeDef htim5;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint16_t adc_buff_written;
-uint16_t adc_buff_read;
 
-uint16_t* ptr_adc_written_buff = &adc_buff_written;
-uint16_t* ptr_adc_read_buff = &adc_buff_read;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -80,14 +72,15 @@ static void MX_ADC1_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
-HAL_StatusTypeDef ADC_init();
-void DrawGUI(SSD1305* display, uint8_t memslot, axes fixedax, axes trackedax, uint16_t setdeg, float refX, float refY, float refZ);
-void DrawYline(SSD1305* display, uint8_t x, SSD1305_COLOR color);
-void DisplayMemslot(SSD1305* display, uint8_t memslot);
-void DisplayFixedAx(SSD1305* display, axes fixedax);
-void DisplayTrackedAx(SSD1305* display, axes trackedax);
-void DisplaySetAngle(SSD1305* display, uint16_t setdeg);
-void DisplayRefDegs(SSD1305* display, float refX, float refY, float refZ);
+void DrawGUI_main(SSD1305* display, uint8_t memslot, axes fixedax, axes trackedax, uint16_t setdeg, float refX, float refY, float refZ);
+void DrawYline_main(SSD1305* display, uint8_t x, SSD1305_COLOR color);
+void DisplayMemslot_main(SSD1305* display, uint8_t memslot);
+void DisplayFixedAx_main(SSD1305* display, axes fixedax);
+void DisplayTrackedAx_main(SSD1305* display, axes trackedax);
+void DisplaySetAngle_main(SSD1305* display, uint16_t setdeg, int selectedDigit = -1);
+void DisplaySetAngle_main(SSD1305* display, uint8_t* digits, int selectedDigit = -1);
+void DisplayRefDegs_main(SSD1305* display, float refX, float refY, float refZ);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -129,38 +122,38 @@ int main(void)
   MX_TIM5_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT( &htim5 );
+  numpadEnable();
   HAL_GPIO_WritePin(OLED_RESET_NOT_GPIO_Port, OLED_RESET_NOT_Pin, GPIO_PIN_SET);
 
   SSD1305 display(&hi2c1, 0x3C, 128, 32);
   display.Init();
   display.Fill(Black);
 
-  FontDef font = Font_7x10;
-  char msg[100];
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  snprintf(msg, sizeof(msg), "NO BUTTON");
   uint8_t number[3] = {0,0,0};
   uint8_t currentNum = 0;
   states currentState = setNum1;
 
-  DrawGUI(&display, 1, x, y, 130, 131, 12.3, 1.8);
+  //DrawGUI_main(&display, 3, x, y, 130, 131, 12.3, 1.8);
+  MemorySlot initialSettings =
+  {
+		  1,//uint8_t number;
+		  y,//axes fixAx;
+		  z,//axes trackedAx;
+		  110,//uint16_t setDegree;
+  };
+  Accelerometer dummyAccel;
+  StateSetFixTrackDeg stateSetFixTrackDeg(initialSettings);
+  mainMachine machine(&stateSetFixTrackDeg, &display, &dummyAccel);
   while (1)
   {
-	  if(adc_buff_read > 4000)
+	  machine.run();
+	  /*if(adcValue2Digit() != 10)
 	  {
-		  currentNum = 3;
-	  }
-	  else if(adc_buff_read > 2000)
-	  {
-		  currentNum = 2;
-	  }
-	  else if(adc_buff_read > 1000)
-	  {
-		  currentNum = 1;
+		  currentNum = adcValue2Digit();
 	  }
 
 	  switch (currentState) {
@@ -199,34 +192,14 @@ int main(void)
 			break;
 		default:
 			break;
-	}
+	  }
+
+	  DisplaySetAngle_main(&display, number, currentState);
+	  display.WriteBitmapToScreen();*/
+	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 
     /* USER CODE END WHILE */
-	  display.SetCursor(0, 0);
-	  //snprintf(msg, sizeof(msg), "%hu", adc_buff_read[0]);
-	  int i, k = 0;
-	  for (i = 0; i < 3; i++)
-	      k = 10 * k + number[i];
 
-	  //snprintf(msg, sizeof(msg), "%d", k);
-	  for(int i = 0; i<3; i++)
-	  {
-		  display.SetCursor(i*font.FontWidth, 0);
-		  snprintf(msg, sizeof(msg), "%d", number[i]);
-
-		  if(i == currentState)
-		  {
-			  display.WriteString(msg, font, Black);
-		  }
-		  else
-		  {
-			  display.WriteString(msg, font, White);
-		  }
-	  }
-	  //display.WriteString(msg, font, Black);
-	  display.WriteBitmapToScreen();
-	  display.FillBitmapBuffer(Black);
-	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -513,34 +486,19 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
-{
-	HAL_StatusTypeDef stat;
-
-	if (htim == &dmaCyclerTimer)
-	{
-		uint16_t* tmp = ptr_adc_read_buff;
-		ptr_adc_read_buff = ptr_adc_written_buff;
-		ptr_adc_written_buff = tmp;
-
-		stat = HAL_ADC_Start_DMA(&configedADC, (uint32_t*)ptr_adc_written_buff, 1);
-	}
-
-}
-
 #define LINE_1_Y 0
 #define LINE_2_Y 11
 #define LINE_3_Y 22
 
-void DrawGUI(SSD1305* display, uint8_t memslot, axes fixedax, axes trackedax, uint16_t setdeg, float refX, float refY, float refZ)
+void DrawGUI_main(SSD1305* display, uint8_t memslot, axes fixedax, axes trackedax, uint16_t setdeg, float refX, float refY, float refZ)
 {
 	//MEM section -> x = 0..21
 	display->SetCursor(0, LINE_1_Y);
 	display->WriteString("MEM", Font_7x10, White);
 
-	DisplayMemslot(display, memslot);
+	DisplayMemslot_main(display, memslot);
 
-	DrawYline(display, 23, White);
+	DrawYline_main(display, 23, White);
 
 	//Fixed, Tracked, Angle -> x = 22...78
 	display->SetCursor(25, LINE_1_Y);
@@ -550,11 +508,11 @@ void DrawGUI(SSD1305* display, uint8_t memslot, axes fixedax, axes trackedax, ui
 	display->SetCursor(25, LINE_3_Y);
 	display->WriteString("Deg:", Font_7x10, White);
 
-	DisplayFixedAx(display, fixedax);
-	DisplayTrackedAx(display, trackedax);
-	DisplaySetAngle(display, setdeg);
+	DisplayFixedAx_main(display, fixedax);
+	DisplayTrackedAx_main(display, trackedax);
+	DisplaySetAngle_main(display, setdeg);
 
-	DrawYline(display, 76, White);
+	DrawYline_main(display, 76, White);
 
 	//REF section -> x = 78...
 	display->SetCursor(78, LINE_1_Y);
@@ -564,13 +522,13 @@ void DrawGUI(SSD1305* display, uint8_t memslot, axes fixedax, axes trackedax, ui
 	display->SetCursor(78, LINE_3_Y);
 	display->WriteString("rz", Font_7x10, White);
 
-	DisplayRefDegs(display, refX, refY, refZ);
+	DisplayRefDegs_main(display, refX, refY, refZ);
 
 	//Put all to display
 	display->WriteBitmapToScreen();
 }
 
-void DrawYline(SSD1305* display, uint8_t x, SSD1305_COLOR color)
+void DrawYline_main(SSD1305* display, uint8_t x, SSD1305_COLOR color)
 {
 	for(uint8_t i = 0; i < display->GetHeight(); i++)
 	{
@@ -578,15 +536,14 @@ void DrawYline(SSD1305* display, uint8_t x, SSD1305_COLOR color)
 	}
 }
 
-void DisplayMemslot(SSD1305* display, uint8_t memslot)
+void DisplayMemslot_main(SSD1305* display, uint8_t memslot)
 {
-	char memslotString[2];
-	snprintf(memslotString, sizeof(memslotString), "%d", memslot);
+	char memslotDigit = memslot + '0';
 	display->SetCursor(5, 12);
-	display->WriteString(memslotString, Font_11x18, White);
+	display->WriteChar(memslotDigit, Font_11x18, White);
 }
 
-void DisplayFixedAx(SSD1305* display, axes fixedax)
+void DisplayFixedAx_main(SSD1305* display, axes fixedax)
 {
 	char axesChar;
 	switch (fixedax) {
@@ -607,7 +564,7 @@ void DisplayFixedAx(SSD1305* display, axes fixedax)
 	display->WriteChar(axesChar, Font_7x10, White);
 }
 
-void DisplayTrackedAx(SSD1305* display, axes trackedax)
+void DisplayTrackedAx_main(SSD1305* display, axes trackedax)
 {
 	char axesChar;
 	switch (trackedax) {
@@ -628,15 +585,47 @@ void DisplayTrackedAx(SSD1305* display, axes trackedax)
 	display->WriteChar(axesChar, Font_7x10, White);
 }
 
-void DisplaySetAngle(SSD1305* display, uint16_t setdeg)
+void DisplaySetAngle_main(SSD1305* display, uint16_t setdeg, int selectedDigit)
 {
-	char setDegString[4];
-	snprintf(setDegString, sizeof(setDegString), "%d", setdeg);
-	display->SetCursor(53, LINE_3_Y);
-	display->WriteString(setDegString, Font_7x10, White);
+	char digits[3];
+
+    digits[0] = ((130/100)%10) + '0';
+    digits[1] = ((130/10)%10) + '0';
+    digits[2] = (130%10) + '0';
+
+    FontDef font = Font_7x10;
+	for(int i = 0; i<3; i++)
+	{
+	  display->SetCursor(53 + i*font.FontWidth, LINE_3_Y);
+	  if(i == selectedDigit)
+	  {
+		  display->WriteChar(digits[i], font, Black);
+	  }
+	  else
+	  {
+		  display->WriteChar(digits[i], font, White);
+	  }
+	}
 }
 
-void DisplayRefDegs(SSD1305* display, float refX, float refY, float refZ)
+void DisplaySetAngle_main(SSD1305* display, uint8_t* digits, int selectedDigit)
+{
+    FontDef font = Font_7x10;
+	for(int i = 0; i<3; i++)
+	{
+	  display->SetCursor(53 + i*font.FontWidth, LINE_3_Y);
+	  if(i == selectedDigit)
+	  {
+		  display->WriteChar(digits[i] + '0', font, Black);
+	  }
+	  else
+	  {
+		  display->WriteChar(digits[i] + '0', font, White);
+	  }
+	}
+}
+
+void DisplayRefDegs_main(SSD1305* display, float refX, float refY, float refZ)
 {
 	char refDegStr[6];
 	snprintf(refDegStr, sizeof(refDegStr), "%05.1f", refX);
@@ -651,6 +640,7 @@ void DisplayRefDegs(SSD1305* display, float refX, float refY, float refZ)
 	display->SetCursor(93, LINE_3_Y);
 	display->WriteString(refDegStr, Font_7x10, White);
 }
+
 /* USER CODE END 4 */
 
 /**
