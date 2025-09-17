@@ -1,17 +1,9 @@
-main.cpp:95:5:int main()	1
-main.cpp:212:6:void SystemClock_Config()	3
-main.cpp:260:13:void MX_ADC1_Init()	3
-main.cpp:312:13:void MX_I2C1_Init()	2
-main.cpp:346:13:void MX_TIM5_Init()	4
-main.cpp:391:13:void MX_USART2_UART_Init()	2
-main.cpp:422:13:void MX_DMA_Init()	1
-main.cpp:440:13:void MX_GPIO_Init()	1
-main.cpp:493:6:void DrawGUI_main(SSD1305*, uint8_t, axes, axes, uint16_t, float, float, float)	1
-main.cpp:531:6:void DrawYline_main(SSD1305*, uint8_t, SSD1305_COLOR)	2
-main.cpp:539:6:void DisplayMemslot_main(SSD1305*, uint8_t)	1
-main.cpp:546:6:void DisplayFixedAx_main(SSD1305*, axes)	5
-main.cpp:567:6:void DisplayTrackedAx_main(SSD1305*, axes)	5
-main.cpp:588:6:void DisplaySetAngle_main(SSD1305*, uint16_t, int)	3
-main.cpp:611:6:void DisplaySetAngle_main(SSD1305*, uint8_t*, int)	3
-main.cpp:628:6:void DisplayRefDegs_main(SSD1305*, float, float, float)	1
-main.cpp:650:6:void Error_Handler()	1
+main.cpp:80:5:int main()	1
+main.cpp:149:6:void SystemClock_Config()	3
+main.cpp:197:13:void MX_ADC1_Init()	3
+main.cpp:249:13:void MX_I2C1_Init()	2
+main.cpp:283:13:void MX_TIM5_Init()	4
+main.cpp:328:13:void MX_USART2_UART_Init()	2
+main.cpp:359:13:void MX_DMA_Init()	1
+main.cpp:377:13:void MX_GPIO_Init()	1
+main.cpp:433:6:void Error_Handler()	1

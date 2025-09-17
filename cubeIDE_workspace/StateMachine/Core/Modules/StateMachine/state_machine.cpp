@@ -7,9 +7,11 @@
 
 #include "state_machine.hpp"
 
-StateMachine::StateMachine(State* initial)
+StateMachine::StateMachine(State* initial, SSD1305* displayHandle, Accelerometer* referenceAccel)
 {
-	this->current = initial;
+	this->displayHandle = displayHandle;
+	this->referenceAccel = referenceAccel;
+	changeState(initial);
 }
 
 void StateMachine::changeState(State* next)
@@ -35,13 +37,6 @@ void StateMachine::run()
 	}
 }
 
-mainMachine::mainMachine(State* initial, SSD1305* displayHandle, Accelerometer* referenceAccel):StateMachine(initial)
-{
-	this->displayHandle = displayHandle;
-	this->referenceAccel = referenceAccel;
-	changeState(initial);
-}
-
 StateSetFixTrackDeg::StateSetFixTrackDeg(MemorySlot initialMemorySlot)
 {
 	this->currentMemorySlot = initialMemorySlot;
@@ -49,54 +44,57 @@ StateSetFixTrackDeg::StateSetFixTrackDeg(MemorySlot initialMemorySlot)
 
 void StateSetFixTrackDeg::onEnter(StateMachine* master)
 {
-    mainMachine* mm = static_cast<mainMachine*>(master);
-    float* refAngles = mm->referenceAccel->getAngles();
-	DrawGUI(mm->displayHandle, currentMemorySlot, refAngles[0], refAngles[1], refAngles[2]);
+    float* refAngles = master->referenceAccel->getAngles();
+	DrawGUI(master->displayHandle, currentMemorySlot, refAngles[0], refAngles[1], refAngles[2]);
+	numberDigits[0] = (currentMemorySlot.setDegree/100)%10;
+	numberDigits[1] = (currentMemorySlot.setDegree/10)%10;
+	numberDigits[2] = currentMemorySlot.setDegree%10;
+
 }
 
 void StateSetFixTrackDeg::run(StateMachine* master)
 {
-    mainMachine* mm = static_cast<mainMachine*>(master);
-    float* refAngles = mm->referenceAccel->getAngles();
+    float* refAngles = master->referenceAccel->getAngles();
 
-	if(adcValue2Digit() != 10)
+	if(adcValue2Digit() != 10) //It cant be 10 so 10 indicates no input
 	{
-	  currentNum = adcValue2Digit();
+		currentDigit = adcValue2Digit();
+	}
+	else
+	{
+		currentDigit = numberDigits[currentDigitState];
 	}
 
 	switch (currentDigitState)
 	{
 		case setDigit1:
-			numberDigits[0] = currentNum;
+			numberDigits[0] = currentDigit;
 			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
 			{
 				HAL_Delay(10);
 				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentDigitState = setDigit2;
-				currentNum = numberDigits[1];
 			}
 			break;
 		case setDigit2:
-			numberDigits[1] = currentNum;
+			numberDigits[1] = currentDigit;
 			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
 			{
 				HAL_Delay(10);
 				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentDigitState = setDigit3;
-				currentNum = numberDigits[2];
 			}
 			break;
 		case setDigit3:
-			numberDigits[2] = currentNum;
+			numberDigits[2] = currentDigit;
 			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
 			{
 				HAL_Delay(10);
 				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentDigitState = setDigit1;
-				currentNum = numberDigits[0];
 			}
 			break;
 		default:
@@ -109,11 +107,11 @@ void StateSetFixTrackDeg::run(StateMachine* master)
 
 	currentMemorySlot.setDegree = numberFromDigits;
 
-	DisplaySetAngle(mm->displayHandle, numberFromDigits, currentDigitState);
+	DisplaySetAngle(master->displayHandle, currentMemorySlot.setDegree, currentDigitState);
 
-	DisplayRefDegs(mm->displayHandle, refAngles[0], refAngles[1], refAngles[2]);
+	DisplayRefDegs(master->displayHandle, refAngles[0], refAngles[1], refAngles[2]);
 
-	mm->displayHandle->WriteBitmapToScreen();
+	master->displayHandle->WriteBitmapToScreen();
 }
 
 void StateSetFixTrackDeg::onExit(StateMachine* master)

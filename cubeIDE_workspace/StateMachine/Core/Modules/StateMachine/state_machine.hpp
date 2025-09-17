@@ -14,6 +14,7 @@
 #include "accelerometer.hpp"
 #include "numpad.hpp"
 #include "main.h"
+
 class StateMachine;
 
 class State
@@ -27,19 +28,13 @@ public:
 class StateMachine
 {
 private:
-	State* current;
-public:
-    explicit StateMachine(State* initial);
-    void changeState(State* next);
-    void run();
-};
-
-class mainMachine : public StateMachine
-{
+	State* current = nullptr;
 public:
 	SSD1305* displayHandle;
 	Accelerometer* referenceAccel;
-	mainMachine(State* initial, SSD1305* displayHandle, Accelerometer* referenceAccel);
+	StateMachine(State* initial, SSD1305* displayHandle, Accelerometer* referenceAccel);
+    void changeState(State* next);
+    void run();
 };
 
 class StateSetFixTrackDeg : public State
@@ -47,7 +42,7 @@ class StateSetFixTrackDeg : public State
 private:
 	enum digitSelectState {setDigit1 = 0, setDigit2 = 1, setDigit3 = 2};
 	digitSelectState currentDigitState = setDigit1;
-	uint8_t currentNum;
+	uint8_t currentDigit;
 	uint8_t numberDigits[3] = {0,0,0};
 	MemorySlot currentMemorySlot;
 public:
