@@ -1,0 +1,2 @@
+../Core/Modules/Stream/System.cpp:13:15:long unsigned int millis()	4	static
+../Core/Modules/Stream/System.cpp:19:6:void delay(uint32_t)	16	static

@@ -179,7 +179,7 @@ private:
     uint8_t commandBuffer[5];
     uint8_t bitmapBuffer[DISPLAY_WIDTH * DISPLAY_HEIGHT / 8];
 
-    uint8_t v_offset = 4;
+    uint8_t v_offset;
 
     HAL_StatusTypeDef SendCommand(uint8_t commandSize);
 
@@ -190,7 +190,13 @@ public:
 				uint8_t width_p,
 				uint8_t height_p);
 
-	bool Init();
+    /**
+	 * @brief Initialise the display with the given orientation.
+	 *
+	 * @param orientation, positive or negative integer.
+	 * @return true if all instructions got successfully sent.
+	 */
+	bool Init(int8_t orientation = 1);
 
 	HAL_StatusTypeDef WriteBitmapToScreen();
 	HAL_StatusTypeDef WriteBitmapToScreen(uint8_t* bitmap, size_t size);

@@ -114,7 +114,7 @@ int main(void)
 		  1.8d,
 		  0.125d);
 
-  motor1_controller.calculate_movement(18, 0.1);
+  motor1_controller.calculate_movement(90, 0.5);
   /* USER CODE END 2 */
 
   /* Infinite loop */

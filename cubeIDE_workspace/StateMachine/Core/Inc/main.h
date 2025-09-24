@@ -67,8 +67,12 @@ void Error_Handler(void);
 #define USART_RX_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define BLUE_BTN_Pin GPIO_PIN_10
+#define BLUE_BTN_GPIO_Port GPIOB
 #define OLED_RESET_NOT_Pin GPIO_PIN_7
 #define OLED_RESET_NOT_GPIO_Port GPIOC
+#define PURPLE_BTN_Pin GPIO_PIN_8
+#define PURPLE_BTN_GPIO_Port GPIOA
 #define PINK_BTN_Pin GPIO_PIN_9
 #define PINK_BTN_GPIO_Port GPIOA
 #define TMS_Pin GPIO_PIN_13
@@ -77,6 +81,8 @@ void Error_Handler(void);
 #define TCK_GPIO_Port GPIOA
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
+#define GREEN_BTN_Pin GPIO_PIN_4
+#define GREEN_BTN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

@@ -1,9 +1,13 @@
-main.cpp:80:5:int main()	1
-main.cpp:149:6:void SystemClock_Config()	3
-main.cpp:197:13:void MX_ADC1_Init()	3
-main.cpp:249:13:void MX_I2C1_Init()	2
-main.cpp:283:13:void MX_TIM5_Init()	4
-main.cpp:328:13:void MX_USART2_UART_Init()	2
-main.cpp:359:13:void MX_DMA_Init()	1
-main.cpp:377:13:void MX_GPIO_Init()	1
-main.cpp:433:6:void Error_Handler()	1
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
+main.cpp:82:5:int main()	1
+main.cpp:158:6:void SystemClock_Config()	3
+main.cpp:206:13:void MX_ADC1_Init()	3
+main.cpp:258:13:void MX_I2C1_Init()	2
+main.cpp:292:13:void MX_TIM5_Init()	4
+main.cpp:337:13:void MX_USART2_UART_Init()	2
+main.cpp:368:13:void MX_DMA_Init()	1
+main.cpp:386:13:void MX_GPIO_Init()	1
+main.cpp:448:6:void Error_Handler()	1
+main.cpp:457:1:void __static_initialization_and_destruction_0(int, int)	5
+main.cpp:457:1:cpp)	1
+main.cpp:457:1:cpp)	1

@@ -24,6 +24,7 @@
 #include "SSD1305.hpp"
 #include "state_machine.hpp"
 #include <stdio.h>
+#include "memory.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -35,6 +36,8 @@
 /* USER CODE BEGIN PD */
 #define dmaCyclerTimer htim5
 #define configedADC hadc1
+#define EEPROMAddress 0x50
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -65,7 +68,6 @@ static void MX_ADC1_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_I2C1_Init(void);
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -118,17 +120,32 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-  MemorySlot initialSettings =
-  {
-		  1,//uint8_t number;
-		  y,//axes fixAx;
-		  z,//axes trackedAx;
-		  110,//uint16_t setDegree;
-  };
+  MemorySlot initialSettings(1, 110, y, z);
   Accelerometer dummyAccel;
-  StateSetFixTrackDeg stateSetFixTrackDeg(initialSettings);
+  StateSetFixTrackDeg stateSetFixTrackDeg(&initialSettings);
   StateMachine machine(&stateSetFixTrackDeg, &display, &dummyAccel);
+
+  //Memory init
+  memoryElement elementList[9] =
+  {
+      {"memSlot1_fixAx", i8},
+      {"memSlot1_trackAx", i8},
+      {"memSlot1_setDeg", i16},
+
+	  {"memSlot1_fixAx", i8},
+      {"memSlot1_trackAx", i8},
+      {"memSlot1_setDeg", i16},
+
+	  {"memSlot1_fixAx", i8},
+      {"memSlot1_trackAx", i8},
+      {"memSlot1_setDeg", i16},
+  };
+
+
+
+  EEPROMmemory myEEPROM(elementList, 9, EEPROMAddress, &hi2c1);
+
+  //Memory init end
   while (1)
   {
 	  machine.run();
@@ -405,6 +422,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : BLUE_BTN_Pin GREEN_BTN_Pin */
+  GPIO_InitStruct.Pin = BLUE_BTN_Pin|GREEN_BTN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
   /*Configure GPIO pin : OLED_RESET_NOT_Pin */
   GPIO_InitStruct.Pin = OLED_RESET_NOT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -412,11 +435,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(OLED_RESET_NOT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PINK_BTN_Pin */
-  GPIO_InitStruct.Pin = PINK_BTN_Pin;
+  /*Configure GPIO pins : PURPLE_BTN_Pin PINK_BTN_Pin */
+  GPIO_InitStruct.Pin = PURPLE_BTN_Pin|PINK_BTN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(PINK_BTN_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

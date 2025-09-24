@@ -1,7 +1,7 @@
 Core/Modules/StateMachine/state_machine.o: \
  ../Core/Modules/StateMachine/state_machine.cpp \
  ../Core/Modules/StateMachine/state_machine.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memory.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memorySlot.hpp \
  C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/GUI/GUI.hpp \
  C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/SSD1305.hpp \
  C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/fonts.h \
@@ -43,7 +43,7 @@ Core/Modules/StateMachine/state_machine.o: \
  C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Numpad/numpad.hpp \
  ../Core/Inc/main.h
 ../Core/Modules/StateMachine/state_machine.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memory.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memorySlot.hpp:
 C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/GUI/GUI.hpp:
 C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/SSD1305.hpp:
 C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/fonts.h:
