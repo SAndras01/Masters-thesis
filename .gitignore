@@ -1,5 +1,4 @@
 # STM32CubeIDE
 .metadata/
 .settings/
-*.ld
 docs/html/

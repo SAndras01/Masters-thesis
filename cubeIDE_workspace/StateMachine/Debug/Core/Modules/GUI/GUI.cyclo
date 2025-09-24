@@ -1,8 +1,8 @@
-../Core/Modules/GUI/GUI.cpp:10:6:void DrawGUI(SSD1305*, MemorySlot, float, float, float)	1
-../Core/Modules/GUI/GUI.cpp:48:6:void DrawYline(SSD1305*, uint8_t, SSD1305_COLOR)	2
-../Core/Modules/GUI/GUI.cpp:56:6:void DisplayMemslot(SSD1305*, uint8_t)	1
-../Core/Modules/GUI/GUI.cpp:63:6:void DisplayFixedAx(SSD1305*, axes, bool)	6
-../Core/Modules/GUI/GUI.cpp:86:6:void DisplayTrackedAx(SSD1305*, axes, bool)	6
-../Core/Modules/GUI/GUI.cpp:108:6:void DisplaySetAngle(SSD1305*, uint16_t, int)	3
-../Core/Modules/GUI/GUI.cpp:131:6:void DisplaySetAngle(SSD1305*, uint8_t*, int)	3
-../Core/Modules/GUI/GUI.cpp:148:6:void DisplayRefDegs(SSD1305*, float, float, float)	1
+GUI.cpp:10:6:void DrawGUI(SSD1305*, MemorySlot, float, float, float)	1
+GUI.cpp:48:6:void DrawYline(SSD1305*, uint8_t, SSD1305_COLOR)	2
+GUI.cpp:56:6:void DisplayMemslot(SSD1305*, uint8_t)	1
+GUI.cpp:63:6:void DisplayFixedAx(SSD1305*, axes, bool)	6
+GUI.cpp:86:6:void DisplayTrackedAx(SSD1305*, axes, bool)	6
+GUI.cpp:108:6:void DisplaySetAngle(SSD1305*, uint16_t, int)	3
+GUI.cpp:131:6:void DisplaySetAngle(SSD1305*, uint8_t*, int)	3
+GUI.cpp:148:6:void DisplayRefDegs(SSD1305*, float, float, float)	1

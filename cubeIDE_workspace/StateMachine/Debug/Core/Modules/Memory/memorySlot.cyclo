@@ -1,5 +1,5 @@
-../Core/Modules/Memory/memorySlot.cpp:10:1:MemorySlot::MemorySlot(uint8_t, uint16_t, axes, axes)	1
-../Core/Modules/Memory/memorySlot.cpp:19:6:bool MemorySlot::setFixedAx(axes)	3
-../Core/Modules/Memory/memorySlot.cpp:40:6:bool MemorySlot::setTrackedAx(axes)	4
-../Core/Modules/Memory/memorySlot.cpp:63:6:axes MemorySlot::getFixedAx()	1
-../Core/Modules/Memory/memorySlot.cpp:64:6:axes MemorySlot::getTrackedAx()	1
+memorySlot.cpp:10:1:MemorySlot::MemorySlot(uint8_t, uint16_t, axes, axes)	1
+memorySlot.cpp:19:6:bool MemorySlot::setFixedAx(axes)	3
+memorySlot.cpp:40:6:bool MemorySlot::setTrackedAx(axes)	4
+memorySlot.cpp:63:6:axes MemorySlot::getFixedAx()	1
+memorySlot.cpp:64:6:axes MemorySlot::getTrackedAx()	1

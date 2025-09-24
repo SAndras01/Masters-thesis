@@ -1,11 +1,11 @@
 Core/Modules/StateMachine/state_machine.o: \
  ../Core/Modules/StateMachine/state_machine.cpp \
  ../Core/Modules/StateMachine/state_machine.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memorySlot.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/GUI/GUI.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/SSD1305.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/fonts.h \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/test_bitmaps.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memorySlot.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/GUI/GUI.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/SSD1305.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/fonts.h \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/test_bitmaps.hpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -39,15 +39,15 @@ Core/Modules/StateMachine/state_machine.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Numpad/numpad.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Numpad/numpad.hpp \
  ../Core/Inc/main.h
 ../Core/Modules/StateMachine/state_machine.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memorySlot.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/GUI/GUI.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/SSD1305.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/fonts.h:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/test_bitmaps.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Memory/memorySlot.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/GUI/GUI.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/SSD1305.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/fonts.h:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/test_bitmaps.hpp:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -81,6 +81,6 @@ D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/SSD1305/
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Numpad/numpad.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Numpad/numpad.hpp:
 ../Core/Inc/main.h:

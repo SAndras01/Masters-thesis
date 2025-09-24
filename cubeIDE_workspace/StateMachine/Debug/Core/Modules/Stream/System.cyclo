@@ -1,2 +1,2 @@
-../Core/Modules/Stream/System.cpp:13:15:long unsigned int millis()	1
-../Core/Modules/Stream/System.cpp:19:6:void delay(uint32_t)	1
+System.cpp:13:15:long unsigned int millis()	1
+System.cpp:19:6:void delay(uint32_t)	1
