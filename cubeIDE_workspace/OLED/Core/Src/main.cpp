@@ -66,6 +66,7 @@ void available_devices(int* devices)
 	int j = 0;
 	for(int i = 0; i<128; i++)
 	{
+		HAL_Delay(100);
 		status = HAL_I2C_IsDeviceReady(&hi2c1, i<<1, 2, 100);
 		if(status == HAL_OK)
 			{

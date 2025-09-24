@@ -4,7 +4,8 @@
 ../Core/Modules/StateMachine/state_machine.cpp:17:6:void StateMachine::changeState(State*)	16	static
 ../Core/Modules/StateMachine/state_machine.cpp:32:6:void StateMachine::run()	16	static
 ../Core/Modules/StateMachine/state_machine.hpp:20:7:constexpr State::State()	16	static
-../Core/Modules/StateMachine/state_machine.cpp:40:1:StateSetFixTrackDeg::StateSetFixTrackDeg(MemorySlot)	24	static
+../Core/Modules/StateMachine/state_machine.cpp:40:1:StateSetFixTrackDeg::StateSetFixTrackDeg(MemorySlot*)	16	static
 ../Core/Modules/StateMachine/state_machine.cpp:45:6:virtual void StateSetFixTrackDeg::onEnter(StateMachine*)	24	static
-../Core/Modules/StateMachine/state_machine.cpp:55:6:virtual void StateSetFixTrackDeg::run(StateMachine*)	24	static,ignoring_inline_asm
-../Core/Modules/StateMachine/state_machine.cpp:117:6:virtual void StateSetFixTrackDeg::onExit(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:55:10:uint16_t digits2num(uint8_t*)	24	static
+../Core/Modules/StateMachine/state_machine.cpp:65:6:virtual void StateSetFixTrackDeg::run(StateMachine*)	32	static,ignoring_inline_asm
+../Core/Modules/StateMachine/state_machine.cpp:204:6:virtual void StateSetFixTrackDeg::onExit(StateMachine*)	16	static

@@ -12,6 +12,7 @@ RM := rm -rf
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
+-include Core/Modules/Stream/subdir.mk
 -include Core/Modules/StateMachine/subdir.mk
 -include Core/Modules/SSD1305/subdir.mk
 -include Core/Modules/Numpad/subdir.mk

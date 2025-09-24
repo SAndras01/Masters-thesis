@@ -25,8 +25,8 @@ void DrawGUI(SSD1305* display, MemorySlot memSlot, float refX, float refY, float
 	display->SetCursor(25, LINE_3_Y);
 	display->WriteString("Deg:", Font_7x10, White);
 
-	DisplayFixedAx(display, memSlot.fixAx);
-	DisplayTrackedAx(display, memSlot.trackedAx);
+	DisplayFixedAx(display, memSlot.getFixedAx());
+	DisplayTrackedAx(display, memSlot.getTrackedAx());
 	DisplaySetAngle(display, memSlot.setDegree);
 
 	DrawYline(display, 76, White);
@@ -60,7 +60,7 @@ void DisplayMemslot(SSD1305* display, uint8_t memslot)
 	display->WriteChar(memslotDigit, Font_11x18, White);
 }
 
-void DisplayFixedAx(SSD1305* display, axes fixedax)
+void DisplayFixedAx(SSD1305* display, axes fixedax, bool highlight)
 {
 	char axesChar;
 	switch (fixedax) {
@@ -78,10 +78,12 @@ void DisplayFixedAx(SSD1305* display, axes fixedax)
 	}
 
 	display->SetCursor(67, LINE_1_Y);
-	display->WriteChar(axesChar, Font_7x10, White);
+	SSD1305_COLOR color = (highlight) ? Black : White;
+	display->WriteChar(axesChar, Font_7x10, color);
+
 }
 
-void DisplayTrackedAx(SSD1305* display, axes trackedax)
+void DisplayTrackedAx(SSD1305* display, axes trackedax, bool highlight)
 {
 	char axesChar;
 	switch (trackedax) {
@@ -99,7 +101,8 @@ void DisplayTrackedAx(SSD1305* display, axes trackedax)
 	}
 
 	display->SetCursor(67, LINE_2_Y);
-	display->WriteChar(axesChar, Font_7x10, White);
+	SSD1305_COLOR color = (highlight) ? Black : White;
+	display->WriteChar(axesChar, Font_7x10, color);
 }
 
 void DisplaySetAngle(SSD1305* display, uint16_t setdeg, int selectedDigit)

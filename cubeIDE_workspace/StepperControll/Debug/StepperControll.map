@@ -2699,7 +2699,7 @@ LOAD c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000008000000                g_pfnVectors
                 0x00000000080001c4                . = ALIGN (0x4)
 
-.text           0x00000000080001c8     0x4584
+.text           0x00000000080001c8     0x4580
                 0x00000000080001c8                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080001c8       0x40 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -2762,403 +2762,403 @@ LOAD c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
                 0x00000000080013ac       0xd2 ./Core/Modules/StepperController/StepperController.o
                 0x00000000080013ac                StepperController::start_stepping(signed char)
  *fill*         0x000000000800147e        0x2 
- .text.main     0x0000000008001480       0xfc ./Core/Src/main.o
+ .text.main     0x0000000008001480       0xf8 ./Core/Src/main.o
                 0x0000000008001480                main
  .text._Z18SystemClock_Configv
-                0x000000000800157c       0xf0 ./Core/Src/main.o
-                0x000000000800157c                SystemClock_Config()
+                0x0000000008001578       0xf0 ./Core/Src/main.o
+                0x0000000008001578                SystemClock_Config()
  .text._ZL12MX_TIM2_Initv
-                0x000000000800166c      0x120 ./Core/Src/main.o
+                0x0000000008001668      0x120 ./Core/Src/main.o
  .text._ZL11MX_DMA_Initv
-                0x000000000800178c       0x40 ./Core/Src/main.o
+                0x0000000008001788       0x40 ./Core/Src/main.o
  .text._ZL12MX_GPIO_Initv
-                0x00000000080017cc      0x118 ./Core/Src/main.o
+                0x00000000080017c8      0x118 ./Core/Src/main.o
  .text.Error_Handler
-                0x00000000080018e4        0xa ./Core/Src/main.o
-                0x00000000080018e4                Error_Handler
- *fill*         0x00000000080018ee        0x2 
+                0x00000000080018e0        0xa ./Core/Src/main.o
+                0x00000000080018e0                Error_Handler
+ *fill*         0x00000000080018ea        0x2 
  .text._Z41__static_initialization_and_destruction_0ii
-                0x00000000080018f0       0x44 ./Core/Src/main.o
+                0x00000000080018ec       0x44 ./Core/Src/main.o
  .text._GLOBAL__sub_I_htim2
-                0x0000000008001934       0x10 ./Core/Src/main.o
+                0x0000000008001930       0x10 ./Core/Src/main.o
  .text.HAL_MspInit
-                0x0000000008001944       0x50 ./Core/Src/stm32f4xx_hal_msp.o
-                0x0000000008001944                HAL_MspInit
+                0x0000000008001940       0x50 ./Core/Src/stm32f4xx_hal_msp.o
+                0x0000000008001940                HAL_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x0000000008001994       0xc0 ./Core/Src/stm32f4xx_hal_msp.o
-                0x0000000008001994                HAL_TIM_Base_MspInit
+                0x0000000008001990       0xc0 ./Core/Src/stm32f4xx_hal_msp.o
+                0x0000000008001990                HAL_TIM_Base_MspInit
  .text.HAL_TIM_MspPostInit
-                0x0000000008001a54       0x70 ./Core/Src/stm32f4xx_hal_msp.o
-                0x0000000008001a54                HAL_TIM_MspPostInit
+                0x0000000008001a50       0x70 ./Core/Src/stm32f4xx_hal_msp.o
+                0x0000000008001a50                HAL_TIM_MspPostInit
  .text.NMI_Handler
-                0x0000000008001ac4        0x6 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001ac4                NMI_Handler
+                0x0000000008001ac0        0x6 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001ac0                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008001aca        0x6 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001aca                HardFault_Handler
+                0x0000000008001ac6        0x6 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001ac6                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008001ad0        0x6 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001ad0                MemManage_Handler
+                0x0000000008001acc        0x6 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001acc                MemManage_Handler
  .text.BusFault_Handler
-                0x0000000008001ad6        0x6 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001ad6                BusFault_Handler
+                0x0000000008001ad2        0x6 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001ad2                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008001adc        0x6 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001adc                UsageFault_Handler
+                0x0000000008001ad8        0x6 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001ad8                UsageFault_Handler
  .text.SVC_Handler
-                0x0000000008001ae2        0xe ./Core/Src/stm32f4xx_it.o
-                0x0000000008001ae2                SVC_Handler
+                0x0000000008001ade        0xe ./Core/Src/stm32f4xx_it.o
+                0x0000000008001ade                SVC_Handler
  .text.DebugMon_Handler
-                0x0000000008001af0        0xe ./Core/Src/stm32f4xx_it.o
-                0x0000000008001af0                DebugMon_Handler
+                0x0000000008001aec        0xe ./Core/Src/stm32f4xx_it.o
+                0x0000000008001aec                DebugMon_Handler
  .text.PendSV_Handler
-                0x0000000008001afe        0xe ./Core/Src/stm32f4xx_it.o
-                0x0000000008001afe                PendSV_Handler
+                0x0000000008001afa        0xe ./Core/Src/stm32f4xx_it.o
+                0x0000000008001afa                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008001b0c        0xc ./Core/Src/stm32f4xx_it.o
-                0x0000000008001b0c                SysTick_Handler
+                0x0000000008001b08        0xc ./Core/Src/stm32f4xx_it.o
+                0x0000000008001b08                SysTick_Handler
  .text.DMA1_Stream1_IRQHandler
-                0x0000000008001b18       0x14 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001b18                DMA1_Stream1_IRQHandler
+                0x0000000008001b14       0x14 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001b14                DMA1_Stream1_IRQHandler
  .text.TIM2_IRQHandler
-                0x0000000008001b2c       0x14 ./Core/Src/stm32f4xx_it.o
-                0x0000000008001b2c                TIM2_IRQHandler
+                0x0000000008001b28       0x14 ./Core/Src/stm32f4xx_it.o
+                0x0000000008001b28                TIM2_IRQHandler
  .text.SystemInit
-                0x0000000008001b40       0x24 ./Core/Src/system_stm32f4xx.o
-                0x0000000008001b40                SystemInit
+                0x0000000008001b3c       0x24 ./Core/Src/system_stm32f4xx.o
+                0x0000000008001b3c                SystemInit
  .text.Reset_Handler
-                0x0000000008001b64       0x50 ./Core/Startup/startup_stm32f446retx.o
-                0x0000000008001b64                Reset_Handler
+                0x0000000008001b60       0x50 ./Core/Startup/startup_stm32f446retx.o
+                0x0000000008001b60                Reset_Handler
  .text.Default_Handler
-                0x0000000008001bb4        0x2 ./Core/Startup/startup_stm32f446retx.o
-                0x0000000008001bb4                RTC_Alarm_IRQHandler
-                0x0000000008001bb4                EXTI2_IRQHandler
-                0x0000000008001bb4                TIM8_CC_IRQHandler
-                0x0000000008001bb4                FMPI2C1_EV_IRQHandler
-                0x0000000008001bb4                SPI4_IRQHandler
-                0x0000000008001bb4                TIM1_CC_IRQHandler
-                0x0000000008001bb4                DMA2_Stream5_IRQHandler
-                0x0000000008001bb4                DMA1_Stream5_IRQHandler
-                0x0000000008001bb4                PVD_IRQHandler
-                0x0000000008001bb4                SDIO_IRQHandler
-                0x0000000008001bb4                TAMP_STAMP_IRQHandler
-                0x0000000008001bb4                CAN2_RX1_IRQHandler
-                0x0000000008001bb4                EXTI3_IRQHandler
-                0x0000000008001bb4                TIM8_TRG_COM_TIM14_IRQHandler
-                0x0000000008001bb4                TIM1_UP_TIM10_IRQHandler
-                0x0000000008001bb4                TIM8_UP_TIM13_IRQHandler
-                0x0000000008001bb4                I2C3_ER_IRQHandler
-                0x0000000008001bb4                EXTI0_IRQHandler
-                0x0000000008001bb4                I2C2_EV_IRQHandler
-                0x0000000008001bb4                DMA1_Stream2_IRQHandler
-                0x0000000008001bb4                CAN1_RX0_IRQHandler
-                0x0000000008001bb4                FPU_IRQHandler
-                0x0000000008001bb4                OTG_HS_WKUP_IRQHandler
-                0x0000000008001bb4                CAN2_SCE_IRQHandler
-                0x0000000008001bb4                DMA2_Stream2_IRQHandler
-                0x0000000008001bb4                SPI1_IRQHandler
-                0x0000000008001bb4                TIM6_DAC_IRQHandler
-                0x0000000008001bb4                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008001bb4                DCMI_IRQHandler
-                0x0000000008001bb4                CAN2_RX0_IRQHandler
-                0x0000000008001bb4                DMA2_Stream3_IRQHandler
-                0x0000000008001bb4                SAI2_IRQHandler
-                0x0000000008001bb4                USART6_IRQHandler
-                0x0000000008001bb4                USART3_IRQHandler
-                0x0000000008001bb4                CAN1_RX1_IRQHandler
-                0x0000000008001bb4                UART5_IRQHandler
-                0x0000000008001bb4                DMA2_Stream0_IRQHandler
-                0x0000000008001bb4                TIM4_IRQHandler
-                0x0000000008001bb4                QUADSPI_IRQHandler
-                0x0000000008001bb4                I2C1_EV_IRQHandler
-                0x0000000008001bb4                DMA1_Stream6_IRQHandler
-                0x0000000008001bb4                UART4_IRQHandler
-                0x0000000008001bb4                TIM3_IRQHandler
-                0x0000000008001bb4                RCC_IRQHandler
-                0x0000000008001bb4                TIM8_BRK_TIM12_IRQHandler
-                0x0000000008001bb4                Default_Handler
-                0x0000000008001bb4                CEC_IRQHandler
-                0x0000000008001bb4                EXTI15_10_IRQHandler
-                0x0000000008001bb4                ADC_IRQHandler
-                0x0000000008001bb4                DMA1_Stream7_IRQHandler
-                0x0000000008001bb4                TIM7_IRQHandler
-                0x0000000008001bb4                CAN2_TX_IRQHandler
-                0x0000000008001bb4                TIM5_IRQHandler
-                0x0000000008001bb4                DMA2_Stream7_IRQHandler
-                0x0000000008001bb4                I2C3_EV_IRQHandler
-                0x0000000008001bb4                EXTI9_5_IRQHandler
-                0x0000000008001bb4                RTC_WKUP_IRQHandler
-                0x0000000008001bb4                SPDIF_RX_IRQHandler
-                0x0000000008001bb4                SPI2_IRQHandler
-                0x0000000008001bb4                OTG_HS_EP1_IN_IRQHandler
-                0x0000000008001bb4                DMA1_Stream0_IRQHandler
-                0x0000000008001bb4                CAN1_TX_IRQHandler
-                0x0000000008001bb4                FMPI2C1_ER_IRQHandler
-                0x0000000008001bb4                EXTI4_IRQHandler
-                0x0000000008001bb4                OTG_HS_EP1_OUT_IRQHandler
-                0x0000000008001bb4                WWDG_IRQHandler
-                0x0000000008001bb4                OTG_FS_WKUP_IRQHandler
-                0x0000000008001bb4                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008001bb4                OTG_HS_IRQHandler
-                0x0000000008001bb4                EXTI1_IRQHandler
-                0x0000000008001bb4                USART2_IRQHandler
-                0x0000000008001bb4                I2C2_ER_IRQHandler
-                0x0000000008001bb4                DMA2_Stream1_IRQHandler
-                0x0000000008001bb4                CAN1_SCE_IRQHandler
-                0x0000000008001bb4                FLASH_IRQHandler
-                0x0000000008001bb4                DMA2_Stream4_IRQHandler
-                0x0000000008001bb4                USART1_IRQHandler
-                0x0000000008001bb4                OTG_FS_IRQHandler
-                0x0000000008001bb4                SPI3_IRQHandler
-                0x0000000008001bb4                DMA1_Stream4_IRQHandler
-                0x0000000008001bb4                I2C1_ER_IRQHandler
-                0x0000000008001bb4                FMC_IRQHandler
-                0x0000000008001bb4                DMA2_Stream6_IRQHandler
-                0x0000000008001bb4                SAI1_IRQHandler
-                0x0000000008001bb4                DMA1_Stream3_IRQHandler
- *fill*         0x0000000008001bb6        0x2 
+                0x0000000008001bb0        0x2 ./Core/Startup/startup_stm32f446retx.o
+                0x0000000008001bb0                RTC_Alarm_IRQHandler
+                0x0000000008001bb0                EXTI2_IRQHandler
+                0x0000000008001bb0                TIM8_CC_IRQHandler
+                0x0000000008001bb0                FMPI2C1_EV_IRQHandler
+                0x0000000008001bb0                SPI4_IRQHandler
+                0x0000000008001bb0                TIM1_CC_IRQHandler
+                0x0000000008001bb0                DMA2_Stream5_IRQHandler
+                0x0000000008001bb0                DMA1_Stream5_IRQHandler
+                0x0000000008001bb0                PVD_IRQHandler
+                0x0000000008001bb0                SDIO_IRQHandler
+                0x0000000008001bb0                TAMP_STAMP_IRQHandler
+                0x0000000008001bb0                CAN2_RX1_IRQHandler
+                0x0000000008001bb0                EXTI3_IRQHandler
+                0x0000000008001bb0                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008001bb0                TIM1_UP_TIM10_IRQHandler
+                0x0000000008001bb0                TIM8_UP_TIM13_IRQHandler
+                0x0000000008001bb0                I2C3_ER_IRQHandler
+                0x0000000008001bb0                EXTI0_IRQHandler
+                0x0000000008001bb0                I2C2_EV_IRQHandler
+                0x0000000008001bb0                DMA1_Stream2_IRQHandler
+                0x0000000008001bb0                CAN1_RX0_IRQHandler
+                0x0000000008001bb0                FPU_IRQHandler
+                0x0000000008001bb0                OTG_HS_WKUP_IRQHandler
+                0x0000000008001bb0                CAN2_SCE_IRQHandler
+                0x0000000008001bb0                DMA2_Stream2_IRQHandler
+                0x0000000008001bb0                SPI1_IRQHandler
+                0x0000000008001bb0                TIM6_DAC_IRQHandler
+                0x0000000008001bb0                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008001bb0                DCMI_IRQHandler
+                0x0000000008001bb0                CAN2_RX0_IRQHandler
+                0x0000000008001bb0                DMA2_Stream3_IRQHandler
+                0x0000000008001bb0                SAI2_IRQHandler
+                0x0000000008001bb0                USART6_IRQHandler
+                0x0000000008001bb0                USART3_IRQHandler
+                0x0000000008001bb0                CAN1_RX1_IRQHandler
+                0x0000000008001bb0                UART5_IRQHandler
+                0x0000000008001bb0                DMA2_Stream0_IRQHandler
+                0x0000000008001bb0                TIM4_IRQHandler
+                0x0000000008001bb0                QUADSPI_IRQHandler
+                0x0000000008001bb0                I2C1_EV_IRQHandler
+                0x0000000008001bb0                DMA1_Stream6_IRQHandler
+                0x0000000008001bb0                UART4_IRQHandler
+                0x0000000008001bb0                TIM3_IRQHandler
+                0x0000000008001bb0                RCC_IRQHandler
+                0x0000000008001bb0                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008001bb0                Default_Handler
+                0x0000000008001bb0                CEC_IRQHandler
+                0x0000000008001bb0                EXTI15_10_IRQHandler
+                0x0000000008001bb0                ADC_IRQHandler
+                0x0000000008001bb0                DMA1_Stream7_IRQHandler
+                0x0000000008001bb0                TIM7_IRQHandler
+                0x0000000008001bb0                CAN2_TX_IRQHandler
+                0x0000000008001bb0                TIM5_IRQHandler
+                0x0000000008001bb0                DMA2_Stream7_IRQHandler
+                0x0000000008001bb0                I2C3_EV_IRQHandler
+                0x0000000008001bb0                EXTI9_5_IRQHandler
+                0x0000000008001bb0                RTC_WKUP_IRQHandler
+                0x0000000008001bb0                SPDIF_RX_IRQHandler
+                0x0000000008001bb0                SPI2_IRQHandler
+                0x0000000008001bb0                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008001bb0                DMA1_Stream0_IRQHandler
+                0x0000000008001bb0                CAN1_TX_IRQHandler
+                0x0000000008001bb0                FMPI2C1_ER_IRQHandler
+                0x0000000008001bb0                EXTI4_IRQHandler
+                0x0000000008001bb0                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008001bb0                WWDG_IRQHandler
+                0x0000000008001bb0                OTG_FS_WKUP_IRQHandler
+                0x0000000008001bb0                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008001bb0                OTG_HS_IRQHandler
+                0x0000000008001bb0                EXTI1_IRQHandler
+                0x0000000008001bb0                USART2_IRQHandler
+                0x0000000008001bb0                I2C2_ER_IRQHandler
+                0x0000000008001bb0                DMA2_Stream1_IRQHandler
+                0x0000000008001bb0                CAN1_SCE_IRQHandler
+                0x0000000008001bb0                FLASH_IRQHandler
+                0x0000000008001bb0                DMA2_Stream4_IRQHandler
+                0x0000000008001bb0                USART1_IRQHandler
+                0x0000000008001bb0                OTG_FS_IRQHandler
+                0x0000000008001bb0                SPI3_IRQHandler
+                0x0000000008001bb0                DMA1_Stream4_IRQHandler
+                0x0000000008001bb0                I2C1_ER_IRQHandler
+                0x0000000008001bb0                FMC_IRQHandler
+                0x0000000008001bb0                DMA2_Stream6_IRQHandler
+                0x0000000008001bb0                SAI1_IRQHandler
+                0x0000000008001bb0                DMA1_Stream3_IRQHandler
+ *fill*         0x0000000008001bb2        0x2 
  .text.HAL_Init
-                0x0000000008001bb8       0x44 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x0000000008001bb8                HAL_Init
+                0x0000000008001bb4       0x44 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x0000000008001bb4                HAL_Init
  .text.HAL_InitTick
-                0x0000000008001bfc       0x60 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x0000000008001bfc                HAL_InitTick
+                0x0000000008001bf8       0x60 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x0000000008001bf8                HAL_InitTick
  .text.HAL_IncTick
-                0x0000000008001c5c       0x28 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x0000000008001c5c                HAL_IncTick
+                0x0000000008001c58       0x28 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x0000000008001c58                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008001c84       0x18 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x0000000008001c84                HAL_GetTick
+                0x0000000008001c80       0x18 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x0000000008001c80                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008001c9c       0x48 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
-                0x0000000008001c9c                HAL_Delay
+                0x0000000008001c98       0x48 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o
+                0x0000000008001c98                HAL_Delay
  .text.__NVIC_SetPriorityGrouping
-                0x0000000008001ce4       0x48 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001ce0       0x48 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .text.__NVIC_GetPriorityGrouping
-                0x0000000008001d2c       0x1c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001d28       0x1c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .text.__NVIC_EnableIRQ
-                0x0000000008001d48       0x3c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001d44       0x3c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .text.__NVIC_SetPriority
-                0x0000000008001d84       0x54 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001d80       0x54 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x0000000008001dd8       0x66 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
- *fill*         0x0000000008001e3e        0x2 
+                0x0000000008001dd4       0x66 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+ *fill*         0x0000000008001e3a        0x2 
  .text.SysTick_Config
-                0x0000000008001e40       0x44 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001e3c       0x44 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008001e84       0x16 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
-                0x0000000008001e84                HAL_NVIC_SetPriorityGrouping
+                0x0000000008001e80       0x16 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001e80                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0000000008001e9a       0x38 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
-                0x0000000008001e9a                HAL_NVIC_SetPriority
+                0x0000000008001e96       0x38 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001e96                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0000000008001ed2       0x1c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
-                0x0000000008001ed2                HAL_NVIC_EnableIRQ
+                0x0000000008001ece       0x1c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001ece                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x0000000008001eee       0x18 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
-                0x0000000008001eee                HAL_SYSTICK_Config
- *fill*         0x0000000008001f06        0x2 
+                0x0000000008001eea       0x18 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o
+                0x0000000008001eea                HAL_SYSTICK_Config
+ *fill*         0x0000000008001f02        0x2 
  .text.HAL_DMA_Init
-                0x0000000008001f08      0x15c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
-                0x0000000008001f08                HAL_DMA_Init
+                0x0000000008001f04      0x15c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008001f04                HAL_DMA_Init
  .text.HAL_DMA_Start_IT
-                0x0000000008002064       0xb0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
-                0x0000000008002064                HAL_DMA_Start_IT
+                0x0000000008002060       0xb0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008002060                HAL_DMA_Start_IT
  .text.HAL_DMA_IRQHandler
-                0x0000000008002114      0x314 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
-                0x0000000008002114                HAL_DMA_IRQHandler
+                0x0000000008002110      0x314 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008002110                HAL_DMA_IRQHandler
  .text.HAL_DMA_RegisterCallback
-                0x0000000008002428       0xa8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
-                0x0000000008002428                HAL_DMA_RegisterCallback
+                0x0000000008002424       0xa8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008002424                HAL_DMA_RegisterCallback
  .text.DMA_SetConfig
-                0x00000000080024d0       0x5c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x00000000080024cc       0x5c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
  .text.DMA_CalcBaseAndBitshift
-                0x000000000800252c       0x6c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008002528       0x6c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
  .text.DMA_CheckFifoParam
-                0x0000000008002598       0xf8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008002594       0xf8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
  .text.HAL_GPIO_Init
-                0x0000000008002690      0x328 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
-                0x0000000008002690                HAL_GPIO_Init
+                0x000000000800268c      0x328 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+                0x000000000800268c                HAL_GPIO_Init
  .text.HAL_GPIO_WritePin
-                0x00000000080029b8       0x32 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
-                0x00000000080029b8                HAL_GPIO_WritePin
- *fill*         0x00000000080029ea        0x2 
+                0x00000000080029b4       0x32 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o
+                0x00000000080029b4                HAL_GPIO_WritePin
+ *fill*         0x00000000080029e6        0x2 
  .text.HAL_RCC_ClockConfig
-                0x00000000080029ec      0x1cc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
-                0x00000000080029ec                HAL_RCC_ClockConfig
+                0x00000000080029e8      0x1cc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o
+                0x00000000080029e8                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x0000000008002bb8      0x460 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
-                0x0000000008002bb8                HAL_RCC_GetSysClockFreq
+                0x0000000008002bb4      0x460 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+                0x0000000008002bb4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_OscConfig
-                0x0000000008003018      0x53c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
-                0x0000000008003018                HAL_RCC_OscConfig
+                0x0000000008003014      0x53c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o
+                0x0000000008003014                HAL_RCC_OscConfig
  .text.HAL_TIM_Base_Init
-                0x0000000008003554       0x9e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003554                HAL_TIM_Base_Init
- *fill*         0x00000000080035f2        0x2 
+                0x0000000008003550       0x9e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003550                HAL_TIM_Base_Init
+ *fill*         0x00000000080035ee        0x2 
  .text.HAL_TIM_Base_Start_IT
-                0x00000000080035f4       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x00000000080035f4                HAL_TIM_Base_Start_IT
+                0x00000000080035f0       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x00000000080035f0                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_PWM_Init
-                0x00000000080036d4       0x9e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x00000000080036d4                HAL_TIM_PWM_Init
+                0x00000000080036d0       0x9e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x00000000080036d0                HAL_TIM_PWM_Init
  .text.HAL_TIM_PWM_MspInit
-                0x0000000008003772       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003772                HAL_TIM_PWM_MspInit
- *fill*         0x0000000008003786        0x2 
+                0x000000000800376e       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x000000000800376e                HAL_TIM_PWM_MspInit
+ *fill*         0x0000000008003782        0x2 
  .text.HAL_TIM_PWM_Start
-                0x0000000008003788      0x190 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003788                HAL_TIM_PWM_Start
+                0x0000000008003784      0x190 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003784                HAL_TIM_PWM_Start
  .text.HAL_TIM_PWM_Stop
-                0x0000000008003918       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003918                HAL_TIM_PWM_Stop
+                0x0000000008003914       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003914                HAL_TIM_PWM_Stop
  .text.HAL_TIM_IRQHandler
-                0x00000000080039f8      0x210 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x00000000080039f8                HAL_TIM_IRQHandler
+                0x00000000080039f4      0x210 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x00000000080039f4                HAL_TIM_IRQHandler
  .text.HAL_TIM_PWM_ConfigChannel
-                0x0000000008003c08      0x184 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003c08                HAL_TIM_PWM_ConfigChannel
+                0x0000000008003c04      0x184 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003c04                HAL_TIM_PWM_ConfigChannel
  .text.HAL_TIM_ConfigClockSource
-                0x0000000008003d8c      0x18e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003d8c                HAL_TIM_ConfigClockSource
+                0x0000000008003d88      0x18e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003d88                HAL_TIM_ConfigClockSource
  .text.HAL_TIM_PeriodElapsedCallback
-                0x0000000008003f1a       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003f1a                HAL_TIM_PeriodElapsedCallback
+                0x0000000008003f16       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003f16                HAL_TIM_PeriodElapsedCallback
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x0000000008003f2e       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003f2e                HAL_TIM_OC_DelayElapsedCallback
+                0x0000000008003f2a       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003f2a                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x0000000008003f42       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003f42                HAL_TIM_IC_CaptureCallback
+                0x0000000008003f3e       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003f3e                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x0000000008003f56       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003f56                HAL_TIM_PWM_PulseFinishedCallback
+                0x0000000008003f52       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003f52                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x0000000008003f6a       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003f6a                HAL_TIM_TriggerCallback
- *fill*         0x0000000008003f7e        0x2 
+                0x0000000008003f66       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003f66                HAL_TIM_TriggerCallback
+ *fill*         0x0000000008003f7a        0x2 
  .text.TIM_Base_SetConfig
-                0x0000000008003f80      0x140 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008003f80                TIM_Base_SetConfig
+                0x0000000008003f7c      0x140 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008003f7c                TIM_Base_SetConfig
  .text.TIM_OC1_SetConfig
-                0x00000000080040c0       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x00000000080040bc       0xe0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .text.TIM_OC2_SetConfig
-                0x00000000080041a0       0xec ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x00000000080041a0                TIM_OC2_SetConfig
+                0x000000000800419c       0xec ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x000000000800419c                TIM_OC2_SetConfig
  .text.TIM_OC3_SetConfig
-                0x000000000800428c       0xe8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008004288       0xe8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .text.TIM_OC4_SetConfig
-                0x0000000008004374       0xac ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008004370       0xac ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .text.TIM_TI1_ConfigInputStage
-                0x0000000008004420       0x5e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x000000000800441c       0x5e ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .text.TIM_TI2_ConfigInputStage
-                0x000000000800447e       0x60 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x000000000800447a       0x60 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .text.TIM_ITRx_SetConfig
-                0x00000000080044de       0x36 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x00000000080044da       0x36 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
  .text.TIM_ETR_SetConfig
-                0x0000000008004514       0x40 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008004514                TIM_ETR_SetConfig
+                0x0000000008004510       0x40 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008004510                TIM_ETR_SetConfig
  .text.TIM_CCxChannelCmd
-                0x0000000008004554       0x4a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
-                0x0000000008004554                TIM_CCxChannelCmd
- *fill*         0x000000000800459e        0x2 
+                0x0000000008004550       0x4a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o
+                0x0000000008004550                TIM_CCxChannelCmd
+ *fill*         0x000000000800459a        0x2 
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x00000000080045a0       0xf8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
-                0x00000000080045a0                HAL_TIMEx_MasterConfigSynchronization
+                0x000000000800459c       0xf8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+                0x000000000800459c                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_CommutCallback
-                0x0000000008004698       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
-                0x0000000008004698                HAL_TIMEx_CommutCallback
+                0x0000000008004694       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+                0x0000000008004694                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x00000000080046ac       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
-                0x00000000080046ac                HAL_TIMEx_BreakCallback
+                0x00000000080046a8       0x14 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o
+                0x00000000080046a8                HAL_TIMEx_BreakCallback
  .text.__libc_init_array
-                0x00000000080046c0       0x48 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
-                0x00000000080046c0                __libc_init_array
- .text.memcpy   0x0000000008004708       0x1c c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
-                0x0000000008004708                memcpy
- .text.memset   0x0000000008004724       0x10 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
-                0x0000000008004724                memset
+                0x00000000080046bc       0x48 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-init.o)
+                0x00000000080046bc                __libc_init_array
+ .text.memcpy   0x0000000008004704       0x1c c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0000000008004704                memcpy
+ .text.memset   0x0000000008004720       0x10 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(lib_a-memset.o)
+                0x0000000008004720                memset
  *(.glue_7)
- .glue_7        0x0000000008004734        0x0 linker stubs
+ .glue_7        0x0000000008004730        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008004734        0x0 linker stubs
+ .glue_7t       0x0000000008004730        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008004734        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x0000000008004730        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x0000000008004734        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008004734                _init
- .init          0x0000000008004738        0x8 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x0000000008004730        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0000000008004730                _init
+ .init          0x0000000008004734        0x8 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x0000000008004740        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x0000000008004740                _fini
- .fini          0x0000000008004744        0x8 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x000000000800474c                . = ALIGN (0x4)
-                0x000000000800474c                _etext = .
+ .fini          0x000000000800473c        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x000000000800473c                _fini
+ .fini          0x0000000008004740        0x8 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000000008004748                . = ALIGN (0x4)
+                0x0000000008004748                _etext = .
 
-.vfp11_veneer   0x000000000800474c        0x0
- .vfp11_veneer  0x000000000800474c        0x0 linker stubs
+.vfp11_veneer   0x0000000008004748        0x0
+ .vfp11_veneer  0x0000000008004748        0x0 linker stubs
 
-.v4_bx          0x000000000800474c        0x0
- .v4_bx         0x000000000800474c        0x0 linker stubs
+.v4_bx          0x0000000008004748        0x0
+ .v4_bx         0x0000000008004748        0x0 linker stubs
 
-.iplt           0x000000000800474c        0x0
- .iplt          0x000000000800474c        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x0000000008004748        0x0
+ .iplt          0x0000000008004748        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x000000000800474c       0x18
-                0x000000000800474c                . = ALIGN (0x4)
+.rodata         0x0000000008004748       0x18
+                0x0000000008004748                . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x000000000800474c       0x10 ./Core/Src/system_stm32f4xx.o
-                0x000000000800474c                AHBPrescTable
+                0x0000000008004748       0x10 ./Core/Src/system_stm32f4xx.o
+                0x0000000008004748                AHBPrescTable
  .rodata.flagBitshiftOffset.0
-                0x000000000800475c        0x8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
-                0x0000000008004764                . = ALIGN (0x4)
+                0x0000000008004758        0x8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o
+                0x0000000008004760                . = ALIGN (0x4)
 
-.ARM.extab      0x0000000008004764        0x0
-                0x0000000008004764                . = ALIGN (0x4)
+.ARM.extab      0x0000000008004760        0x0
+                0x0000000008004760                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008004764                . = ALIGN (0x4)
+                0x0000000008004760                . = ALIGN (0x4)
 
-.ARM            0x0000000008004764        0x8
-                0x0000000008004764                . = ALIGN (0x4)
-                0x0000000008004764                __exidx_start = .
+.ARM            0x0000000008004760        0x8
+                0x0000000008004760                . = ALIGN (0x4)
+                0x0000000008004760                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0000000008004764        0x8 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x000000000800476c                __exidx_end = .
-                0x000000000800476c                . = ALIGN (0x4)
+ .ARM.exidx     0x0000000008004760        0x8 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x0000000008004768                __exidx_end = .
+                0x0000000008004768                . = ALIGN (0x4)
 
-.rel.dyn        0x000000000800476c        0x0
- .rel.iplt      0x000000000800476c        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0000000008004768        0x0
+ .rel.iplt      0x0000000008004768        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x000000000800476c        0x0
-                0x000000000800476c                . = ALIGN (0x4)
-                0x000000000800476c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008004768        0x0
+                0x0000000008004768                . = ALIGN (0x4)
+                0x0000000008004768                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000000000800476c                PROVIDE (__preinit_array_end = .)
-                0x000000000800476c                . = ALIGN (0x4)
+                0x0000000008004768                PROVIDE (__preinit_array_end = .)
+                0x0000000008004768                . = ALIGN (0x4)
 
-.init_array     0x000000000800476c        0x8
-                0x000000000800476c                . = ALIGN (0x4)
-                0x000000000800476c                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008004768        0x8
+                0x0000000008004768                . = ALIGN (0x4)
+                0x0000000008004768                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800476c        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
- .init_array    0x0000000008004770        0x4 ./Core/Src/main.o
-                0x0000000008004774                PROVIDE (__init_array_end = .)
-                0x0000000008004774                . = ALIGN (0x4)
+ .init_array    0x0000000008004768        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .init_array    0x000000000800476c        0x4 ./Core/Src/main.o
+                0x0000000008004770                PROVIDE (__init_array_end = .)
+                0x0000000008004770                . = ALIGN (0x4)
 
-.fini_array     0x0000000008004774        0x4
-                0x0000000008004774                . = ALIGN (0x4)
+.fini_array     0x0000000008004770        0x4
+                0x0000000008004770                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008004774        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x0000000008004770        0x4 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008004778                . = ALIGN (0x4)
-                0x0000000008004778                _sidata = LOADADDR (.data)
+                0x0000000008004774                . = ALIGN (0x4)
+                0x0000000008004774                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x32c load address 0x0000000008004778
+.data           0x0000000020000000      0x32c load address 0x0000000008004774
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3181,11 +3181,11 @@ LOAD c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
  *fill*         0x0000000020000329        0x3 
                 0x000000002000032c                _edata = .
 
-.igot.plt       0x000000002000032c        0x0 load address 0x0000000008004aa4
+.igot.plt       0x000000002000032c        0x0 load address 0x0000000008004aa0
  .igot.plt      0x000000002000032c        0x0 c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x000000002000032c                . = ALIGN (0x4)
 
-.bss            0x000000002000032c       0xd8 load address 0x0000000008004aa4
+.bss            0x000000002000032c       0xd8 load address 0x0000000008004aa0
                 0x000000002000032c                _sbss = .
                 0x000000002000032c                __bss_start__ = _sbss
  *(.bss)
@@ -3208,7 +3208,7 @@ LOAD c:/st/stm32cubeide_1.12.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000020000404                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000404      0x604 load address 0x0000000008004aa4
+                0x0000000020000404      0x604 load address 0x0000000008004aa0
                 0x0000000020000408                . = ALIGN (0x8)
  *fill*         0x0000000020000404        0x4 
                 [!provide]                        PROVIDE (end = .)

@@ -8,8 +8,8 @@
 #ifndef MODULES_STATEMACHINE_STATE_MACHINE_HPP_
 #define MODULES_STATEMACHINE_STATE_MACHINE_HPP_
 
+#include <memorySlot.hpp>
 #include <stdint.h>
-#include "memory.hpp"
 #include "GUI.hpp"
 #include "accelerometer.hpp"
 #include "numpad.hpp"
@@ -40,18 +40,18 @@ public:
 class StateSetFixTrackDeg : public State
 {
 private:
-	enum digitSelectState {setDigit1 = 0, setDigit2 = 1, setDigit3 = 2};
-	digitSelectState currentDigitState = setDigit1;
+	enum SettingSelectState {setDigit1 = 0, setDigit2 = 1, setDigit3 = 2, setFixAx = 4, setTrackAx = 5};
+	SettingSelectState currentSettingState = setDigit1;
 	uint8_t currentDigit;
 	uint8_t numberDigits[3] = {0,0,0};
-	MemorySlot currentMemorySlot;
+	MemorySlot* currentMemorySlot;
 public:
-	StateSetFixTrackDeg(MemorySlot initialMemorySlot);
+	StateSetFixTrackDeg(MemorySlot* initialMemorySlot);
     void onEnter(StateMachine* master) override;
     void run(StateMachine* master) override;
     void onExit(StateMachine* master) override;
 
-    void setMemorySlot(MemorySlot);
-    MemorySlot getMemorySlot();
+    void setMemorySlot(MemorySlot*);
+    MemorySlot* getMemorySlot();
 };
 #endif /* MODULES_STATEMACHINE_STATE_MACHINE_HPP_ */
