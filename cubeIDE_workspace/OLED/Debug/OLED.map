@@ -3762,6 +3762,9 @@ LOAD C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0800373c                        __exidx_end = .
                 0x0800373c                        . = ALIGN (0x4)
 
+.rel.dyn        0x0800373c        0x0
+ .rel.iplt      0x0800373c        0x0 C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+
 .preinit_array  0x0800373c        0x0
                 0x0800373c                        . = ALIGN (0x4)
                 0x0800373c                        PROVIDE (__preinit_array_start = .)
@@ -3787,9 +3790,6 @@ LOAD C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 [!provide]                        PROVIDE (__fini_array_end = .)
                 0x08003744                        . = ALIGN (0x4)
                 0x08003744                        _sidata = LOADADDR (.data)
-
-.rel.dyn        0x08003744        0x0
- .rel.iplt      0x08003744        0x0 C:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
 .data           0x20000000        0xc load address 0x08003744
                 0x20000000                        . = ALIGN (0x4)

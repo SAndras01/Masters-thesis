@@ -1,13 +1,13 @@
-gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
-main.cpp:82:5:int main()	1
-main.cpp:166:6:void SystemClock_Config()	3
-main.cpp:214:13:void MX_ADC1_Init()	3
-main.cpp:266:13:void MX_I2C1_Init()	2
-main.cpp:300:13:void MX_TIM5_Init()	4
-main.cpp:345:13:void MX_USART2_UART_Init()	2
-main.cpp:376:13:void MX_DMA_Init()	1
-main.cpp:394:13:void MX_GPIO_Init()	1
-main.cpp:456:6:void Error_Handler()	1
-main.cpp:465:1:void __static_initialization_and_destruction_0(int, int)	5
-main.cpp:465:1:cpp)	1
-main.cpp:465:1:cpp)	1
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
+../Core/Src/main.cpp:82:5:int main()	1
+../Core/Src/main.cpp:166:6:void SystemClock_Config()	3
+../Core/Src/main.cpp:214:13:void MX_ADC1_Init()	3
+../Core/Src/main.cpp:266:13:void MX_I2C1_Init()	2
+../Core/Src/main.cpp:300:13:void MX_TIM5_Init()	4
+../Core/Src/main.cpp:345:13:void MX_USART2_UART_Init()	2
+../Core/Src/main.cpp:376:13:void MX_DMA_Init()	1
+../Core/Src/main.cpp:394:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:456:6:void Error_Handler()	1
+../Core/Src/main.cpp:465:1:void __static_initialization_and_destruction_0(int, int)	5
+../Core/Src/main.cpp:465:1:cpp)	1
+../Core/Src/main.cpp:465:1:cpp)	1
