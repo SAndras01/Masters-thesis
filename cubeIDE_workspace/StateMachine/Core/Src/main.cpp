@@ -25,6 +25,9 @@
 #include "state_machine.hpp"
 #include <stdio.h>
 #include "memory.hpp"
+
+#include "Shellminator.hpp"
+#include "Serial.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,9 +57,11 @@ I2C_HandleTypeDef hi2c1;
 TIM_HandleTypeDef htim5;
 
 UART_HandleTypeDef huart2;
+DMA_HandleTypeDef hdma_usart2_rx;
 
 /* USER CODE BEGIN PV */
-
+Serial usart2( &huart2 );
+Shellminator shell( &usart2 );
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -116,40 +121,97 @@ int main(void)
   display.Init();
   display.Fill(Black);
 
+  //Memory init
+  memoryElement elementList[9] =
+  {
+      {"MS1_fixAx", i8},
+      {"MS1_trackAx", i8},
+      {"MS1_setDeg", i16},
+
+	  {"MS2_fixAx", i8},
+      {"MS2_trackAx", i8},
+      {"MS2_setDeg", i16},
+
+	  {"MS3_fixAx", i8},
+      {"MS3_trackAx", i8},
+      {"MS3_setDeg", i16},
+  };
+
+ //deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
+  EEPROMmemory myEEPROM(elementList, 9, EEPROMAddress, &hi2c1);
+
+  //TODO: Modellezzem le itt mi történik: írjam, olvassam ezeket a memóriahelyeket
+
+  /*
+  uint8_t ms1fxax;
+  uint8_t ms1trax;
+  uint16_t ms1deg;
+
+  uint8_t ms2fxax;
+  uint8_t ms2trax;
+  uint16_t ms2deg;
+
+  uint8_t ms3fxax;
+  uint8_t ms3trax;
+  uint16_t ms3deg;
+
+
+
+  myEEPROM.setValue("MS1_fixAx", (uint8_t) 2);
+  myEEPROM.setValue("MS1_trackAx", (uint8_t) 3);
+  myEEPROM.setValue("MS1_setDeg", (uint16_t) 311);
+
+  myEEPROM.setValue("MS2_fixAx", (uint8_t) 1);
+  myEEPROM.setValue("MS2_trackAx", (uint8_t) 3);
+  myEEPROM.setValue("MS2_setDeg", (uint16_t) 122);
+
+  myEEPROM.setValue("MS3_fixAx", (uint8_t) 1);
+  myEEPROM.setValue("MS3_trackAx", (uint8_t) 2);
+  myEEPROM.setValue("MS3_setDeg", (uint16_t) 233);
+
+  //myEEPROM["MS2_fixAx"] = (uint8_t) 1;
+  //myEEPROM["MS2_trackAx"] = (uint8_t) 3;
+  //myEEPROM["MS2_setDeg"] = (uint16_t) 456;
+
+
+  myEEPROM.getValue("MS1_fixAx", &ms1fxax);
+  myEEPROM.getValue("MS1_trackAx", &ms1trax);
+  myEEPROM.getValue("MS1_setDeg", &ms1deg);
+
+  myEEPROM.getValue("MS2_fixAx", &ms2fxax);
+  myEEPROM.getValue("MS2_trackAx", &ms2trax);
+  myEEPROM.getValue("MS2_setDeg", &ms2deg);
+
+
+  myEEPROM.getValue("MS3_fixAx", &ms3fxax);
+  myEEPROM.getValue("MS3_trackAx", &ms3trax);
+  myEEPROM.getValue("MS3_setDeg", &ms3deg);
+
+  */
+
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  MemorySlot initialSettings(1, 110, y, z);
+
   Accelerometer dummyAccel;
-  StateSetFixTrackDeg stateSetFixTrackDeg(&initialSettings);
-  StateMachine machine(&stateSetFixTrackDeg, &display, &dummyAccel);
+  State_Settings state_Settings;
+  State_SelectMemory state_SelectMemory;
+  getMemorySlotFromEEPROM(&state_Settings.currentMemorySlot, 1, &myEEPROM);
+  StateMachine machine(&state_SelectMemory, &state_Settings, &state_SelectMemory, &display, &dummyAccel, &myEEPROM);
 
-  //Memory init
-  memoryElement elementList[9] =
-  {
-      {"memSlot1_fixAx", i8},
-      {"memSlot1_trackAx", i8},
-      {"memSlot1_setDeg", i16},
-
-	  {"memSlot1_fixAx", i8},
-      {"memSlot1_trackAx", i8},
-      {"memSlot1_setDeg", i16},
-
-	  {"memSlot1_fixAx", i8},
-      {"memSlot1_trackAx", i8},
-      {"memSlot1_setDeg", i16},
-  };
-
-
-
-  EEPROMmemory myEEPROM(elementList, 9, EEPROMAddress, &hi2c1);
 
   //Memory init end
+
+  usart2.begin( 115200 );
+  shell.clear();
+  shell.begin( "stm32" );
   while (1)
   {
-	  machine.run();
-
+	  //machine.run();
+	  shell.update();
 	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 
     /* USER CODE END WHILE */
@@ -378,8 +440,12 @@ static void MX_DMA_Init(void)
 
   /* DMA controller clock enable */
   __HAL_RCC_DMA2_CLK_ENABLE();
+  __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
+  /* DMA1_Stream5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
   /* DMA2_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);

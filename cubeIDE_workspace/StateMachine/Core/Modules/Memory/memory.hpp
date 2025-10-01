@@ -5,7 +5,7 @@
  *      Author: SNA1BP
  */
 
-//TO DO: CREATE_I8_ELEMENT to work with array init
+//TODO: CREATE_I8_ELEMENT to work with array init
 
 #ifndef MEMORY_MEMORY_HPP_
 #define MEMORY_MEMORY_HPP_

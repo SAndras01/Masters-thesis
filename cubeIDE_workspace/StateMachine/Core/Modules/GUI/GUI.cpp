@@ -7,13 +7,15 @@
 
 #include "GUI.hpp"
 
-void DrawGUI(SSD1305* display, MemorySlot memSlot, float refX, float refY, float refZ)
+void DrawGUI(	SSD1305* display, MemorySlot memSlot,
+		float refX, float refY, float refZ,
+		bool highlightMem, bool highlightFixed, bool highlightTracked)
 {
 	//MEM section -> x = 0..21
 	display->SetCursor(0, LINE_1_Y);
 	display->WriteString("MEM", Font_7x10, White);
 
-	DisplayMemslot(display, memSlot.number);
+	DisplayMemslot(display, memSlot.number, highlightMem);
 
 	DrawYline(display, 23, White);
 
@@ -25,9 +27,9 @@ void DrawGUI(SSD1305* display, MemorySlot memSlot, float refX, float refY, float
 	display->SetCursor(25, LINE_3_Y);
 	display->WriteString("Deg:", Font_7x10, White);
 
-	DisplayFixedAx(display, memSlot.getFixedAx());
-	DisplayTrackedAx(display, memSlot.getTrackedAx());
-	DisplaySetAngle(display, memSlot.setDegree);
+	DisplayFixedAx(display, memSlot.getFixedAx(), highlightFixed);
+	DisplayTrackedAx(display, memSlot.getTrackedAx(), highlightTracked);
+	DisplaySetAngle(display, memSlot.getSetDegree());
 
 	DrawYline(display, 76, White);
 
@@ -53,11 +55,13 @@ void DrawYline(SSD1305* display, uint8_t x, SSD1305_COLOR color)
 	}
 }
 
-void DisplayMemslot(SSD1305* display, uint8_t memslot)
+void DisplayMemslot(SSD1305* display, uint8_t memslot, bool highlight)
 {
+	SSD1305_COLOR color = (highlight) ? Black : White;
+
 	char memslotDigit = memslot + '0';
 	display->SetCursor(5, 12);
-	display->WriteChar(memslotDigit, Font_11x18, White);
+	display->WriteChar(memslotDigit, Font_11x18, color);
 }
 
 void DisplayFixedAx(SSD1305* display, axes fixedax, bool highlight)

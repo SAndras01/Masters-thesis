@@ -443,6 +443,8 @@ void EEPROMmemory::Init()
     uint16_t headerAddress = 0;
 
     uint16_t j = 0;
+
+    bool addressDuplicates = false;
     while(n < 440)
     {
     bool inDict = 0;
@@ -471,10 +473,20 @@ void EEPROMmemory::Init()
 		{
 			if(strcmp(dict[i].key, fetchedElement.key) == 0)
 			{
-				//Test if the address of the found element is invalid -> not divisible by 128 OR not greater than 55*128 OR larger than 64000
+			    //Check for address duplicates
+				addressDuplicates = false;
+			    for(uint16_t k = 1; k < i; k++)
+			    {
+					if (fetchedElement.start == dict[k].start)
+					{
+						addressDuplicates = true;
+					}
+			    }
+
+				//Test if the address of the found element is a duplicate or invalid -> not divisible by 128 OR not greater than 55*128 OR larger than 64000
 				if( (fetchedElement.start%128 != 0) || (fetchedElement.start < 55*128) || (fetchedElement.start >= 64000) )
 				{
-					HAL_Delay(1);
+					break;
 				}
 				else
 				{
@@ -519,6 +531,26 @@ void EEPROMmemory::Init()
 		n++;
     }//while(n < 440)
 
+    //Check for address duplicates
+    for(uint16_t k = 1; k < j; k++)
+    {
+		addressDuplicates = false;
+    	for(uint16_t L = 0; L < k; L++)
+    	{
+    		if(deletedDataRegions[k] == deletedDataRegions[L])
+    		{
+    			addressDuplicates = true;
+    			break;
+    		}
+    	}
+    	if(addressDuplicates) //delete it by making it an impossible address
+    	{
+    		deletedDataRegions[k] = 0xFFFF;
+    	}
+    }
+
+    uint16_t proposedDataStartAddress = 0;
+    bool AddrCcollision = true;
     j = 0;
     for(uint16_t i = 0; i<dictLen; i++)
     {
@@ -527,14 +559,33 @@ void EEPROMmemory::Init()
     	{
     		if(deletedHeaderRegions[j] != 0xFFFF)//Fill in the deleted regions
     		{
-    			// becaouse of the line "if( (fetchedElement.start%128 == 0) && (fetchedElement.start >= 55*128) )" this list might have "gaps"
+    			/*	becaouse of the line "if( (fetchedElement.start%128 == 0) && (fetchedElement.start >= 55*128) )" this list might have "gaps"
+    			*	duplicates were also marked by setting them to 0xFFFF
+    			*/
     			if(deletedDataRegions[j] != 0xFFFF)
     			{
     				dict[i].start = deletedDataRegions[j];
     			}
     			else
     			{
-    				dict[i].start = pageLen * (i+55);
+    				//give it an address, but first check if it collides with any previously given addresses
+    				proposedDataStartAddress = pageLen * (i+55); //one data per page
+    				uint16_t increment = 1;
+    				while(AddrCcollision)
+    				{
+    					for(uint16_t k = 0; k<i; k++)
+    					{
+    						if(dict[k].start == proposedDataStartAddress)
+    						{
+    							AddrCcollision = true;
+    							proposedDataStartAddress += increment * pageLen; //collision detected, shift it with one page then check again
+    							break;
+    						}
+    						AddrCcollision = false;
+    					}
+    					increment++;
+    				}
+    				dict[i].start = proposedDataStartAddress;
     				deleteRegion(I2Ccontroller, EEPROMAddress, dict[i].start, pageLen);
     			}
     			writeHeader(dict[i], deletedHeaderRegions[j]);
@@ -543,7 +594,24 @@ void EEPROMmemory::Init()
 
     		else
     		{
-				dict[i].start = pageLen * (i+55); //one data per page
+				//give it an address, but first check if it collides with any previously given addresses
+				proposedDataStartAddress = pageLen * (i+55); //one data per page
+				uint16_t increment = 1;
+				while(AddrCcollision)
+				{
+					for(uint16_t k = 0; k<i; k++)
+					{
+						if(dict[k].start == proposedDataStartAddress)
+						{
+							AddrCcollision = true;
+							proposedDataStartAddress += increment * pageLen; //collision detected, shift it with one page then check again
+							break;
+						}
+						AddrCcollision = false;
+					}
+					increment++;
+				}
+				dict[i].start = proposedDataStartAddress;
 				deleteRegion(I2Ccontroller, EEPROMAddress, dict[i].start, pageLen); // erase the occupied page
 
 				writeHeader(dict[i], firstEmptyHeaderAddress);

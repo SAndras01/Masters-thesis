@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (12.3.rel1)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -9,11 +9,15 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Drivers/Shellminator-3.0.1/src/GUI/subdir.mk
+-include Drivers/Shellminator-3.0.1/src/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
+-include Drivers/Commander-API-3.0.0/src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include Core/Modules/Stream/subdir.mk
 -include Core/Modules/StateMachine/subdir.mk
+-include Core/Modules/Serial/subdir.mk
 -include Core/Modules/SSD1305/subdir.mk
 -include Core/Modules/Numpad/subdir.mk
 -include Core/Modules/Memory/subdir.mk
@@ -28,9 +32,6 @@ endif
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
 endif
-ifneq ($(strip $(CCM_DEPS)),)
--include $(CCM_DEPS)
-endif
 ifneq ($(strip $(C_UPPER_DEPS)),)
 -include $(C_UPPER_DEPS)
 endif
@@ -42,12 +43,6 @@ ifneq ($(strip $(S_DEPS)),)
 endif
 ifneq ($(strip $(S_UPPER_DEPS)),)
 -include $(S_UPPER_DEPS)
-endif
-ifneq ($(strip $(CXXM_DEPS)),)
--include $(CXXM_DEPS)
-endif
-ifneq ($(strip $(C++M_DEPS)),)
--include $(C++M_DEPS)
 endif
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
@@ -91,8 +86,8 @@ all: main-build
 main-build: StateMachine.elf secondary-outputs
 
 # Tool invocations
-StateMachine.elf StateMachine.map: $(OBJS) $(USER_OBJS) D:\Projektek\Masters-thesis\cubeIDE_workspace\StateMachine\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "StateMachine.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Projektek\Masters-thesis\cubeIDE_workspace\StateMachine\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="StateMachine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+StateMachine.elf StateMachine.map: $(OBJS) $(USER_OBJS) C:\Users\SNA1BP\Documents\Masters-thesis\cubeIDE_workspace\StateMachine\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "StateMachine.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\SNA1BP\Documents\Masters-thesis\cubeIDE_workspace\StateMachine\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="StateMachine.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

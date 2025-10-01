@@ -18,9 +18,11 @@
 
 
 
-void DrawGUI(SSD1305* display, MemorySlot memslot, float refX, float refY, float refZ);
+void DrawGUI(	SSD1305* display, MemorySlot memSlot,
+				float refX, float refY, float refZ,
+				bool highlightMem = false, bool highlightFixed = false, bool highlightTracked = false);
 void DrawYline(SSD1305* display, uint8_t x, SSD1305_COLOR color);
-void DisplayMemslot(SSD1305* display, uint8_t memslot);
+void DisplayMemslot(SSD1305* display, uint8_t memslot, bool highlight = false);
 void DisplayFixedAx(SSD1305* display, axes fixedax, bool highlight = false);
 void DisplayTrackedAx(SSD1305* display, axes trackedax, bool highlight = false);
 void DisplaySetAngle(SSD1305* display, uint16_t setdeg, int selectedDigit = -1);

@@ -41,11 +41,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 
 uint8_t adcValue2Digit()
 {
-	if(adc_buff_read > 4000)
+	if(adc_buff_read > 3000)
 	{
 		return 3;
 	}
-	else if(adc_buff_read > 2000)
+	else if(adc_buff_read > 1800)
 	{
 		return 2;
 	}

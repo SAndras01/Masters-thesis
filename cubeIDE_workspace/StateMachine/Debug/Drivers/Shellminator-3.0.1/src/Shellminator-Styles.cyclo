@@ -1,0 +1,11 @@
+Shellminator-Styles.cpp:36:6:void Shellminator::hideCursor()	1
+Shellminator-Styles.cpp:42:6:static void Shellminator::hideCursor(Stream*)	2
+Shellminator-Styles.cpp:52:6:void Shellminator::showCursor()	1
+Shellminator-Styles.cpp:58:6:static void Shellminator::showCursor(Stream*)	2
+Shellminator-Styles.cpp:68:6:void Shellminator::clear()	1
+Shellminator-Styles.cpp:75:6:static void Shellminator::setFormat(Stream*, int)	2
+Shellminator-Styles.cpp:85:6:static void Shellminator::setFormat(Stream*, int, int)	2
+Shellminator-Styles.cpp:97:6:static void Shellminator::setFormat(Stream*, int, int, int)	2
+Shellminator-Styles.cpp:111:6:void Shellminator::format(Stream*, int)	2
+Shellminator-Styles.cpp:117:6:void Shellminator::format(Stream*, int, int)	2
+Shellminator-Styles.cpp:123:6:void Shellminator::format(Stream*, int, int, int)	2

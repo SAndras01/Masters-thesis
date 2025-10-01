@@ -1,0 +1,4 @@
+Shellminator-MouseInterface.cpp:36:6:void Shellminator::mouseBegin()	1
+Shellminator-MouseInterface.cpp:47:6:void Shellminator::mouseEnd()	1
+Shellminator-MouseInterface.cpp:56:6:void Shellminator::ShellminatorMouseEventParserState(char)	5
+Shellminator-MouseInterface.cpp:95:6:void Shellminator::parseMouseData()	13

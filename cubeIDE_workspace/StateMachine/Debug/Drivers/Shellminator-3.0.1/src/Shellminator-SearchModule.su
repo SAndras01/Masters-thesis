@@ -1,0 +1,4 @@
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:36:6:void Shellminator::historySearchBackward()	24	static
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:86:6:void Shellminator::historySearchForward()	24	static
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:117:6:void Shellminator::redrawHistorySearch()	40	static
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:215:5:int Shellminator::substring(char*, char*)	40	static

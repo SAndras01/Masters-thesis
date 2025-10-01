@@ -1,0 +1,1 @@
+Shellminator-QR-Code-Module.cpp:178:10:void ShellminatorQR::generate(Stream*, const char*, qrcodegen_Ecc)	2

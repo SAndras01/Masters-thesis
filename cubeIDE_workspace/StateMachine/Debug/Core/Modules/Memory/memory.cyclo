@@ -1,34 +1,34 @@
-C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
-../Core/Modules/Memory/memory.cpp:11:19:HAL_StatusTypeDef writeMultiPage(I2C_HandleTypeDef*, uint8_t, uint16_t, uint8_t*, uint16_t, uint8_t)	5
-../Core/Modules/Memory/memory.cpp:52:19:HAL_StatusTypeDef deleteRegion(I2C_HandleTypeDef*, uint8_t, uint16_t, uint16_t, uint8_t)	6
-../Core/Modules/Memory/memory.cpp:98:1:Memory::Memory(memoryElement*, uint16_t, MemoryErrorCallback_t, Stream*)	4
-../Core/Modules/Memory/memory.cpp:112:6:void Memory::attachErrorCallback(MemoryErrorCallback_t)	1
-../Core/Modules/Memory/memory.cpp:114:6:void Memory::attachStream(Stream*)	1
-../Core/Modules/Memory/memory.cpp:116:6:bool Memory::getValue(const char*, uint8_t*)	4
-../Core/Modules/Memory/memory.cpp:132:6:bool Memory::getValue(const char*, uint16_t*)	4
-../Core/Modules/Memory/memory.cpp:148:6:bool Memory::getValue(const char*, uint32_t*)	4
-../Core/Modules/Memory/memory.cpp:164:6:bool Memory::getValue(const char*, const char*)	4
-../Core/Modules/Memory/memory.cpp:182:6:bool Memory::setValue(const char*, uint8_t)	4
-../Core/Modules/Memory/memory.cpp:199:6:bool Memory::setValue(const char*, uint16_t)	4
-../Core/Modules/Memory/memory.cpp:216:6:bool Memory::setValue(const char*, uint32_t)	4
-../Core/Modules/Memory/memory.cpp:233:6:bool Memory::setValue(const char*, const char*)	4
-../Core/Modules/Memory/memory.cpp:251:6:void Memory::listAll(Stream*)	8
-../Core/Modules/Memory/memory.cpp:302:6:bool memoryElement::deleteData()	1
-../Core/Modules/Memory/memory.cpp:304:6:void memoryElement::print()	6
-../Core/Modules/Memory/memory.cpp:347:6:void memoryElement::operator=(uint8_t)	1
-../Core/Modules/Memory/memory.cpp:348:6:void memoryElement::operator=(uint16_t)	1
-../Core/Modules/Memory/memory.cpp:349:6:void memoryElement::operator=(uint32_t)	1
-../Core/Modules/Memory/memory.cpp:350:6:void memoryElement::operator=(const char*)	1
-../Core/Modules/Memory/memory.cpp:352:1:EEPROMmemory::EEPROMmemory(memoryElement*, uint16_t, uint8_t, I2C_HandleTypeDef*, MemoryErrorCallback_t, Stream*)	1
-../Core/Modules/Memory/memory.cpp:360:19:HAL_StatusTypeDef EEPROMmemory::writeHeader(memoryElement, uint16_t)	3
-../Core/Modules/Memory/memory.hpp:102:8:memoryElement::memoryElement()	1
-../Core/Modules/Memory/memory.cpp:385:15:memoryElement EEPROMmemory::readHeader(uint16_t)	2
-../Core/Modules/Memory/memory.cpp:418:6:void EEPROMmemory::Init()	23
-../Core/Modules/Memory/memory.cpp:560:6:virtual bool EEPROMmemory::_getValue(uint32_t, void*, elementType)	7
-../Core/Modules/Memory/memory.cpp:597:6:void EEPROMmemory::updateHeader(uint32_t, elementType)	7
-../Core/Modules/Memory/memory.cpp:633:6:virtual bool EEPROMmemory::_setValue(uint32_t, void*, elementType)	7
-../Core/Modules/Memory/memory.cpp:675:6:virtual bool EEPROMmemory::deleteElementData(const char*)	6
-../Core/Modules/Memory/memory.cpp:698:15:virtual memoryElement EEPROMmemory::operator[](const char*)	4
-../Core/Modules/Memory/memory.cpp:714:1:void __static_initialization_and_destruction_0(int, int)	5
-../Core/Modules/Memory/memory.cpp:714:1:cpp)	1
-../Core/Modules/Memory/memory.cpp:714:1:cpp)	1
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
+memory.cpp:11:19:HAL_StatusTypeDef writeMultiPage(I2C_HandleTypeDef*, uint8_t, uint16_t, uint8_t*, uint16_t, uint8_t)	5
+memory.cpp:52:19:HAL_StatusTypeDef deleteRegion(I2C_HandleTypeDef*, uint8_t, uint16_t, uint16_t, uint8_t)	6
+memory.cpp:98:1:Memory::Memory(memoryElement*, uint16_t, MemoryErrorCallback_t, Stream*)	4
+memory.cpp:112:6:void Memory::attachErrorCallback(MemoryErrorCallback_t)	1
+memory.cpp:114:6:void Memory::attachStream(Stream*)	1
+memory.cpp:116:6:bool Memory::getValue(const char*, uint8_t*)	4
+memory.cpp:132:6:bool Memory::getValue(const char*, uint16_t*)	4
+memory.cpp:148:6:bool Memory::getValue(const char*, uint32_t*)	4
+memory.cpp:164:6:bool Memory::getValue(const char*, const char*)	4
+memory.cpp:182:6:bool Memory::setValue(const char*, uint8_t)	4
+memory.cpp:199:6:bool Memory::setValue(const char*, uint16_t)	4
+memory.cpp:216:6:bool Memory::setValue(const char*, uint32_t)	4
+memory.cpp:233:6:bool Memory::setValue(const char*, const char*)	4
+memory.cpp:251:6:void Memory::listAll(Stream*)	8
+memory.cpp:302:6:bool memoryElement::deleteData()	1
+memory.cpp:304:6:void memoryElement::print()	6
+memory.cpp:347:6:void memoryElement::operator=(uint8_t)	1
+memory.cpp:348:6:void memoryElement::operator=(uint16_t)	1
+memory.cpp:349:6:void memoryElement::operator=(uint32_t)	1
+memory.cpp:350:6:void memoryElement::operator=(const char*)	1
+memory.cpp:352:1:EEPROMmemory::EEPROMmemory(memoryElement*, uint16_t, uint8_t, I2C_HandleTypeDef*, MemoryErrorCallback_t, Stream*)	1
+memory.cpp:360:19:HAL_StatusTypeDef EEPROMmemory::writeHeader(memoryElement, uint16_t)	3
+memory.hpp:102:8:memoryElement::memoryElement()	1
+memory.cpp:385:15:memoryElement EEPROMmemory::readHeader(uint16_t)	2
+memory.cpp:418:6:void EEPROMmemory::Init()	35
+memory.cpp:628:6:virtual bool EEPROMmemory::_getValue(uint32_t, void*, elementType)	7
+memory.cpp:665:6:void EEPROMmemory::updateHeader(uint32_t, elementType)	7
+memory.cpp:701:6:virtual bool EEPROMmemory::_setValue(uint32_t, void*, elementType)	7
+memory.cpp:743:6:virtual bool EEPROMmemory::deleteElementData(const char*)	6
+memory.cpp:766:15:virtual memoryElement EEPROMmemory::operator[](const char*)	4
+memory.cpp:782:1:void __static_initialization_and_destruction_0(int, int)	5
+memory.cpp:782:1:cpp)	1
+memory.cpp:782:1:cpp)	1

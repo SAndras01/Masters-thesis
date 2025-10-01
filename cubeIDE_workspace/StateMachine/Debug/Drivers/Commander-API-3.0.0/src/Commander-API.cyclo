@@ -1,0 +1,59 @@
+Commander-API.cpp:43:6:void Commander::attachTreeFunction(Commander::systemCommand_t*, uint32_t)	4
+Commander-API.cpp:62:6:bool Commander::init()	1
+Commander-API.cpp:66:6:bool Commander::enablePipeModuleFunc(char*, int, commanderPipeChannel*)	3
+Commander-API.cpp:87:6:bool Commander::executeCommand(const char*)	29
+Commander-API.cpp:399:6:bool Commander::execute(const char*, Stream*, CommandCaller*)	5
+Commander-API.cpp:434:6:void Commander::attachDebugChannel(Stream*)	1
+Commander-API.cpp:438:6:static void Commander::setDebugLevel(Commander::debugLevel_t)	1
+Commander-API.cpp:442:6:void Commander::printHelp(Stream*, bool, bool)	7
+Commander-API.cpp:495:5:int Commander::hasChar(const char*, char, bool)	6
+Commander-API.cpp:527:5:int Commander::hasChar(const char*, char, int, bool)	3
+Commander-API.cpp:555:6:void Commander::enableFormatting()	1
+Commander-API.cpp:558:6:void Commander::disableFormatting()	1
+Commander-API.cpp:562:6:static void Commander::printArgumentError(Stream*)	2
+Commander-API.cpp:575:6:static void Commander::attachVariablesFunction(Commander::systemVariable_t*, uint32_t)	2
+Commander-API.cpp:585:30:static Commander::systemVariable_t* Commander::getSystemVariable(const char*)	1
+Commander-API.cpp:589:6:static void Commander::printSystemVariable(Stream*, const char*, int)	7
+Commander-API.cpp:622:6:static void Commander::printSystemVariables(Stream*)	8
+Commander-API.cpp:666:6:static bool Commander::inString(const char*, int)	6
+Commander-API.cpp:704:6:void Commander::update(char*, int, Stream*)	10
+Commander-API.cpp:768:5:static int Commander::floatToString(float, char*, int)	6
+Commander-API.cpp:829:6:void Commander::printBrokenPipe()	10
+Commander-API.cpp:899:6:bool Commander::commandExists(const char*, Commander::systemCommand_t**)	3
+Commander-API.cpp:914:13:const char* Commander::getHint(int, bool)	5
+Commander-API.cpp:928:5:int Commander::generateHint(const char*, char*, int)	10
+Commander-Database.hpp:230:1:CommanderDatabase<T>::CommanderDatabase(CommanderDatabase<T>::dataRecord_t*, uint16_t) [with T = Commander::API_t]	1
+Commander-Database.hpp:250:6:void CommanderDatabase<T>::setDebugLevel(CommanderDatabase<T>::debugLevel_t) [with T = Commander::API_t]	1
+Commander-Database.hpp:245:6:void CommanderDatabase<T>::attachDebugChannel(Stream*) [with T = Commander::API_t]	1
+Commander-Database.hpp:492:6:bool CommanderDatabase<T>::init() [with T = Commander::API_t]	17
+Commander-Database.hpp:592:48:CommanderDatabase<T>::dataRecord_t* CommanderDatabase<T>::operator[](const char*) [with T = Commander::API_t]	9
+Commander-Database.hpp:638:10:uint16_t CommanderDatabase<T>::getSize() [with T = Commander::API_t]	1
+Commander-Database.hpp:275:10:uint16_t CommanderDatabase<T>::findIndexByPlace(uint16_t) [with T = Commander::API_t]	3
+Commander-Database.hpp:580:48:CommanderDatabase<T>::dataRecord_t* CommanderDatabase<T>::operator[](int) [with T = Commander::API_t]	3
+Commander-Database.hpp:215:1:CommanderDatabase<T>::CommanderDatabase() [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:230:1:CommanderDatabase<T>::CommanderDatabase(CommanderDatabase<T>::dataRecord_t*, uint16_t) [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:250:6:void CommanderDatabase<T>::setDebugLevel(CommanderDatabase<T>::debugLevel_t) [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:492:6:bool CommanderDatabase<T>::init() [with T = Commander::systemVariableData_t]	17
+Commander-Database.hpp:592:48:CommanderDatabase<T>::dataRecord_t* CommanderDatabase<T>::operator[](const char*) [with T = Commander::systemVariableData_t]	9
+Commander-Database.hpp:638:10:uint16_t CommanderDatabase<T>::getSize() [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:580:48:CommanderDatabase<T>::dataRecord_t* CommanderDatabase<T>::operator[](int) [with T = Commander::systemVariableData_t]	3
+Commander-Database.hpp:710:5:int CommanderDatabase<T>::completeFragment(const char*, char*, int) [with T = Commander::API_t]	14
+Commander-Database.hpp:255:5:int CommanderDatabase<T>::strcmpElementElementRegular(CommanderDatabase<T>::dataRecord_t*, CommanderDatabase<T>::dataRecord_t*) [with T = Commander::API_t]	1
+Commander-Database.hpp:260:5:int CommanderDatabase<T>::strcmpElementCharArrayRegular(CommanderDatabase<T>::dataRecord_t*, const char*) [with T = Commander::API_t]	1
+Commander-Database.hpp:265:5:int CommanderDatabase<T>::strncmpElementElementRegular(CommanderDatabase<T>::dataRecord_t*, CommanderDatabase<T>::dataRecord_t*, size_t) [with T = Commander::API_t]	1
+Commander-Database.hpp:270:5:int CommanderDatabase<T>::strncmpElementCharArrayRegular(CommanderDatabase<T>::dataRecord_t*, const char*, size_t) [with T = Commander::API_t]	1
+Commander-Database.hpp:322:6:bool CommanderDatabase<T>::optimizeDataTree() [with T = Commander::API_t]	26
+Commander-Database.hpp:255:5:int CommanderDatabase<T>::strcmpElementElementRegular(CommanderDatabase<T>::dataRecord_t*, CommanderDatabase<T>::dataRecord_t*) [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:260:5:int CommanderDatabase<T>::strcmpElementCharArrayRegular(CommanderDatabase<T>::dataRecord_t*, const char*) [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:265:5:int CommanderDatabase<T>::strncmpElementElementRegular(CommanderDatabase<T>::dataRecord_t*, CommanderDatabase<T>::dataRecord_t*, size_t) [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:270:5:int CommanderDatabase<T>::strncmpElementCharArrayRegular(CommanderDatabase<T>::dataRecord_t*, const char*, size_t) [with T = Commander::systemVariableData_t]	1
+Commander-Database.hpp:322:6:bool CommanderDatabase<T>::optimizeDataTree() [with T = Commander::systemVariableData_t]	26
+Commander-Database.hpp:643:5:int CommanderDatabase<T>::strcmpDB(const char*, const char*) [with T = Commander::API_t]	5
+Commander-Database.hpp:673:5:int CommanderDatabase<T>::strncmpDB(const char*, const char*, size_t) [with T = Commander::API_t]	6
+Commander-Database.hpp:299:6:void CommanderDatabase<T>::swapElements(uint16_t, uint16_t) [with T = Commander::API_t]	3
+Commander-Database.hpp:643:5:int CommanderDatabase<T>::strcmpDB(const char*, const char*) [with T = Commander::systemVariableData_t]	5
+Commander-Database.hpp:673:5:int CommanderDatabase<T>::strncmpDB(const char*, const char*, size_t) [with T = Commander::systemVariableData_t]	6
+Commander-Database.hpp:299:6:void CommanderDatabase<T>::swapElements(uint16_t, uint16_t) [with T = Commander::systemVariableData_t]	3
+Commander-Database.hpp:275:10:uint16_t CommanderDatabase<T>::findIndexByPlace(uint16_t) [with T = Commander::systemVariableData_t]	3
+Commander-API.cpp:1016:1:void __static_initialization_and_destruction_0(int, int)	3
+Commander-API.cpp:1016:1:cpp)	1

@@ -1,0 +1,19 @@
+Commander-Arguments.cpp:3:1:Argument::Argument(const char*, int)	2
+Commander-Arguments.cpp:33:1:Argument::Argument(const char*, char)	2
+Commander-Arguments.cpp:63:1:Argument::Argument(const char*, char, const char*)	2
+Commander-Arguments.cpp:92:5:int Argument::findShortName()	17
+Commander-Arguments.cpp:175:5:int Argument::findLongName()	15
+Commander-Arguments.cpp:303:5:int Argument::findByPlace()	15
+Commander-Arguments.cpp:377:5:int Argument::findStart()	5
+Commander-Arguments.cpp:419:6:bool Argument::parseInt()	5
+Commander-Arguments.cpp:470:6:bool Argument::parseFloat()	9
+Commander-Arguments.cpp:520:6:bool Argument::parseStringFunction(char*, int)	23
+Commander-Arguments.cpp:674:6:bool Argument::find()	1
+Commander-Arguments.cpp:687:1:Argument::operator int()	2
+Commander-Arguments.cpp:697:1:Argument::operator float()	2
+Commander-Arguments.cpp:707:1:Argument::operator bool()	1
+Commander-Arguments.cpp:714:1:Argument::operator char*()	3
+Commander-Arguments.cpp:727:6:bool Argument::isFound()	1
+Commander-Arguments.cpp:732:5:int Argument::substring(char*, char*)	5
+Commander-Arguments.cpp:764:6:bool Argument::inString(int)	5
+Commander-Arguments.cpp:790:30:Commander::systemVariable_t* Argument::getSystemVariable()	1

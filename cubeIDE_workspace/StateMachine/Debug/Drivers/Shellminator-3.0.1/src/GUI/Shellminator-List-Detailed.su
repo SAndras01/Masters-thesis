@@ -1,0 +1,5 @@
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:78:18:virtual void ShellminatorScreen::setOrigin(int, int)	24	static
+../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:36:1:ShellminatorListDetailed::ShellminatorListDetailed()	16	static
+../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:47:1:ShellminatorListDetailed::ShellminatorListDetailed(const char**, const char**, int, const char*)	24	static
+../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:63:6:virtual void ShellminatorListDetailed::init(Shellminator*, Stream*)	32	static
+../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:95:6:virtual void ShellminatorListDetailed::printExtra(int, bool)	40	static
