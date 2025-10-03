@@ -1,39 +1,39 @@
-SSD1305.cpp:10:1:SSD1305::SSD1305(I2C_HandleTypeDef*, uint8_t, uint8_t, uint8_t)	1
-SSD1305.cpp:22:6:bool SSD1305::Init(int8_t)	3
-SSD1305.cpp:57:9:uint8_t SSD1305::GetHeight()	1
-SSD1305.cpp:58:9:uint8_t SSD1305::GetWidth()	1
-SSD1305.cpp:60:19:HAL_StatusTypeDef SSD1305::WriteBitmapToScreen()	2
-SSD1305.cpp:78:19:HAL_StatusTypeDef SSD1305::WriteBitmapToScreen(uint8_t*, size_t)	2
-SSD1305.cpp:94:6:void SSD1305::FillBitmapBuffer(SSD1305_COLOR)	4
-SSD1305.cpp:104:19:HAL_StatusTypeDef SSD1305::Fill(SSD1305_COLOR)	7
-SSD1305.cpp:138:6:bool SSD1305::DrawPixel(uint8_t, uint8_t, SSD1305_COLOR)	4
-SSD1305.cpp:160:6:char SSD1305::WriteChar(char, FontDef, SSD1305_COLOR)	6
-SSD1305.cpp:197:6:bool SSD1305::WriteString(const char*, FontDef, SSD1305_COLOR)	3
-SSD1305.cpp:216:6:void SSD1305::SetCursor(uint8_t, uint8_t)	1
-SSD1305.cpp:227:19:HAL_StatusTypeDef SSD1305::SendCommand(uint8_t)	1
-SSD1305.cpp:232:19:HAL_StatusTypeDef SSD1305::SetLowerColumnStartAddress(uint8_t)	2
-SSD1305.cpp:242:19:HAL_StatusTypeDef SSD1305::SetHigherColumnStartAddress(uint8_t)	2
-SSD1305.cpp:252:19:HAL_StatusTypeDef SSD1305::SetMemoryAddressingMode(MemoryAddressingMode)	1
-SSD1305.cpp:260:19:HAL_StatusTypeDef SSD1305::SetColumnAddress(uint8_t, uint8_t)	3
-SSD1305.cpp:278:19:HAL_StatusTypeDef SSD1305::SetPageAddress(uint8_t, uint8_t)	3
-SSD1305.cpp:296:19:HAL_StatusTypeDef SSD1305::SetDisplayStartLine(uint8_t)	2
-SSD1305.cpp:308:19:HAL_StatusTypeDef SSD1305::SetContrastControllBANK0(uint8_t)	1
-SSD1305.cpp:316:19:HAL_StatusTypeDef SSD1305::SetBrightnessForAreaColorBanks(uint8_t)	1
-SSD1305.cpp:324:19:HAL_StatusTypeDef SSD1305::SetLUT(uint8_t, uint8_t, uint8_t, uint8_t)	9
-SSD1305.cpp:363:19:HAL_StatusTypeDef SSD1305::SetSegmentReMap(SegmentRemap)	1
-SSD1305.cpp:370:19:HAL_StatusTypeDef SSD1305::EntireDisplayON(DisplayONMode)	1
-SSD1305.cpp:377:19:HAL_StatusTypeDef SSD1305::SetNormalInverse(DisplayInverseMode)	1
-SSD1305.cpp:384:19:HAL_StatusTypeDef SSD1305::SetMultiplexRatio(uint8_t)	2
-SSD1305.cpp:397:19:HAL_StatusTypeDef SSD1305::SetDimMode(uint8_t, uint8_t)	1
-SSD1305.cpp:407:19:HAL_StatusTypeDef SSD1305::SetDisplayON_OFF(DisplayMode)	1
-SSD1305.cpp:414:19:HAL_StatusTypeDef SSD1305::SetPageStartAddress(uint8_t)	2
-SSD1305.cpp:426:19:HAL_StatusTypeDef SSD1305::SetComOutputScanDirection(ComOutputScanDirection)	1
-SSD1305.cpp:433:19:HAL_StatusTypeDef SSD1305::SetDisplayOffset(uint8_t)	2
-SSD1305.cpp:446:19:HAL_StatusTypeDef SSD1305::SetDisplayClockDivideRatio_OscillatorFrequency(uint8_t, uint8_t)	3
-SSD1305.cpp:464:19:HAL_StatusTypeDef SSD1305::SetColorAndPowerMode(ColorMode, PowerMode)	1
-SSD1305.cpp:472:19:HAL_StatusTypeDef SSD1305::SetPrechargePeriod(uint8_t, uint8_t)	3
-SSD1305.cpp:490:19:HAL_StatusTypeDef SSD1305::SetCOMPinsHWConfig(COMPinConfig, EnableCOMRemap)	1
-SSD1305.cpp:498:19:HAL_StatusTypeDef SSD1305::SetVcomhDeselectLevel(VcomhDeselectLevel)	1
-SSD1305.cpp:506:19:HAL_StatusTypeDef SSD1305::EnterReadModifyWrite()	1
-SSD1305.cpp:513:19:HAL_StatusTypeDef SSD1305::NOP()	1
-SSD1305.cpp:520:19:HAL_StatusTypeDef SSD1305::ExitReadModifyWrite()	1
+../Core/Modules/SSD1305/SSD1305.cpp:10:1:SSD1305::SSD1305(I2C_HandleTypeDef*, uint8_t, uint8_t, uint8_t)	1
+../Core/Modules/SSD1305/SSD1305.cpp:22:6:bool SSD1305::Init(int8_t)	3
+../Core/Modules/SSD1305/SSD1305.cpp:57:9:uint8_t SSD1305::GetHeight()	1
+../Core/Modules/SSD1305/SSD1305.cpp:58:9:uint8_t SSD1305::GetWidth()	1
+../Core/Modules/SSD1305/SSD1305.cpp:60:19:HAL_StatusTypeDef SSD1305::WriteBitmapToScreen()	2
+../Core/Modules/SSD1305/SSD1305.cpp:78:19:HAL_StatusTypeDef SSD1305::WriteBitmapToScreen(uint8_t*, size_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:94:6:void SSD1305::FillBitmapBuffer(SSD1305_COLOR)	4
+../Core/Modules/SSD1305/SSD1305.cpp:104:19:HAL_StatusTypeDef SSD1305::Fill(SSD1305_COLOR)	7
+../Core/Modules/SSD1305/SSD1305.cpp:138:6:bool SSD1305::DrawPixel(uint8_t, uint8_t, SSD1305_COLOR)	4
+../Core/Modules/SSD1305/SSD1305.cpp:160:6:char SSD1305::WriteChar(char, FontDef, SSD1305_COLOR)	6
+../Core/Modules/SSD1305/SSD1305.cpp:197:6:bool SSD1305::WriteString(const char*, FontDef, SSD1305_COLOR)	3
+../Core/Modules/SSD1305/SSD1305.cpp:216:6:void SSD1305::SetCursor(uint8_t, uint8_t)	1
+../Core/Modules/SSD1305/SSD1305.cpp:227:19:HAL_StatusTypeDef SSD1305::SendCommand(uint8_t)	1
+../Core/Modules/SSD1305/SSD1305.cpp:232:19:HAL_StatusTypeDef SSD1305::SetLowerColumnStartAddress(uint8_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:242:19:HAL_StatusTypeDef SSD1305::SetHigherColumnStartAddress(uint8_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:252:19:HAL_StatusTypeDef SSD1305::SetMemoryAddressingMode(MemoryAddressingMode)	1
+../Core/Modules/SSD1305/SSD1305.cpp:260:19:HAL_StatusTypeDef SSD1305::SetColumnAddress(uint8_t, uint8_t)	3
+../Core/Modules/SSD1305/SSD1305.cpp:278:19:HAL_StatusTypeDef SSD1305::SetPageAddress(uint8_t, uint8_t)	3
+../Core/Modules/SSD1305/SSD1305.cpp:296:19:HAL_StatusTypeDef SSD1305::SetDisplayStartLine(uint8_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:308:19:HAL_StatusTypeDef SSD1305::SetContrastControllBANK0(uint8_t)	1
+../Core/Modules/SSD1305/SSD1305.cpp:316:19:HAL_StatusTypeDef SSD1305::SetBrightnessForAreaColorBanks(uint8_t)	1
+../Core/Modules/SSD1305/SSD1305.cpp:324:19:HAL_StatusTypeDef SSD1305::SetLUT(uint8_t, uint8_t, uint8_t, uint8_t)	9
+../Core/Modules/SSD1305/SSD1305.cpp:363:19:HAL_StatusTypeDef SSD1305::SetSegmentReMap(SegmentRemap)	1
+../Core/Modules/SSD1305/SSD1305.cpp:370:19:HAL_StatusTypeDef SSD1305::EntireDisplayON(DisplayONMode)	1
+../Core/Modules/SSD1305/SSD1305.cpp:377:19:HAL_StatusTypeDef SSD1305::SetNormalInverse(DisplayInverseMode)	1
+../Core/Modules/SSD1305/SSD1305.cpp:384:19:HAL_StatusTypeDef SSD1305::SetMultiplexRatio(uint8_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:397:19:HAL_StatusTypeDef SSD1305::SetDimMode(uint8_t, uint8_t)	1
+../Core/Modules/SSD1305/SSD1305.cpp:407:19:HAL_StatusTypeDef SSD1305::SetDisplayON_OFF(DisplayMode)	1
+../Core/Modules/SSD1305/SSD1305.cpp:414:19:HAL_StatusTypeDef SSD1305::SetPageStartAddress(uint8_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:426:19:HAL_StatusTypeDef SSD1305::SetComOutputScanDirection(ComOutputScanDirection)	1
+../Core/Modules/SSD1305/SSD1305.cpp:433:19:HAL_StatusTypeDef SSD1305::SetDisplayOffset(uint8_t)	2
+../Core/Modules/SSD1305/SSD1305.cpp:446:19:HAL_StatusTypeDef SSD1305::SetDisplayClockDivideRatio_OscillatorFrequency(uint8_t, uint8_t)	3
+../Core/Modules/SSD1305/SSD1305.cpp:464:19:HAL_StatusTypeDef SSD1305::SetColorAndPowerMode(ColorMode, PowerMode)	1
+../Core/Modules/SSD1305/SSD1305.cpp:472:19:HAL_StatusTypeDef SSD1305::SetPrechargePeriod(uint8_t, uint8_t)	3
+../Core/Modules/SSD1305/SSD1305.cpp:490:19:HAL_StatusTypeDef SSD1305::SetCOMPinsHWConfig(COMPinConfig, EnableCOMRemap)	1
+../Core/Modules/SSD1305/SSD1305.cpp:498:19:HAL_StatusTypeDef SSD1305::SetVcomhDeselectLevel(VcomhDeselectLevel)	1
+../Core/Modules/SSD1305/SSD1305.cpp:506:19:HAL_StatusTypeDef SSD1305::EnterReadModifyWrite()	1
+../Core/Modules/SSD1305/SSD1305.cpp:513:19:HAL_StatusTypeDef SSD1305::NOP()	1
+../Core/Modules/SSD1305/SSD1305.cpp:520:19:HAL_StatusTypeDef SSD1305::ExitReadModifyWrite()	1

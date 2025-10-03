@@ -1,21 +1,21 @@
-gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
-state_machine.hpp:31:18:virtual void State::onEnter(StateMachine*)	1
-state_machine.hpp:32:18:virtual void State::onExit(StateMachine*)	1
-state_machine.cpp:10:10:uint16_t digits2num(uint8_t*)	2
-state_machine.cpp:21:6:bool getMemorySlotFromEEPROM(MemorySlot*, uint8_t, EEPROMmemory*)	1
-state_machine.cpp:51:6:bool saveMemorySlotToEEPROM(MemorySlot, EEPROMmemory*)	1
-state_machine.cpp:71:1:StateMachine::StateMachine(State*, State_Settings*, State_SelectMemory*, SSD1305*, Accelerometer*, EEPROMmemory*)	1
-state_machine.cpp:85:6:void StateMachine::changeState(State*)	3
-state_machine.cpp:100:6:void StateMachine::run()	2
-state_machine.hpp:28:7:constexpr State::State()	1
-state_machine.cpp:111:1:State_Settings::State_Settings()	1
-state_machine.cpp:115:6:virtual void State_Settings::onEnter(StateMachine*)	1
-state_machine.cpp:124:6:virtual void State_Settings::run(StateMachine*)	33
-state_machine.cpp:276:6:virtual void State_Settings::onExit(StateMachine*)	1
-state_machine.cpp:286:1:State_SelectMemory::State_SelectMemory()	1
-state_machine.cpp:288:6:virtual void State_SelectMemory::onEnter(StateMachine*)	1
-state_machine.cpp:296:6:virtual void State_SelectMemory::run(StateMachine*)	6
-state_machine.cpp:320:6:virtual void State_SelectMemory::onExit(StateMachine*)	1
-state_machine.cpp:323:1:void __static_initialization_and_destruction_0(int, int)	5
-state_machine.cpp:323:1:cpp)	1
-state_machine.cpp:323:1:cpp)	1
+C:\ST\STM32CubeIDE_1.16.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623\tools\arm-none-eabi\include\c++\12.3.1\arm-none-eabi\thumb\v7e-m+fp\hard\bits\gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
+../Core/Modules/StateMachine/state_machine.hpp:31:18:virtual void State::onEnter(StateMachine*)	1
+../Core/Modules/StateMachine/state_machine.hpp:32:18:virtual void State::onExit(StateMachine*)	1
+../Core/Modules/StateMachine/state_machine.cpp:10:10:uint16_t digits2num(uint8_t*)	2
+../Core/Modules/StateMachine/state_machine.cpp:21:6:bool getMemorySlotFromEEPROM(MemorySlot*, uint8_t, EEPROMmemory*)	1
+../Core/Modules/StateMachine/state_machine.cpp:51:6:bool saveMemorySlotToEEPROM(MemorySlot, EEPROMmemory*)	1
+../Core/Modules/StateMachine/state_machine.cpp:71:1:StateMachine::StateMachine(State*, State_Settings*, State_SelectMemory*, SSD1305*, Accelerometer*, EEPROMmemory*)	1
+../Core/Modules/StateMachine/state_machine.cpp:85:6:void StateMachine::changeState(State*)	3
+../Core/Modules/StateMachine/state_machine.cpp:100:6:void StateMachine::run()	2
+../Core/Modules/StateMachine/state_machine.hpp:28:7:constexpr State::State()	1
+../Core/Modules/StateMachine/state_machine.cpp:111:1:State_Settings::State_Settings()	1
+../Core/Modules/StateMachine/state_machine.cpp:115:6:virtual void State_Settings::onEnter(StateMachine*)	1
+../Core/Modules/StateMachine/state_machine.cpp:124:6:virtual void State_Settings::run(StateMachine*)	33
+../Core/Modules/StateMachine/state_machine.cpp:276:6:virtual void State_Settings::onExit(StateMachine*)	1
+../Core/Modules/StateMachine/state_machine.cpp:286:1:State_SelectMemory::State_SelectMemory()	1
+../Core/Modules/StateMachine/state_machine.cpp:288:6:virtual void State_SelectMemory::onEnter(StateMachine*)	1
+../Core/Modules/StateMachine/state_machine.cpp:296:6:virtual void State_SelectMemory::run(StateMachine*)	6
+../Core/Modules/StateMachine/state_machine.cpp:320:6:virtual void State_SelectMemory::onExit(StateMachine*)	1
+../Core/Modules/StateMachine/state_machine.cpp:323:1:void __static_initialization_and_destruction_0(int, int)	5
+../Core/Modules/StateMachine/state_machine.cpp:323:1:cpp)	1
+../Core/Modules/StateMachine/state_machine.cpp:323:1:cpp)	1
