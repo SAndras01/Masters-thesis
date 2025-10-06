@@ -1,5 +1,6 @@
 "./Core/Modules/Accelerometer/accelerometer.o"
 "./Core/Modules/GUI/GUI.o"
+"./Core/Modules/ICM2098/ICM2098.o"
 "./Core/Modules/Memory/memory.o"
 "./Core/Modules/Memory/memorySlot.o"
 "./Core/Modules/Numpad/numpad.o"

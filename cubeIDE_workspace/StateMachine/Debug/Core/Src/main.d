@@ -53,7 +53,9 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp \
  D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-VT100-Commands.hpp \
  D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Serial/Serial.hpp
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Serial/Serial.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/ICM2098/ICM2098.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/ICM2098/ICM2098_Registers.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -110,3 +112,5 @@ D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-
 D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-VT100-Commands.hpp:
 D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp:
 D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Serial/Serial.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/ICM2098/ICM2098.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/ICM2098/ICM2098_Registers.hpp:

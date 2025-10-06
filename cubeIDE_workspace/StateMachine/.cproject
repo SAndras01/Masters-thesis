@@ -44,6 +44,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Core/Modules/Serial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Shellminator-3.0.1/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Commander-API-3.0.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Core/Modules/ICM2098}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.665398291" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -71,6 +72,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Core/Modules/Serial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Shellminator-3.0.1/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Commander-API-3.0.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Core/Modules/ICM2098}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1796449560" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -98,6 +100,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Core/Modules/Serial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Shellminator-3.0.1/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Commander-API-3.0.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Core/Modules/ICM2098}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1393041145" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -166,6 +169,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Core/Modules/Serial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Shellminator-3.0.1/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Commander-API-3.0.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Core/Modules/ICM2098}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1982642786" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -192,6 +196,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Core/Modules/Serial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Shellminator-3.0.1/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Commander-API-3.0.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Core/Modules/ICM2098}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.710588817" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -218,6 +223,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Core/Modules/Serial}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Shellminator-3.0.1/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/StateMachine/Drivers/Commander-API-3.0.0}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Core/Modules/ICM2098}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.679923355" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>

@@ -40,6 +40,7 @@ CPP_DEPS :=
 SUBDIRS := \
 Core/Modules/Accelerometer \
 Core/Modules/GUI \
+Core/Modules/ICM2098 \
 Core/Modules/Memory \
 Core/Modules/Numpad \
 Core/Modules/SSD1305 \

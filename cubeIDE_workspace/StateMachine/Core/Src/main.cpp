@@ -28,6 +28,8 @@
 
 #include "Shellminator.hpp"
 #include "Serial.hpp"
+
+#include "ICM2098.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -114,12 +116,72 @@ int main(void)
   MX_TIM5_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
+
+
+
+
   numpadEnable();
   HAL_GPIO_WritePin(OLED_RESET_NOT_GPIO_Port, OLED_RESET_NOT_Pin, GPIO_PIN_SET);
 
   SSD1305 display(&hi2c1, 0x3C, 128, 32);
   display.Init();
   display.Fill(Black);
+
+  //ACCEL
+
+
+  uint8_t icm_addr = 0x69;   // vagy 0x69, ha AD0 high
+  HAL_StatusTypeDef status;
+  uint8_t data;
+
+  //Bank2
+  data = 0x20; // Bank 2
+  HAL_I2C_Mem_Write(&hi2c1, icm_addr << 1, ICM20948_REG_BANK_SEL, 1, &data, 1, HAL_TIMEOUT);
+
+  //FS = +/-2G
+  uint8_t AccelConfig = 0;
+  uint8_t AccelConfigTest = 0;
+  HAL_I2C_Mem_Read(&hi2c1, icm_addr << 1, ICM20948_REG_ACCEL_CONFIG, 1, &AccelConfig, 1, HAL_TIMEOUT);
+
+  /*AccelConfig &= 0b11111001;
+  AccelConfig |= 0x6<<3;
+  AccelConfig |= 0b00<<1;*/
+  AccelConfig = 0x00;
+
+  HAL_I2C_Mem_Write(&hi2c1, icm_addr << 1, ICM20948_REG_ACCEL_CONFIG, 1, &AccelConfig, 1, HAL_TIMEOUT);
+  HAL_I2C_Mem_Read(&hi2c1, icm_addr << 1, ICM20948_REG_ACCEL_CONFIG, 1, &AccelConfigTest, 1, HAL_TIMEOUT);
+
+  //Bank0
+  data = 0x00; // Bank 0
+  HAL_I2C_Mem_Write(&hi2c1, icm_addr << 1, ICM20948_REG_BANK_SEL, 1, &data, 1, HAL_TIMEOUT);
+
+  //ReadAccelX
+  uint8_t accel_x[2];
+  int16_t accelRaw = 0;
+  float accel;
+  float scale = 16384.0f;
+
+  HAL_I2C_Mem_Read(&hi2c1, icm_addr << 1, ICM20948_REG_ACCEL_XOUT_H, 1, accel_x, 2, HAL_TIMEOUT);
+
+  accelRaw = (int16_t)((accel_x[0] << 8) | accel_x[1]);
+  accel = ((float)accelRaw)/(scale);
+  char msg[30];
+
+
+  while(true)
+  {
+	  HAL_I2C_Mem_Read(&hi2c1, icm_addr << 1, ICM20948_REG_ACCEL_XOUT_H, 1, accel_x, 2, HAL_TIMEOUT);
+
+	  accelRaw = (int16_t)((accel_x[0] << 8) | accel_x[1]);
+	  accel = ((float)accelRaw)/(scale);
+
+	snprintf(msg, sizeof(msg), "%+05.3f", accel);
+	display.SetCursor(0, 0);
+	display.WriteString(msg, Font_7x10, White);
+	display.WriteBitmapToScreen();
+  }
+
+  //ACCEL
 
   //Memory init
   memoryElement elementList[9] =
@@ -140,57 +202,6 @@ int main(void)
  //deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
   EEPROMmemory myEEPROM(elementList, 9, EEPROMAddress, &hi2c1);
 
-  //TODO: Modellezzem le itt mi történik: írjam, olvassam ezeket a memóriahelyeket
-
-  /*
-  uint8_t ms1fxax;
-  uint8_t ms1trax;
-  uint16_t ms1deg;
-
-  uint8_t ms2fxax;
-  uint8_t ms2trax;
-  uint16_t ms2deg;
-
-  uint8_t ms3fxax;
-  uint8_t ms3trax;
-  uint16_t ms3deg;
-
-
-
-  myEEPROM.setValue("MS1_fixAx", (uint8_t) 2);
-  myEEPROM.setValue("MS1_trackAx", (uint8_t) 3);
-  myEEPROM.setValue("MS1_setDeg", (uint16_t) 311);
-
-  myEEPROM.setValue("MS2_fixAx", (uint8_t) 1);
-  myEEPROM.setValue("MS2_trackAx", (uint8_t) 3);
-  myEEPROM.setValue("MS2_setDeg", (uint16_t) 122);
-
-  myEEPROM.setValue("MS3_fixAx", (uint8_t) 1);
-  myEEPROM.setValue("MS3_trackAx", (uint8_t) 2);
-  myEEPROM.setValue("MS3_setDeg", (uint16_t) 233);
-
-  //myEEPROM["MS2_fixAx"] = (uint8_t) 1;
-  //myEEPROM["MS2_trackAx"] = (uint8_t) 3;
-  //myEEPROM["MS2_setDeg"] = (uint16_t) 456;
-
-
-  myEEPROM.getValue("MS1_fixAx", &ms1fxax);
-  myEEPROM.getValue("MS1_trackAx", &ms1trax);
-  myEEPROM.getValue("MS1_setDeg", &ms1deg);
-
-  myEEPROM.getValue("MS2_fixAx", &ms2fxax);
-  myEEPROM.getValue("MS2_trackAx", &ms2trax);
-  myEEPROM.getValue("MS2_setDeg", &ms2deg);
-
-
-  myEEPROM.getValue("MS3_fixAx", &ms3fxax);
-  myEEPROM.getValue("MS3_trackAx", &ms3trax);
-  myEEPROM.getValue("MS3_setDeg", &ms3deg);
-
-  */
-
-
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -210,7 +221,7 @@ int main(void)
   shell.begin( "stm32" );
   while (1)
   {
-	  //machine.run();
+	  machine.run();
 	  shell.update();
 	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 
