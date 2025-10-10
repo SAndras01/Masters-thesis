@@ -10,4 +10,4 @@
 ../Core/Modules/Stream/Stream.cpp:159:7:float Stream::parseFloat(LookaheadMode, char)	32	static
 ../Core/Modules/Stream/Stream.cpp:202:8:size_t Stream::readBytes(char*, size_t)	32	static
 ../Core/Modules/Stream/Stream.cpp:219:8:size_t Stream::readBytesUntil(char, char*, size_t)	32	static
-../Core/Modules/Stream/Stream.cpp:231:5:int Stream::findMulti(MultiTarget*, int)	48	static
+../Core/Modules/Stream/Stream.cpp:231:5:int Stream::findMulti(Stream::MultiTarget*, int)	48	static

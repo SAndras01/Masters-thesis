@@ -18,7 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
+#include <stdio.h>
+#include <string.h>
+#include "AS5147U.hpp"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -59,80 +61,6 @@ static void MX_SPI1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-// AS5147U CRC8 calculation (AMS polynomial 0x1D)
-static uint8_t AS5x47_CalcCRC8(uint16_t data)
-{
-    uint8_t crc = 0xC4;
-    uint8_t bytes[2] = { (uint8_t)(data >> 8), (uint8_t)(data & 0xFF) };
-
-    for (int i = 0; i < 2; i++) {
-        crc ^= bytes[i];
-        for (int bit = 0; bit < 8; bit++) {
-            if (crc & 0x80)
-                crc = ((crc << 1) ^ 0x1D) & 0xFF;
-            else
-                crc = (crc << 1) & 0xFF;
-        }
-    }
-    crc ^= 0xFF;
-    return crc;
-}
-
-
-uint16_t AS5x47_Read16(SPI_HandleTypeDef *hspi, GPIO_TypeDef *CS_Port, uint16_t CS_Pin, uint16_t address)
-{
-    uint8_t tx[2];
-    uint8_t rx[2];
-    uint16_t cmd = (0x4000u | (address & 0x3FFFu)); // bit14=1 -> read
-
-    tx[0] = (uint8_t)(cmd >> 8);
-    tx[1] = (uint8_t)(cmd & 0xFF);
-
-    // 1) Parancs elküldése
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_RESET);
-    HAL_SPI_Transmit(hspi, tx, 2, HAL_MAX_DELAY);
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_SET);
-
-    // 2) Dummy read a válaszért
-    uint8_t dummy[2] = { 0xFF, 0xFF };
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_RESET);
-    HAL_SPI_TransmitReceive(hspi, dummy, rx, 2, HAL_MAX_DELAY);
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_SET);
-
-    uint16_t result = ((uint16_t)rx[0] << 8) | rx[1];
-    return result;
-}
-
-void AS5x47_WriteRegister(SPI_HandleTypeDef *hspi, GPIO_TypeDef *CS_Port, uint16_t CS_Pin, uint16_t address, uint16_t data)
-{
-    uint8_t frame[3];
-
-    // Első 24-bit frame: write command
-    uint16_t cmd = (address & 0x3FFFu);  // bit14=0 (write)
-    uint8_t crc_cmd = AS5x47_CalcCRC8(cmd);
-
-    frame[0] = (uint8_t)(cmd >> 8);
-    frame[1] = (uint8_t)(cmd & 0xFF);
-    frame[2] = crc_cmd;
-
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_RESET);
-    HAL_SPI_Transmit(hspi, frame, 3, HAL_MAX_DELAY);
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_SET);
-
-    HAL_Delay(1); // kis szünet a két frame között
-
-    // Második 24-bit frame: data + CRC
-    uint8_t crc_data = AS5x47_CalcCRC8(data);
-    frame[0] = (uint8_t)(data >> 8);
-    frame[1] = (uint8_t)(data & 0xFF);
-    frame[2] = crc_data;
-
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_RESET);
-    HAL_SPI_Transmit(hspi, frame, 3, HAL_MAX_DELAY);
-    HAL_GPIO_WritePin(CS_Port, CS_Pin, GPIO_PIN_SET);
-}
-
-
 /* USER CODE END 0 */
 
 /**
@@ -238,7 +166,7 @@ int main(void)
   HAL_Delay(10);
 
 
-*/
+
 
   char MSG[64] = {'\0'};
   float scaler = 16383.0;
@@ -246,44 +174,71 @@ int main(void)
   uint16_t rawAng = 0;
   uint16_t rawAngComp = 0;
 
-  // 1) Olvasd ki az eredeti értéket
-  uint16_t settings1 = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019);
 
-  // 2) Állítsd be a bit4-et
-  settings1 |= (0 << 4);
-  AS5x47_WriteRegister(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019, settings1);
+  // Settings1
+  uint16_t settings1 = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0018);
+  settings1 |= (0b101 << 3);
+  AS5x47_WriteRegister(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0018, settings1);
+  uint16_t settings1_check = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0018);
 
-  // 3) Ellenőrizd visszaolvasással
-  uint16_t verify = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019);
+  // Settings2
+  uint16_t settings2 = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019);
 
+  settings2 |= (0 << 4);
+  AS5x47_WriteRegister(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019, settings2);
+*/
+  char MSG[64] = {'\0'};
+  float angle = 0;
+  uint8_t AGCval = 0;
+  uint16_t FILTERSTATUS_Data = 0;
+  uint8_t K_adpt = 9;
+
+
+  AS5147U encoder(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin);
+
+  if( !encoder.init() )
+  {
+	  snprintf(MSG, sizeof(MSG), "INIT ERROR");
+	  HAL_UART_Transmit(&huart2, (uint8_t*)MSG, strlen(MSG), 100);
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  /*
 	  rawAng = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x3FFE);
 	  rawAngComp = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x3FFF);
 
-	  rawAng &= 0x3FFF;        // 14 bites adat
+	  rawAng &= 0x3FFF;
 	  rawAngComp &= 0x3FFF;
 
 	  angle = (float)rawAng/scaler * (float)360;
 	  angleWcomp = (float)rawAngComp/scaler * (float)360;
+		*/
+	  AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x00F6, &FILTERSTATUS_Data);
+	  K_adpt = FILTERSTATUS_Data & 0b111;
 
-	  // kurzor vissza a terminál elejére (2 sorral fel), képernyő frissítés
-	  snprintf(MSG, sizeof(MSG), "\033[H\033[J"); // clear screen (opcionális)
+	  angle = encoder.getDegrees();
+	  AGCval = encoder.getAGC();
+
+	  snprintf(MSG, sizeof(MSG), "\033[H\033[J"); // clear screen
 	  HAL_UART_Transmit(&huart2, (uint8_t*)MSG, strlen(MSG), 100);
 
-	  // első sor
-	  snprintf(MSG, sizeof(MSG), "Raw angle   : %05.3f °\r\n", angle);
+	  // row1
+	  snprintf(MSG, sizeof(MSG), "Angle   : %05.3f °\r\n", angle);
 	  HAL_UART_Transmit(&huart2, (uint8_t*)MSG, strlen(MSG), 100);
 
-	  // második sor
-	  snprintf(MSG, sizeof(MSG), "With comp   : %05.3f °\r\n", angleWcomp);
+	  // row2
+	  snprintf(MSG, sizeof(MSG), "K value   : %d \r\n", K_adpt);
 	  HAL_UART_Transmit(&huart2, (uint8_t*)MSG, strlen(MSG), 100);
 
-	  HAL_Delay(200); // frissítés ~20 Hz-en
+	  // row3
+	  snprintf(MSG, sizeof(MSG), "AGC value   : %d \r\n", AGCval);
+	  HAL_UART_Transmit(&huart2, (uint8_t*)MSG, strlen(MSG), 100);
+
+	  HAL_Delay(50);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
