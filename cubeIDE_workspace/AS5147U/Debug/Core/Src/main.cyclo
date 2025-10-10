@@ -1,7 +1,9 @@
-main.c:65:10:AS5x47_Read16	4
-main.c:102:5:main	1
-main.c:201:6:SystemClock_Config	3
-main.c:249:13:MX_SPI1_Init	2
-main.c:287:13:MX_USART2_UART_Init	2
-main.c:320:13:MX_GPIO_Init	1
-main.c:367:6:Error_Handler	1
+../Core/Src/main.c:63:16:AS5x47_CalcCRC8	4
+../Core/Src/main.c:82:10:AS5x47_Read16	1
+../Core/Src/main.c:106:6:AS5x47_WriteRegister	1
+../Core/Src/main.c:142:5:main	1
+../Core/Src/main.c:298:6:SystemClock_Config	3
+../Core/Src/main.c:346:13:MX_SPI1_Init	2
+../Core/Src/main.c:384:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:417:13:MX_GPIO_Init	1
+../Core/Src/main.c:464:6:Error_Handler	1
