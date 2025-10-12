@@ -95,98 +95,6 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  /*
-  uint16_t address = 0x0019;
-
-  uint16_t data = 0;
-  uint16_t data2 = 0;
-  uint16_t rawAng = 0;
-  uint16_t rawAngComp = 0;
-
-  uint16_t frame = address & 0x3FFF;
-
-  (frame) ^= (-(1) ^ (frame)) & (1UL << (14)); //Mert Read
-
-
-  //READ settings
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
-  HAL_SPI_Transmit(&hspi1, (uint8_t *)&frame, 1, HAL_MAX_DELAY);
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_SET);
-
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
-  HAL_SPI_Receive(&hspi1, (uint8_t *)&data, 1, HAL_MAX_DELAY);;
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_SET);
-  HAL_Delay(10);
-
-
-  //Disable DAEC
-  frame = address & 0x3FFF;
-
-  uint16_t data2write = 0b1 << 4;
-
-  //Write settings
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
-  HAL_SPI_Transmit(&hspi1, (uint8_t *)&frame, 1, HAL_MAX_DELAY);
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_SET);
-
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
-  HAL_SPI_Transmit(&hspi1, (uint8_t *)&data2write, 1, HAL_MAX_DELAY);;
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_SET);
-  HAL_Delay(10);
-
-
-  //READ settings
-  (frame) ^= (-(1) ^ (frame)) & (1UL << (14)); //Mert Read
-
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
-  HAL_SPI_Transmit(&hspi1, (uint8_t *)&frame, 1, HAL_MAX_DELAY);
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_SET);
-
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_RESET);
-  HAL_Delay(10);
-  HAL_SPI_Receive(&hspi1, (uint8_t *)&data2, 1, HAL_MAX_DELAY);;
-  HAL_Delay(10);
-  HAL_GPIO_WritePin(ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, GPIO_PIN_SET);
-  HAL_Delay(10);
-
-
-
-
-  char MSG[64] = {'\0'};
-  float scaler = 16383.0;
-  float angle, angleWcomp;
-  uint16_t rawAng = 0;
-  uint16_t rawAngComp = 0;
-
-
-  // Settings1
-  uint16_t settings1 = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0018);
-  settings1 |= (0b101 << 3);
-  AS5x47_WriteRegister(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0018, settings1);
-  uint16_t settings1_check = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0018);
-
-  // Settings2
-  uint16_t settings2 = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019);
-
-  settings2 |= (0 << 4);
-  AS5x47_WriteRegister(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x0019, settings2);
-*/
   char MSG[64] = {'\0'};
   float angle = 0;
   uint8_t AGCval = 0;
@@ -207,16 +115,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  /*
-	  rawAng = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x3FFE);
-	  rawAngComp = AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x3FFF);
-
-	  rawAng &= 0x3FFF;
-	  rawAngComp &= 0x3FFF;
-
-	  angle = (float)rawAng/scaler * (float)360;
-	  angleWcomp = (float)rawAngComp/scaler * (float)360;
-		*/
 	  AS5x47_Read16(&hspi1, ENCODER1_CS_GPIO_Port, ENCODER1_CS_Pin, 0x00F6, &FILTERSTATUS_Data);
 	  K_adpt = FILTERSTATUS_Data & 0b111;
 

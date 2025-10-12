@@ -1,8 +1,8 @@
-StepperController.cpp:51:6:void XferCplt_Callback(DMA_HandleTypeDef*)	1
-StepperController.cpp:59:1:StepperController::StepperController(TIM_HandleTypeDef*, DMA_HandleTypeDef*, GPIO*, double, double)	1
-StepperController.cpp:77:9:int32_t StepperController::interpolate_from_LUT(int32_t, LUTTable)	6
-StepperController.cpp:111:6:bool StepperController::calculate_movement(uint32_t, float)	3
-StepperController.cpp:152:6:bool StepperController::start_stepping(int8_t)	5
-StepperController.cpp:189:6:void StepperController::set_ustep(float)	1
-StepperController.cpp:191:7:float StepperController::get_ustep()	1
-StepperController.cpp:193:7:GPIO* StepperController::get_DIR_pin()	1
+../Core/Modules/StepperController/StepperController.cpp:51:6:void XferCplt_Callback(DMA_HandleTypeDef*)	1
+../Core/Modules/StepperController/StepperController.cpp:59:1:StepperController::StepperController(TIM_HandleTypeDef*, DMA_HandleTypeDef*, GPIO*, double, double)	1
+../Core/Modules/StepperController/StepperController.cpp:77:9:int32_t StepperController::interpolate_from_LUT(int32_t, LUTTable)	6
+../Core/Modules/StepperController/StepperController.cpp:111:6:bool StepperController::calculate_movement(uint32_t, float)	3
+../Core/Modules/StepperController/StepperController.cpp:152:6:bool StepperController::start_stepping(int8_t)	5
+../Core/Modules/StepperController/StepperController.cpp:189:6:void StepperController::set_ustep(float)	1
+../Core/Modules/StepperController/StepperController.cpp:191:7:float StepperController::get_ustep()	1
+../Core/Modules/StepperController/StepperController.cpp:193:7:GPIO* StepperController::get_DIR_pin()	1

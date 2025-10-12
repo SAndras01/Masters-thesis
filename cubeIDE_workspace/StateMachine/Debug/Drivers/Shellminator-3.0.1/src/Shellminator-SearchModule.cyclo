@@ -1,4 +1,4 @@
-Shellminator-SearchModule.cpp:36:6:void Shellminator::historySearchBackward()	3
-Shellminator-SearchModule.cpp:86:6:void Shellminator::historySearchForward()	3
-Shellminator-SearchModule.cpp:117:6:void Shellminator::redrawHistorySearch()	12
-Shellminator-SearchModule.cpp:215:5:int Shellminator::substring(char*, char*)	5
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:36:6:void Shellminator::historySearchBackward()	3
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:86:6:void Shellminator::historySearchForward()	3
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:117:6:void Shellminator::redrawHistorySearch()	12
+../Drivers/Shellminator-3.0.1/src/Shellminator-SearchModule.cpp:215:5:int Shellminator::substring(char*, char*)	5

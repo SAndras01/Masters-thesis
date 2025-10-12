@@ -26,9 +26,9 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U_Registers.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/GPIO/GPIO.hpp
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U_Registers.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/GPIO/GPIO.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -57,6 +57,6 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U_Registers.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/GPIO/GPIO.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/AS5147U/AS5147U_Registers.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/AS5147U/Core/Modules/GPIO/GPIO.hpp:
