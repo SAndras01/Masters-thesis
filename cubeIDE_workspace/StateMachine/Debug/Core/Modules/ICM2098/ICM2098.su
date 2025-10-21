@@ -1,4 +1,1 @@
 ../Core/Modules/ICM2098/ICM2098.cpp:10:1:ICM2098::ICM2098(I2C_HandleTypeDef*, uint8_t, AccRange, GyroRange)	24	static
-../Core/Modules/ICM2098/ICM2098.cpp:20:8:float* ICM2098::getAngles()	16	static
-../Core/Modules/ICM2098/ICM2098.cpp:25:8:float* ICM2098::getGyro()	16	static
-../Core/Modules/ICM2098/ICM2098.cpp:29:8:float* ICM2098::getMagneto()	16	static

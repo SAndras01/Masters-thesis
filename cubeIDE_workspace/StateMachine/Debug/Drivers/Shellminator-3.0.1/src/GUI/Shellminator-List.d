@@ -1,32 +1,32 @@
 Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List.o: \
  ../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List.cpp \
  ../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/System.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-DefaultSettings.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-BufferedPrinter.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-VT100-Commands.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/System.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-DefaultSettings.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-BufferedPrinter.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-VT100-Commands.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp
 ../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/System.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-DefaultSettings.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-BufferedPrinter.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-VT100-Commands.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/System.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-DefaultSettings.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-BufferedPrinter.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-VT100-Commands.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.hpp:

@@ -26,8 +26,8 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/GPIO/GPIO.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/StepperController/StepperController.hpp
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/GPIO/GPIO.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/StepperController/StepperController.hpp
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -56,5 +56,5 @@ Core/Src/main.o: ../Core/Src/main.cpp ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/GPIO/GPIO.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/StepperController/StepperController.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/GPIO/GPIO.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StepperControll/Core/Modules/StepperController/StepperController.hpp:

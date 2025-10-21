@@ -168,11 +168,15 @@ bool StepperController::start_stepping(int8_t direction)
 
 	steppingFinished = false;
 
+	//Start the timer with the first timer vale so the actual Init value doesn't interfere
+	stepTimer->Instance->ARR = timer_values[0];
+
 	State1 = HAL_TIM_Base_Start_IT(stepTimer);
 
 	State2 = HAL_TIM_PWM_Start(stepTimer, TIM_CHANNEL_1);
 
-	State3 = HAL_DMA_Start_IT(timerUpdaterDMA, (uint32_t)timer_values, DstAddress, n_steps);
+	//-1 as we have already stepped once with the 0th timer value
+	State3 = HAL_DMA_Start_IT(timerUpdaterDMA, (uint32_t)timer_values, DstAddress, n_steps-1);
 
 	__HAL_TIM_ENABLE_DMA(stepTimer, TIM_DMA_UPDATE);
 

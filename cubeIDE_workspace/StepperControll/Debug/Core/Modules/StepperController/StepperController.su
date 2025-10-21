@@ -3,6 +3,6 @@
 ../Core/Modules/StepperController/StepperController.cpp:77:9:int32_t StepperController::interpolate_from_LUT(int32_t, LUTTable)	88	static
 ../Core/Modules/StepperController/StepperController.cpp:111:6:bool StepperController::calculate_movement(uint32_t, float)	1008	dynamic
 ../Core/Modules/StepperController/StepperController.cpp:152:6:bool StepperController::start_stepping(int8_t)	24	static
-../Core/Modules/StepperController/StepperController.cpp:189:6:void StepperController::set_ustep(float)	16	static
-../Core/Modules/StepperController/StepperController.cpp:191:7:float StepperController::get_ustep()	16	static
-../Core/Modules/StepperController/StepperController.cpp:193:7:GPIO* StepperController::get_DIR_pin()	16	static
+../Core/Modules/StepperController/StepperController.cpp:193:6:void StepperController::set_ustep(float)	16	static
+../Core/Modules/StepperController/StepperController.cpp:195:7:float StepperController::get_ustep()	16	static
+../Core/Modules/StepperController/StepperController.cpp:197:7:GPIO* StepperController::get_DIR_pin()	16	static

@@ -1,5 +1,5 @@
-../Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp:46:18:virtual void DefaultColorizer::printChar(Stream*, char)	2
-../Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.hpp:47:18:virtual void DefaultColorizer::reset(Stream*)	1
-../Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.cpp:3:1:DefaultColorizer::DefaultColorizer()	1
-../Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.cpp:8:6:bool DefaultColorizer::isCharacter(char)	5
-../Drivers/Shellminator-3.0.1/src/Shellminator-Colorizer.cpp:18:6:bool DefaultColorizer::isNumber(char)	3
+Shellminator-Colorizer.hpp:46:18:virtual void DefaultColorizer::printChar(Stream*, char)	2
+Shellminator-Colorizer.hpp:47:18:virtual void DefaultColorizer::reset(Stream*)	1
+Shellminator-Colorizer.cpp:3:1:DefaultColorizer::DefaultColorizer()	1
+Shellminator-Colorizer.cpp:8:6:bool DefaultColorizer::isCharacter(char)	5
+Shellminator-Colorizer.cpp:18:6:bool DefaultColorizer::isNumber(char)	3

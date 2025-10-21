@@ -1,5 +1,5 @@
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:78:18:virtual void ShellminatorScreen::setOrigin(int, int)	3
-../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:36:1:ShellminatorListDetailed::ShellminatorListDetailed()	1
-../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:47:1:ShellminatorListDetailed::ShellminatorListDetailed(const char**, const char**, int, const char*)	2
-../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:63:6:virtual void ShellminatorListDetailed::init(Shellminator*, Stream*)	4
-../Drivers/Shellminator-3.0.1/src/GUI/Shellminator-List-Detailed.cpp:95:6:virtual void ShellminatorListDetailed::printExtra(int, bool)	13
+Shellminator-Screen.hpp:78:18:virtual void ShellminatorScreen::setOrigin(int, int)	3
+Shellminator-List-Detailed.cpp:36:1:ShellminatorListDetailed::ShellminatorListDetailed()	1
+Shellminator-List-Detailed.cpp:47:1:ShellminatorListDetailed::ShellminatorListDetailed(const char**, const char**, int, const char*)	2
+Shellminator-List-Detailed.cpp:63:6:virtual void ShellminatorListDetailed::init(Shellminator*, Stream*)	4
+Shellminator-List-Detailed.cpp:95:6:virtual void ShellminatorListDetailed::printExtra(int, bool)	13

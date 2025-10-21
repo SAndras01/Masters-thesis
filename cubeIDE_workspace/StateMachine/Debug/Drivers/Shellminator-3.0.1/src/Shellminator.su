@@ -1,8 +1,8 @@
 ../Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:109:9:int ShellminatorScreen::down()	16	static
 ../Drivers/Shellminator-3.0.1/src/Shellminator-Screen.hpp:138:12:void (* ShellminatorScreen::getEndFunction())(Shellminator*)	16	static
 ../Drivers/Shellminator-3.0.1/src/Shellminator.cpp:38:1:Shellminator::Shellminator(Stream*)	16	static
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp:37:7:constexpr Print& Print::operator=(Print&&)	16	static
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp:49:7:constexpr Stream& Stream::operator=(Stream&&)	16	static
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp:37:7:constexpr Print& Print::operator=(Print&&)	16	static
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp:49:7:constexpr Stream& Stream::operator=(Stream&&)	16	static
 ../Drivers/Shellminator-3.0.1/src/Shellminator-BufferedPrinter.hpp:60:7:constexpr ShellminatorBufferedPrinter& ShellminatorBufferedPrinter::operator=(ShellminatorBufferedPrinter&&)	16	static
 ../Drivers/Shellminator-3.0.1/src/Shellminator.cpp:67:6:bool Shellminator::enableBuffering(uint8_t*, int)	64	static
 ../Drivers/Shellminator-3.0.1/src/Shellminator.cpp:88:30:ShellminatorBufferedPrinter* Shellminator::getBufferedPrinter()	16	static
