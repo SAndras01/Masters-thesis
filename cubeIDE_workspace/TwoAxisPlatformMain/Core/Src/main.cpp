@@ -272,7 +272,7 @@ int main(void)
       {"MS3_setDeg", i16},
   };
 
- //deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
+  deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
   EEPROMmemory EEPROM(elementList, 9, EEPROMAddress, &hi2c2);
 
 

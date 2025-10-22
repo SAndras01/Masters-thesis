@@ -65,7 +65,7 @@ HAL_StatusTypeDef deleteRegion(I2C_HandleTypeDef* I2Ccontroller, uint8_t EEPROMA
 		{
 			//255 from start until EOP then len = len-remainder, start = start + remainder
 			HAL_Delay(5);
-			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), ereaserBuffer, remainder, HAL_MAX_DELAY);
+			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), ereaserBuffer, remainder, 100);
 
 			while(stat != HAL_OK)
 			{
@@ -80,7 +80,7 @@ HAL_StatusTypeDef deleteRegion(I2C_HandleTypeDef* I2Ccontroller, uint8_t EEPROMA
 		{
 			//255 from start until len then len = 0
 			HAL_Delay(5);
-			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), ereaserBuffer, len, HAL_MAX_DELAY);
+			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), ereaserBuffer, len, 100);
 
 			while(stat != HAL_OK)
 			{
