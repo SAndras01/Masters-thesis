@@ -573,7 +573,7 @@ void EEPROMmemory::Init()
     				uint16_t increment = 1;
     				while(AddrCcollision)
     				{
-    					for(uint16_t k = 0; k<i; k++)
+    					for(uint16_t k = 0; k<i+1; k++)
     					{
     						if(dict[k].start == proposedDataStartAddress)
     						{
@@ -599,7 +599,7 @@ void EEPROMmemory::Init()
 				uint16_t increment = 1;
 				while(AddrCcollision)
 				{
-					for(uint16_t k = 0; k<i; k++)
+					for(uint16_t k = 0; k<i+1; k++)
 					{
 						if(dict[k].start == proposedDataStartAddress)
 						{

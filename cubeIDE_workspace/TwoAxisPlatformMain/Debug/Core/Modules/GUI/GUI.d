@@ -1,9 +1,9 @@
 Core/Modules/GUI/GUI.o: ../Core/Modules/GUI/GUI.cpp \
  ../Core/Modules/GUI/GUI.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp \
  ../Core/Inc/main.h ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -43,10 +43,10 @@ Core/Modules/GUI/GUI.o: ../Core/Modules/GUI/GUI.cpp \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h
 ../Core/Modules/GUI/GUI.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp:
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:

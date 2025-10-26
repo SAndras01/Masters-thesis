@@ -12,7 +12,7 @@
 
 class Accelerometer {
 public:
-	float* getRefAccels();
+	virtual float* getRefAccels();
 };
 
 #endif /* MODULES_ACCELEROMETER_ACCELEROMETER_HPP_ */

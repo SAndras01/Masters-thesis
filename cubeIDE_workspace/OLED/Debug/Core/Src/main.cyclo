@@ -1,7 +1,7 @@
-main.cpp:62:6:void available_devices(int*)	3
-main.cpp:84:5:int main()	8
-main.cpp:188:6:void SystemClock_Config()	3
-main.cpp:236:13:void MX_I2C1_Init()	2
-main.cpp:270:13:void MX_USART2_UART_Init()	2
-main.cpp:303:13:void MX_GPIO_Init()	1
-main.cpp:343:6:void Error_Handler()	1
+../Core/Src/main.cpp:62:6:void available_devices(int*)	3
+../Core/Src/main.cpp:84:5:int main()	8
+../Core/Src/main.cpp:188:6:void SystemClock_Config()	3
+../Core/Src/main.cpp:236:13:void MX_I2C1_Init()	2
+../Core/Src/main.cpp:270:13:void MX_USART2_UART_Init()	2
+../Core/Src/main.cpp:303:13:void MX_GPIO_Init()	1
+../Core/Src/main.cpp:343:6:void Error_Handler()	1

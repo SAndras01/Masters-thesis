@@ -72,7 +72,6 @@ ADC_HandleTypeDef hadc1;
 ETH_HandleTypeDef heth;
 
 I2C_HandleTypeDef hi2c1;
-I2C_HandleTypeDef hi2c2;
 
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
@@ -114,7 +113,6 @@ static void MX_TIM2_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM6_Init(void);
-static void MX_I2C2_Init(void);
 /* USER CODE BEGIN PFP */
 void available_devices(int* devices)
 {
@@ -123,7 +121,7 @@ void available_devices(int* devices)
 	int j = 0;
 	for(int i = 0; i<128; i++)
 	{
-		status = HAL_I2C_IsDeviceReady(&hi2c2, i<<1, 2, 100);
+		status = HAL_I2C_IsDeviceReady(&hi2c1, i<<1, 2, 100);
 		devices[i] = 0;
 		if(status == HAL_OK)
 			{
@@ -179,9 +177,8 @@ int main(void)
   MX_TIM5_Init();
   MX_ADC1_Init();
   MX_TIM6_Init();
-  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
-/*
+
 
   //ENN_GPIO_MOT1.digitalWrite(GPIO_PIN_RESET);
   //ENN_GPIO_MOT2.digitalWrite(GPIO_PIN_RESET);
@@ -235,12 +232,14 @@ int main(void)
 
   if( encoder.init() )
   {
+	  display.Fill(Black);
 	  display.SetCursor(0, 0);
 	  display.WriteString("ENCODER INIT OK", Font_7x10, White);
 	  display.WriteBitmapToScreen();
   }
   else
   {
+	  display.Fill(Black);
 	  display.SetCursor(0, 0);
 	  display.WriteString("ENCODER INIT NOK", Font_7x10, White);
 	  display.WriteBitmapToScreen();
@@ -251,7 +250,7 @@ int main(void)
   }
 
 
-*/
+
   //Memory init
   int devices[128];
 
@@ -272,8 +271,8 @@ int main(void)
       {"MS3_setDeg", i16},
   };
 
-  deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
-  EEPROMmemory EEPROM(elementList, 9, EEPROMAddress, &hi2c2);
+  //deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
+  EEPROMmemory EEPROM(elementList, 9, EEPROMAddress, &hi2c1);
 
 
   uint8_t testVal = 99;
@@ -281,13 +280,13 @@ int main(void)
 
   HAL_StatusTypeDef stat;
   uint16_t start = 0;
-  stat = HAL_I2C_IsDeviceReady(&hi2c2, EEPROMAddress<<1, 2, 100);
-  stat = HAL_I2C_Mem_Read(&hi2c2, EEPROMAddress<<1, start, sizeof(start), &testVal, sizeof(testVal), 1000);
+  stat = HAL_I2C_IsDeviceReady(&hi2c1, EEPROMAddress<<1, 2, 100);
+  stat = HAL_I2C_Mem_Read(&hi2c1, EEPROMAddress<<1, start, I2C_MEMADD_SIZE_16BIT, &testVal, sizeof(testVal), 1000);
 
   State_Settings state_Settings;
   State_SelectMemory state_SelectMemory;
   getMemorySlotFromEEPROM(&state_Settings.currentMemorySlot, 1, &EEPROM);
-  //StateMachine machine(&state_SelectMemory, &state_Settings, &state_SelectMemory, &display, &imu, &EEPROM);
+  StateMachine machine(&state_SelectMemory, &state_Settings, &state_SelectMemory, &display, &imu, &EEPROM);
 
 
 
@@ -298,10 +297,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  //machine.run();
+	machine.run();
 
 
-	  //HAL_Delay(200);
+	//HAL_Delay(200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -512,54 +511,6 @@ static void MX_I2C1_Init(void)
   /* USER CODE BEGIN I2C1_Init 2 */
 
   /* USER CODE END I2C1_Init 2 */
-
-}
-
-/**
-  * @brief I2C2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_I2C2_Init(void)
-{
-
-  /* USER CODE BEGIN I2C2_Init 0 */
-
-  /* USER CODE END I2C2_Init 0 */
-
-  /* USER CODE BEGIN I2C2_Init 1 */
-
-  /* USER CODE END I2C2_Init 1 */
-  hi2c2.Instance = I2C2;
-  hi2c2.Init.Timing = 0x20303E5D;
-  hi2c2.Init.OwnAddress1 = 0;
-  hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-  hi2c2.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-  hi2c2.Init.OwnAddress2 = 0;
-  hi2c2.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
-  hi2c2.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c2.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-  if (HAL_I2C_Init(&hi2c2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Analogue filter
-  */
-  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Digital filter
-  */
-  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN I2C2_Init 2 */
-
-  /* USER CODE END I2C2_Init 2 */
 
 }
 
@@ -945,10 +896,10 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
@@ -995,7 +946,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : PINK_BTN_Pin */
   GPIO_InitStruct.Pin = PINK_BTN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(PINK_BTN_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PE9 DIR_MOT1_Pin DIR_MOT2_Pin */

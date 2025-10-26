@@ -1,11 +1,11 @@
 Core/Modules/StateMachine/state_machine.o: \
  ../Core/Modules/StateMachine/state_machine.cpp \
  ../Core/Modules/StateMachine/state_machine.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memory.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Stream.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Print.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Printable.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memory.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Stream.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Print.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Printable.hpp \
  ../Core/Inc/main.h ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../Core/Inc/stm32f7xx_hal_conf.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h \
@@ -44,18 +44,18 @@ Core/Modules/StateMachine/state_machine.o: \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/GUI/GUI.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp \
- C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Numpad/numpad.hpp
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/GUI/GUI.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp \
+ D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Numpad/numpad.hpp
 ../Core/Modules/StateMachine/state_machine.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memory.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Stream.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Print.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Printable.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memorySlot.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Memory/memory.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Stream.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Print.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Stream/Printable.hpp:
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -95,9 +95,9 @@ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/C
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/GUI/GUI.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp:
-C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Numpad/numpad.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/GUI/GUI.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/SSD1305.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/fonts.h:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/SSD1305/test_bitmaps.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp:
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Numpad/numpad.hpp:

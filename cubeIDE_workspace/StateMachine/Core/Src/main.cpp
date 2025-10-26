@@ -116,6 +116,34 @@ int main(void)
   MX_TIM5_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
+  //Memory init
+  memoryElement elementList[9] =
+  {
+      {"MS1_fixAx", i8},
+      {"MS1_trackAx", i8},
+      {"MS1_setDeg", i16},
+
+	  {"MS2_fixAx", i8},
+      {"MS2_trackAx", i8},
+      {"MS2_setDeg", i16},
+
+	  {"MS3_fixAx", i8},
+      {"MS3_trackAx", i8},
+      {"MS3_setDeg", i16},
+  };
+
+  //deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
+  EEPROMmemory myEEPROM(elementList, 9, EEPROMAddress, &hi2c1);
+
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+
+  Accelerometer dummyAccel;
+  State_Settings state_Settings;
+  State_SelectMemory state_SelectMemory;
+  getMemorySlotFromEEPROM(&state_Settings.currentMemorySlot, 1, &myEEPROM);
 
 
 
@@ -183,34 +211,6 @@ int main(void)
 
   //ACCEL
 
-  //Memory init
-  memoryElement elementList[9] =
-  {
-      {"MS1_fixAx", i8},
-      {"MS1_trackAx", i8},
-      {"MS1_setDeg", i16},
-
-	  {"MS2_fixAx", i8},
-      {"MS2_trackAx", i8},
-      {"MS2_setDeg", i16},
-
-	  {"MS3_fixAx", i8},
-      {"MS3_trackAx", i8},
-      {"MS3_setDeg", i16},
-  };
-
- //deleteRegion(&hi2c1, EEPROMAddress, 0, 128);
-  EEPROMmemory myEEPROM(elementList, 9, EEPROMAddress, &hi2c1);
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-
-  Accelerometer dummyAccel;
-  State_Settings state_Settings;
-  State_SelectMemory state_SelectMemory;
-  getMemorySlotFromEEPROM(&state_Settings.currentMemorySlot, 1, &myEEPROM);
   StateMachine machine(&state_SelectMemory, &state_Settings, &state_SelectMemory, &display, &dummyAccel, &myEEPROM);
 
 

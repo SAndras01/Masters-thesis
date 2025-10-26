@@ -19,8 +19,12 @@ HAL_StatusTypeDef writeMultiPage(I2C_HandleTypeDef* I2Ccontroller, uint8_t EEPRO
 
 		if( remainder <= len )
 		{
-			HAL_Delay(5);
-			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), data_p, remainder, HAL_MAX_DELAY);
+			while (HAL_I2C_IsDeviceReady(I2Ccontroller, EEPROMAddress<<1, 2, 100) != HAL_OK)
+			{
+				HAL_Delay(5);
+			}
+
+			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, I2C_MEMADD_SIZE_16BIT, data_p, remainder, HAL_MAX_DELAY);
 
 			while(stat != HAL_OK)
 			{
@@ -33,8 +37,12 @@ HAL_StatusTypeDef writeMultiPage(I2C_HandleTypeDef* I2Ccontroller, uint8_t EEPRO
 		}
 		else//write the rest of the data
 		{
-			HAL_Delay(5);
-			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), data_p, len, HAL_MAX_DELAY);
+			while (HAL_I2C_IsDeviceReady(I2Ccontroller, EEPROMAddress<<1, 2, 100) != HAL_OK)
+			{
+				HAL_Delay(5);
+			}
+
+			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, I2C_MEMADD_SIZE_16BIT, data_p, len, HAL_MAX_DELAY);
 
 			while(stat != HAL_OK)
 			{
@@ -64,8 +72,11 @@ HAL_StatusTypeDef deleteRegion(I2C_HandleTypeDef* I2Ccontroller, uint8_t EEPROMA
 		if( remainder <= len )
 		{
 			//255 from start until EOP then len = len-remainder, start = start + remainder
-			HAL_Delay(5);
-			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), ereaserBuffer, remainder, 100);
+			while (HAL_I2C_IsDeviceReady(I2Ccontroller, EEPROMAddress<<1, 2, 100) != HAL_OK)
+			{
+				HAL_Delay(5);
+			}
+			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, I2C_MEMADD_SIZE_16BIT, ereaserBuffer, remainder, 100);
 
 			while(stat != HAL_OK)
 			{
@@ -79,8 +90,11 @@ HAL_StatusTypeDef deleteRegion(I2C_HandleTypeDef* I2Ccontroller, uint8_t EEPROMA
 		else
 		{
 			//255 from start until len then len = 0
-			HAL_Delay(5);
-			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, sizeof(start), ereaserBuffer, len, 100);
+			while (HAL_I2C_IsDeviceReady(I2Ccontroller, EEPROMAddress<<1, 2, 100) != HAL_OK)
+			{
+				HAL_Delay(5);
+			}
+			stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, start, I2C_MEMADD_SIZE_16BIT, ereaserBuffer, len, 100);
 
 			while(stat != HAL_OK)
 			{
@@ -372,7 +386,7 @@ HAL_StatusTypeDef EEPROMmemory::writeHeader(memoryElement element_p, uint16_t he
 
 
 	HAL_Delay(5);
-	stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, headerStart_p, sizeof(headerStart_p), headerBuffer, sizeof(headerBuffer), HAL_MAX_DELAY);
+	stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, headerStart_p, I2C_MEMADD_SIZE_16BIT, headerBuffer, sizeof(headerBuffer), HAL_MAX_DELAY);
 
 	while(stat != HAL_OK)
 	{
@@ -394,10 +408,10 @@ memoryElement EEPROMmemory::readHeader(uint16_t headerStart_p)
     HAL_StatusTypeDef stat;
 
     HAL_Delay(5);
-	stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, headerStart_p, sizeof(headerStart_p), headerBuffer ,sizeof(headerBuffer), HAL_MAX_DELAY);
+	stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, headerStart_p, I2C_MEMADD_SIZE_16BIT, headerBuffer ,sizeof(headerBuffer), HAL_MAX_DELAY);
 	while(stat != HAL_OK)
 	{
-		stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, headerStart_p, sizeof(headerStart_p), headerBuffer ,sizeof(headerBuffer), HAL_MAX_DELAY);
+		stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, headerStart_p, I2C_MEMADD_SIZE_16BIT, headerBuffer ,sizeof(headerBuffer), HAL_MAX_DELAY);
 	}
 
 	memcpy(keyToRead, (uint8_t*)(headerBuffer+keyStarts), startStarts);
@@ -658,11 +672,12 @@ bool EEPROMmemory::_getValue(uint32_t start_p, void* result_p, elementType type_
 	}
 
 	HAL_Delay(5);
-	stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, start_p, (uint16_t)start_p, (uint8_t*)result_p ,len, 1000);
+	stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, start_p, I2C_MEMADD_SIZE_16BIT, (uint8_t*)result_p ,len, 1000);
 
 	while(stat != HAL_OK)
 	{
-		stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, start_p, (uint16_t)start_p, (uint8_t*)result_p , len, HAL_MAX_DELAY);
+		stat = HAL_I2C_Mem_Read(I2Ccontroller, EEPROMAddress<<1, start_p, I2C_MEMADD_SIZE_16BIT, (uint8_t*)result_p , len, 1000);
+		HAL_Delay(5);
 	}
 
 	if(stat == HAL_OK){ return true; }
@@ -736,7 +751,7 @@ bool EEPROMmemory::_setValue(uint32_t start_p, void* value_p, elementType type_p
 
 
 	HAL_Delay(5);
-	stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, (uint16_t)start_p, sizeof(uint16_t), (uint8_t*)value_p, len, HAL_MAX_DELAY);
+	stat = HAL_I2C_Mem_Write(I2Ccontroller, EEPROMAddress<<1, (uint16_t)start_p, I2C_MEMADD_SIZE_16BIT, (uint8_t*)value_p, len, HAL_MAX_DELAY);
 
 	while(stat != HAL_OK)
 	{

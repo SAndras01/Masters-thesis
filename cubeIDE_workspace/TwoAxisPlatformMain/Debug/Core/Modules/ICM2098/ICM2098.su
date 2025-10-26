@@ -1,3 +1,4 @@
+D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp:13:7:constexpr Accelerometer::Accelerometer()	16	static
 ../Core/Modules/ICM2098/ICM2098.cpp:10:1:ICM2098::ICM2098(I2C_HandleTypeDef*, uint8_t, AccRange, GyroRange)	24	static
 ../Core/Modules/ICM2098/ICM2098.cpp:23:19:HAL_StatusTypeDef ICM2098::writeReg(uint8_t, uint8_t)	32	static
 ../Core/Modules/ICM2098/ICM2098.cpp:28:19:HAL_StatusTypeDef ICM2098::readRegs(uint8_t, uint8_t*, uint8_t)	48	static
@@ -9,5 +10,5 @@
 ../Core/Modules/ICM2098/ICM2098.cpp:134:6:void ICM2098::readAccel(float*, float*, float*)	48	static
 ../Core/Modules/ICM2098/ICM2098.cpp:152:6:void ICM2098::readGyro(float*, float*, float*)	48	static
 ../Core/Modules/ICM2098/ICM2098.cpp:170:7:float ICM2098::readTemperature()	24	static
-../Core/Modules/ICM2098/ICM2098.cpp:179:8:float* ICM2098::getRefAccels()	16	static
+../Core/Modules/ICM2098/ICM2098.cpp:179:8:virtual float* ICM2098::getRefAccels()	16	static
 ../Core/Modules/ICM2098/ICM2098.cpp:187:6:bool ICM2098::getMagneto(float*, float*, float*)	24	static

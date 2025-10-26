@@ -11,6 +11,9 @@ void DrawGUI(	SSD1305* display, MemorySlot memSlot,
 		float refX, float refY, float refZ,
 		bool highlightMem, bool highlightFixed, bool highlightTracked)
 {
+	//clear screen
+	display->FillBitmapBuffer(Black);
+
 	//MEM section -> x = 0..21
 	display->SetCursor(0, LINE_1_Y);
 	display->WriteString("MEM", Font_7x10, White);
@@ -152,15 +155,15 @@ void DisplaySetAngle(SSD1305* display, uint8_t* digits, int selectedDigit)
 void DisplayRefDegs(SSD1305* display, float refX, float refY, float refZ)
 {
 	char refDegStr[6];
-	snprintf(refDegStr, sizeof(refDegStr), "%05.1f", refX);
+	snprintf(refDegStr, sizeof(refDegStr), "%+04.2f", refX);
 	display->SetCursor(93, LINE_1_Y);
 	display->WriteString(refDegStr, Font_7x10, White);
 
-	snprintf(refDegStr, sizeof(refDegStr), "%05.1f", refY);
+	snprintf(refDegStr, sizeof(refDegStr), "%+04.2f", refY);
 	display->SetCursor(93, LINE_2_Y);
 	display->WriteString(refDegStr, Font_7x10, White);
 
-	snprintf(refDegStr, sizeof(refDegStr), "%05.1f", refZ);
+	snprintf(refDegStr, sizeof(refDegStr), "%+04.2f", refZ);
 	display->SetCursor(93, LINE_3_Y);
 	display->WriteString(refDegStr, Font_7x10, White);
 }
