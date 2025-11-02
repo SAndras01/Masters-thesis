@@ -1,21 +1,21 @@
 LTspice 24.0.9 for Windows
-Circuit: * D:\Projektek\Masters-thesis\LTspice\Numpad.asc
-Start Time: Mon Nov  3 00:32:48 2025
+Circuit: * D:\Projektek\Masters-thesis\LTspice\Numpad_clean_for_presentation.asc
+Start Time: Mon Nov  3 00:50:18 2025
 solver = Normal
 Maximum thread count: 12
 
 
 
-WARNING: Node N006 is floating.
+WARNING: Node N005 is floating.
+WARNING: Node N013 is floating.
+WARNING: Node N002 is floating.
 WARNING: Node N009 is floating.
-WARNING: Node N012 is floating.
-WARNING: Node N015 is floating.
-WARNING: Node N018 is floating.
+WARNING: Node N016 is floating.
 WARNING: Node N021 is floating.
 WARNING: Node N024 is floating.
 WARNING: Node N027 is floating.
 WARNING: Node N030 is floating.
-WARNING: Node N033 is floating.
+WARNING: Node N018 is floating.
 
 WARNING: Less than two connections to node 3vmeasback.  This node is used by r13.
 WARNING: Less than two connections to node numpadmeasback.  This node is used by r18.
@@ -137,5 +137,5 @@ tnom = 27
 temp = 27
 method = modified trap
 .step x=1
-Total elapsed time: 0.772 seconds.
+Total elapsed time: 2.028 seconds.
 
