@@ -3,3 +3,4 @@
 .settings/
 docs/html/
 .Debug/*
+*.raw
