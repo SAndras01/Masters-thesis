@@ -1896,70 +1896,168 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Visszajelző LED\n\n"
+	(rectangle
+		(start 207.645 12.319)
+		(end 229.2349 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 20a55a14-7649-42fe-add1-c3b4e3732ef2)
+	)
+	(rectangle
+		(start 12.065 65.024)
+		(end 79.3749 70.104)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 4a22baa4-ddba-42b6-b9ce-10cdfc7625df)
+	)
+	(rectangle
+		(start 207.518 109.601)
+		(end 243.0779 114.681)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 58086693-e0d3-40a7-abcf-7b07a2c8be53)
+	)
+	(rectangle
+		(start 207.518 63.881)
+		(end 237.9979 68.961)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 7925ea35-60b3-4462-a736-8aaaf291c8f5)
+	)
+	(rectangle
+		(start 12.7 127.254)
+		(end 71.1199 132.334)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 8f615ba9-8341-481a-ad40-67ca54b45e87)
+	)
+	(rectangle
+		(start 93.345 12.319)
+		(end 109.8549 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid cb046913-0eea-4c1a-a7d8-a69c10b83659)
+	)
+	(rectangle
+		(start 12.7 12.319)
+		(end 74.9299 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid d04656cd-ae95-4cb8-8b36-5ead6baf80f7)
+	)
+	(text "Visszajelző LED\n"
 		(exclude_from_sim no)
-		(at 208.026 64.516 0)
+		(at 222.885 66.675 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "09f73e6d-d42c-4efe-b71c-5db90d2ca269")
+		(uuid "1bfe6b95-b03b-4932-898c-7791a507ccb4")
 	)
 	(text "Referenciafeszültség előállítása"
 		(exclude_from_sim no)
-		(at 13.97 13.97 0)
+		(at 43.815 15.24 0)
 		(effects
 			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "1330bd7b-7af1-483f-857b-947aa4704073")
-	)
-	(text "Numpad"
-		(exclude_from_sim no)
-		(at 98.806 14.732 0)
-		(effects
-			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
 		)
-		(uuid "1c0f2dc6-63c1-4288-abd6-a1f11144f9bb")
-	)
-	(text "Opamp tápellátás"
-		(exclude_from_sim no)
-		(at 208.28 110.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "268b1b63-ecee-4940-9dd2-38eb72e73997")
+		(uuid "42607390-1ddf-4fad-8419-045bb9000a2b")
 	)
 	(text "Referenciafeszültség visszamérése"
 		(exclude_from_sim no)
-		(at 13.97 66.04 0)
+		(at 45.72 67.945 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "3664fb7c-6565-492c-9edd-4f501fec861e")
+		(uuid "4553dbf3-5ae8-4301-a052-46de09135bb4")
 	)
 	(text "Numpadkimenet visszamérése"
 		(exclude_from_sim no)
-		(at 12.954 128.016 0)
+		(at 41.91 130.175 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "95d087a9-c124-4e26-aa57-5f8d9fa084d7")
+		(uuid "4c4ee8c9-2cd4-4a66-b26d-841964c872c8")
+	)
+	(text "Numpad"
+		(exclude_from_sim no)
+		(at 101.6 15.24 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "61c93956-7db7-423d-a230-da2c6000f332")
 	)
 	(text "V_{out} = 2.5V×(1+R_{1}/R_{2})"
 		(exclude_from_sim yes)
@@ -1973,14 +2071,29 @@
 	)
 	(text "Csatlakozó"
 		(exclude_from_sim no)
-		(at 208.28 13.97 0)
+		(at 218.44 15.24 0)
 		(effects
 			(font
-				(size 1.27 1.27)
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "de232a05-058e-4d1d-adf6-07f93a0e7083")
+		(uuid "cb28fe08-3003-49d2-a084-7ea622756e7c")
+	)
+	(text "Opamp tápellátás"
+		(exclude_from_sim no)
+		(at 225.425 112.395 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "dcb120cf-8429-4e40-9b03-1add2d73a64b")
 	)
 	(junction
 		(at 35.56 163.83)
@@ -2194,16 +2307,6 @@
 		)
 		(uuid "08cb78c8-bc54-4fcb-a17f-816b29d2c1f1")
 	)
-	(polyline
-		(pts
-			(xy 207.01 12.7) (xy 207.01 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0b109bfd-9363-422f-8f09-8af2fe3b2128")
-	)
 	(wire
 		(pts
 			(xy 147.32 31.75) (xy 158.75 31.75)
@@ -2223,6 +2326,17 @@
 			(type default)
 		)
 		(uuid "14a1e3ba-e402-4164-8fd6-f15e00e07671")
+	)
+	(polyline
+		(pts
+			(xy 92.71 12.065) (xy 92.71 198.12)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "178ce731-9117-4c05-bf36-16e5a27306e3")
 	)
 	(wire
 		(pts
@@ -2314,6 +2428,17 @@
 		)
 		(uuid "26e2c7cf-8401-4f8a-8704-f7b06d115523")
 	)
+	(polyline
+		(pts
+			(xy 207.01 12.065) (xy 207.01 165.735)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "27c214c3-4647-4ed6-9ee8-a6631c7cd838")
+	)
 	(wire
 		(pts
 			(xy 158.75 31.75) (xy 158.75 44.45)
@@ -2364,6 +2489,17 @@
 		)
 		(uuid "2a6f5104-c2ac-4d49-b5c8-6debe1f0c877")
 	)
+	(polyline
+		(pts
+			(xy 207.01 109.22) (xy 285.115 109.22)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "2d0a3620-c911-42f8-9f13-ff20cfb67709")
+	)
 	(wire
 		(pts
 			(xy 167.64 31.75) (xy 167.64 35.56)
@@ -2383,6 +2519,17 @@
 			(type default)
 		)
 		(uuid "2e056799-cef1-48ce-94fa-5a03df7090d0")
+	)
+	(polyline
+		(pts
+			(xy 12.065 64.77) (xy 92.71 64.77)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "31b15380-8100-49aa-8c25-9ec6c441ba6e")
 	)
 	(wire
 		(pts
@@ -2414,16 +2561,6 @@
 		)
 		(uuid "387b7650-c2df-4fb7-b7ed-eab6832ce969")
 	)
-	(polyline
-		(pts
-			(xy 92.71 12.7) (xy 92.71 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "439cc2da-aba0-4250-8cb2-eeac6b16e4dc")
-	)
 	(wire
 		(pts
 			(xy 35.56 107.95) (xy 35.56 109.22)
@@ -2453,6 +2590,17 @@
 			(type default)
 		)
 		(uuid "535aa93a-3ce4-463e-a404-479f7ea30ebe")
+	)
+	(polyline
+		(pts
+			(xy 12.065 126.365) (xy 92.71 126.365)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "5424b027-4376-4b4f-b6d7-b9821b7dbc30")
 	)
 	(wire
 		(pts
@@ -2583,16 +2731,6 @@
 			(type default)
 		)
 		(uuid "6802434b-a7d4-4294-a891-82bcfc934447")
-	)
-	(polyline
-		(pts
-			(xy 12.7 127) (xy 92.71 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "69f1dcf8-22e9-4baf-a36f-b3b7eb7a6a69")
 	)
 	(wire
 		(pts
@@ -2864,16 +3002,6 @@
 		)
 		(uuid "a2159932-69cd-4017-85e6-58cb99d23c34")
 	)
-	(polyline
-		(pts
-			(xy 92.71 99.06) (xy 92.71 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a40e0eaa-35dd-448d-b369-5745c905a790")
-	)
 	(wire
 		(pts
 			(xy 147.32 95.25) (xy 158.75 95.25)
@@ -2883,16 +3011,6 @@
 			(type default)
 		)
 		(uuid "a5d348a0-23d3-4863-8b45-ea28837e876b")
-	)
-	(polyline
-		(pts
-			(xy 12.7 64.77) (xy 92.71 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6927a9f-b5d6-4256-a025-a71936e9ce15")
 	)
 	(wire
 		(pts
@@ -2984,6 +3102,17 @@
 		)
 		(uuid "bf40858b-084a-459f-826f-d1124013b4f4")
 	)
+	(polyline
+		(pts
+			(xy 207.01 63.5) (xy 285.115 63.5)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "c0189842-c55f-498f-838f-dcde8d583733")
+	)
 	(wire
 		(pts
 			(xy 120.65 133.35) (xy 137.16 133.35)
@@ -3013,16 +3142,6 @@
 			(type default)
 		)
 		(uuid "c67e0b26-7235-453c-93c1-62d908b651f2")
-	)
-	(polyline
-		(pts
-			(xy 207.01 63.5) (xy 285.115 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c6f556dc-d446-416f-959e-a36e9e5489cf")
 	)
 	(wire
 		(pts
@@ -3093,16 +3212,6 @@
 			(type default)
 		)
 		(uuid "d3ec836e-8aa4-4eeb-9bd8-61d9a92db682")
-	)
-	(polyline
-		(pts
-			(xy 207.01 109.22) (xy 284.48 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d40ffc61-e706-4817-8d90-e8a850265fc5")
 	)
 	(wire
 		(pts
@@ -3344,7 +3453,7 @@
 		)
 		(uuid "ff772556-e48f-4528-aecd-dbb8354e4771")
 	)
-	(label "NumpadOut_toADC"
+	(label "NUMPAD_A_OUT"
 		(at 252.73 43.18 0)
 		(effects
 			(font
@@ -3364,7 +3473,7 @@
 		)
 		(uuid "5a59a660-133f-49a7-925f-7900ef18665d")
 	)
-	(label "VREF_measback"
+	(label "NUMPAD_VREF"
 		(at 252.73 40.64 0)
 		(effects
 			(font
@@ -3384,7 +3493,7 @@
 		)
 		(uuid "aed837fe-94fd-4fc4-bf37-db235aebb64b")
 	)
-	(label "VREF_measback"
+	(label "NUMPAD_VREF"
 		(at 64.77 90.17 0)
 		(effects
 			(font
@@ -3404,7 +3513,7 @@
 		)
 		(uuid "d6ab5ced-7a4e-482b-925e-a4620b266a72")
 	)
-	(label "NumpadOut_toADC"
+	(label "NUMPAD_A_OUT"
 		(at 64.77 154.94 0)
 		(effects
 			(font
@@ -5752,7 +5861,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0603_1608Metric"
 			(at 243.84 93.98 0)
 			(effects
 				(font
@@ -6099,7 +6208,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "4k7"
 			(at 246.38 85.0899 0)
 			(effects
 				(font

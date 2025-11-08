@@ -1939,16 +1939,61 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Kijelző"
-		(exclude_from_sim no)
-		(at 13.97 13.716 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-			(justify left top)
+	(rectangle
+		(start 210.8201 12.319)
+		(end 232.41 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
 		)
-		(uuid "1578030c-6749-409b-884e-4c00e39736a8")
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 024b9ff3-0e9e-4761-aab5-585281b5e771)
+	)
+	(rectangle
+		(start 12.7001 12.319)
+		(end 27.305 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 78350a6c-046a-4c89-8476-a91acd2ee581)
+	)
+	(rectangle
+		(start 108.5851 12.319)
+		(end 139.065 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid 8f45108e-3950-4a47-ae52-cf40f64e53df)
+	)
+	(rectangle
+		(start 160.6549 12.319)
+		(end 192.405 17.399)
+		(stroke
+			(width 0)
+			(type solid)
+			(color 255 229 191 1)
+		)
+		(fill
+			(type color)
+			(color 255 153 0 1)
+		)
+		(uuid f67f7914-1044-4f02-a201-0f3a688df8bf)
 	)
 	(text "A0 low (JP0 open)   : addr = 0b0111100\nA0 high (JP0 closed): addr = 0b0111101\n"
 		(exclude_from_sim no)
@@ -1961,38 +2006,57 @@
 		)
 		(uuid "38c934c1-49fa-471c-be4b-4d9b77397044")
 	)
-	(text "I2C address A0"
+	(text "Csatlakozó"
 		(exclude_from_sim no)
-		(at 110.998 13.208 0)
+		(at 221.615 15.24 0)
 		(effects
 			(font
 				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "9ad3b6cf-fdbd-41e2-b3fd-d41e99002008")
+		(uuid "5e492a5a-7b18-4a6d-99cb-775b3600581c")
 	)
 	(text "Visszajelző LED"
 		(exclude_from_sim no)
-		(at 162.814 14.224 0)
+		(at 176.53 15.24 0)
 		(effects
 			(font
 				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "aa0fcf5d-e74d-4e75-a13b-b320c55a15f7")
+		(uuid "6247e2cf-f9ac-40a5-b724-5091537b5eae")
 	)
-	(text "Csatlakozó"
+	(text "Kijelző"
 		(exclude_from_sim no)
-		(at 212.09 13.716 0)
+		(at 19.685 15.24 0)
 		(effects
 			(font
 				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
 			)
-			(justify left top)
 		)
-		(uuid "c24b9900-eec9-483c-935f-b66570152660")
+		(uuid "6838edd2-d7b8-4059-9679-79a397cbe244")
+	)
+	(text "I2C address A0"
+		(exclude_from_sim no)
+		(at 123.825 15.24 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(thickness 0.508)
+				(bold yes)
+				(color 255 255 255 1)
+			)
+		)
+		(uuid "edad94d3-dd0f-42a1-8c89-2eb1533570e1")
 	)
 	(junction
 		(at 45.72 88.9)
@@ -2115,16 +2179,6 @@
 			(type default)
 		)
 		(uuid "0c4843f2-d66f-4693-94b9-11c0aa8dbeeb")
-	)
-	(polyline
-		(pts
-			(xy 210.185 12.065) (xy 210.185 165.735)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f486ba6-c630-48b8-82dc-375958039eeb")
 	)
 	(wire
 		(pts
@@ -2348,13 +2402,14 @@
 	)
 	(polyline
 		(pts
-			(xy 160.02 12.7) (xy 160.02 197.485)
+			(xy 210.185 12.065) (xy 210.185 165.735)
 		)
 		(stroke
-			(width 0)
-			(type default)
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
 		)
-		(uuid "70c55df0-8fc3-4938-8f7b-41b467324ccc")
+		(uuid "718aeaf5-e0c5-40a5-8466-ea6333290dc8")
 	)
 	(wire
 		(pts
@@ -2386,16 +2441,6 @@
 		)
 		(uuid "743a03d3-6477-4309-90bc-fbc0e9fef79d")
 	)
-	(polyline
-		(pts
-			(xy 109.855 12.065) (xy 109.855 197.485)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b7e7e10-54a7-4f5a-b9a4-a70ebcba7a18")
-	)
 	(wire
 		(pts
 			(xy 48.26 78.74) (xy 45.72 78.74)
@@ -2405,6 +2450,17 @@
 			(type default)
 		)
 		(uuid "80c3f56e-5196-4817-9dfa-00c41a2d265f")
+	)
+	(polyline
+		(pts
+			(xy 107.95 12.065) (xy 107.95 198.12)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "83a251c3-58f3-4902-a450-f449d9dc1fb7")
 	)
 	(wire
 		(pts
@@ -2455,6 +2511,17 @@
 			(type default)
 		)
 		(uuid "96241c9f-81b8-4125-be0a-e17a115b2dfa")
+	)
+	(polyline
+		(pts
+			(xy 160.02 12.065) (xy 160.02 198.12)
+		)
+		(stroke
+			(width 0.762)
+			(type solid)
+			(color 255 153 0 1)
+		)
+		(uuid "9a01f6fd-14c8-40eb-9dc7-cc1d24c7fdb1")
 	)
 	(wire
 		(pts
@@ -3363,7 +3430,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6274060d-690c-40f0-b55a-5d787682c793")
 		(property "Reference" "R2"
@@ -3375,7 +3442,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2k"
+		(property "Value" "2k2"
 			(at 241.3 91.4399 0)
 			(effects
 				(font
@@ -3985,7 +4052,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e0bd3b26-e887-4f01-9bc6-fcc68a56bd22")
 		(property "Reference" "R1"
@@ -3997,7 +4064,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2k"
+		(property "Value" "2k2"
 			(at 257.81 88.8999 0)
 			(effects
 				(font
