@@ -51,8 +51,35 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        [
+          "pth_inside_courtyard|114500000|109500000|17965e23-c509-41db-b0e5-483e25f00db8|52416e5c-52f2-48bf-a1ce-47a35278b76f",
+          ""
+        ],
+        [
+          "pth_inside_courtyard|116500000|109500000|9a30adf3-2b5e-4de1-b08c-d121360c860c|52416e5c-52f2-48bf-a1ce-47a35278b76f",
+          ""
+        ],
+        [
+          "pth_inside_courtyard|118500000|109500000|ecca2718-d3d8-4ca5-b36e-f34e7559595e|52416e5c-52f2-48bf-a1ce-47a35278b76f",
+          ""
+        ],
+        [
+          "pth_inside_courtyard|120500000|109500000|002b8a0b-54d3-4672-b5b7-2bd328ee3f98|52416e5c-52f2-48bf-a1ce-47a35278b76f",
+          ""
+        ],
+        [
+          "pth_inside_courtyard|122500000|109500000|37975df0-6145-4e78-b5cf-34a19a902caf|52416e5c-52f2-48bf-a1ce-47a35278b76f",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -141,7 +168,7 @@
           "td_onpthpad": true,
           "td_onroundshapesonly": false,
           "td_onsmdpad": true,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onvia": true
         }
       ],
@@ -180,7 +207,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.508
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +237,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -451,7 +486,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "KITTEN.kicad_pro",
+    "filename": "display.kicad_pro",
     "version": 3
   },
   "net_settings": {

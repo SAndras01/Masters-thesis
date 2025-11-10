@@ -1995,7 +1995,7 @@
 		)
 		(uuid f67f7914-1044-4f02-a201-0f3a688df8bf)
 	)
-	(text "A0 low (JP0 open)   : addr = 0b0111100\nA0 high (JP0 closed): addr = 0b0111101\n"
+	(text "A0 low (JP1 open)   : addr = 0b0111100\nA0 high (JP1 closed): addr = 0b0111101\n"
 		(exclude_from_sim no)
 		(at 110.49 19.05 0)
 		(effects
@@ -2823,7 +2823,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0838639a-6ec9-4519-a3a3-cfc9ecbb6aa9")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR03"
 			(at 133.35 82.55 0)
 			(effects
 				(font
@@ -2873,7 +2873,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "#PWR04")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -2968,7 +2968,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "13937295-00bf-47c0-bc05-0f889610595a")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR06"
 			(at 185.42 109.22 0)
 			(effects
 				(font
@@ -3018,7 +3018,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "#PWR010")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -3033,7 +3033,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "37ee2c54-c8c9-46cc-9252-2e518b252311")
-		(property "Reference" "U3"
+		(property "Reference" "U1"
 			(at 50.8 61.722 0)
 			(effects
 				(font
@@ -3153,7 +3153,7 @@
 		(instances
 			(project ""
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "U3")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -3235,7 +3235,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3a4b4fd3-93db-44d0-90a0-559e86f0bacf")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR09"
 			(at 238.76 87.63 0)
 			(effects
 				(font
@@ -3285,7 +3285,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "#PWR06")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -3433,7 +3433,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "6274060d-690c-40f0-b55a-5d787682c793")
-		(property "Reference" "R2"
+		(property "Reference" "R3"
 			(at 241.3 88.8999 0)
 			(effects
 				(font
@@ -3487,7 +3487,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "R2")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -3503,7 +3503,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7d7bd8ac-acec-4c3b-9832-829e4d7e52da")
-		(property "Reference" "R4"
+		(property "Reference" "R1"
 			(at 135.89 95.2499 0)
 			(effects
 				(font
@@ -3557,7 +3557,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "R4")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -3573,7 +3573,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8bf475ab-c6da-4974-82eb-bd0dbf6841d1")
-		(property "Reference" "J4"
+		(property "Reference" "J1"
 			(at 267.335 88.9 0)
 			(effects
 				(font
@@ -3634,7 +3634,7 @@
 		(instances
 			(project ""
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "J4")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -3650,7 +3650,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4df769a-7b59-4275-8205-fd96d81425cd")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR04"
 			(at 133.35 109.22 0)
 			(effects
 				(font
@@ -3700,7 +3700,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "#PWR03")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -3782,7 +3782,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd205a91-0074-46dd-bc57-a0446bac7577")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR05"
 			(at 185.42 83.82 0)
 			(effects
 				(font
@@ -3832,7 +3832,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "#PWR09")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -3919,7 +3919,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cddc3914-84df-4269-9b9f-611992e6e01b")
-		(property "Reference" "R3"
+		(property "Reference" "R2"
 			(at 187.96 85.0899 0)
 			(effects
 				(font
@@ -3973,7 +3973,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "R3")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -3989,7 +3989,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e060f22d-f49e-4771-b4ed-cd507f7eb294")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR010"
 			(at 255.27 85.09 0)
 			(effects
 				(font
@@ -4039,7 +4039,7 @@
 		(instances
 			(project "KITTEN"
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "#PWR05")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -4055,7 +4055,7 @@
 		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e0bd3b26-e887-4f01-9bc6-fcc68a56bd22")
-		(property "Reference" "R1"
+		(property "Reference" "R4"
 			(at 257.81 86.3599 0)
 			(effects
 				(font
@@ -4109,7 +4109,7 @@
 		(instances
 			(project ""
 				(path "/c14c77e6-5108-4122-81fc-9f298705addb"
-					(reference "R1")
+					(reference "R4")
 					(unit 1)
 				)
 			)

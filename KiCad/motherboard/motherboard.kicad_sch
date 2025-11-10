@@ -32576,15 +32576,15 @@
 		)
 		(uuid "0419fb93-70ac-4c56-a8fd-ee555589b21d")
 	)
-	(label "BTN_FREE_MOOVE"
-		(at 176.53 165.1 0)
+	(label "BTN_SET"
+		(at 97.79 184.15 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "0595fb8c-63df-401d-a8c1-d44f42314fe0")
+		(uuid "0471db2f-6a6f-487c-af59-fe76427a2e54")
 	)
 	(label "I2C_SDA"
 		(at 279.4 55.88 0)
@@ -32595,16 +32595,6 @@
 			(justify left bottom)
 		)
 		(uuid "0c591f50-af60-4cb1-a5dc-b7d55c545ebb")
-	)
-	(label "BTN_MEMSLOT"
-		(at 176.53 157.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0cc57b22-a3ed-4e20-8eca-ab0fd57a8dae")
 	)
 	(label "MOT1_MS1"
 		(at 279.4 152.4 0)
@@ -32645,16 +32635,6 @@
 			(justify right bottom)
 		)
 		(uuid "1367a43f-043a-458a-882a-d490d703b7a0")
-	)
-	(label "BTN_FIX_AX"
-		(at 97.79 179.07 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "14f42180-2ec9-4948-969c-90fdcb6716c1")
 	)
 	(label "PDN_UART_MOT2"
 		(at 279.4 92.71 0)
@@ -32706,6 +32686,16 @@
 		)
 		(uuid "2123bbd5-4526-4226-b744-7379aef42a6c")
 	)
+	(label "BTN_EXTERNAL_EXTRA"
+		(at 97.79 194.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "24aaf583-cfab-4b9f-a4a2-ca802ff97427")
+	)
 	(label "GND_TRG"
 		(at 441.96 288.29 180)
 		(effects
@@ -32736,16 +32726,6 @@
 		)
 		(uuid "293eef84-6f83-4315-a613-f1082b9d6357")
 	)
-	(label "BTN_TRACKED_AX"
-		(at 97.79 181.61 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2a9c6ec1-b8a0-4bc1-89c5-b14c13158fd6")
-	)
 	(label "MOT1_SPREAD"
 		(at 213.36 298.45 0)
 		(effects
@@ -32755,16 +32735,6 @@
 			(justify left bottom)
 		)
 		(uuid "2c76c8f6-213f-4198-99bd-fc7efbf11e5f")
-	)
-	(label "BTN_FIX_AX"
-		(at 176.53 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2f7de523-5d87-444b-a591-56f3088cb9da")
 	)
 	(label "MISO_LISTEN_EXTERNAL"
 		(at 521.97 105.41 0)
@@ -32786,6 +32756,26 @@
 		)
 		(uuid "356bff6f-7151-4cf5-88d6-c97ce41c4f8f")
 	)
+	(label "BTN_FREE_MOOVE"
+		(at 176.53 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "390d35de-010a-4cc7-adb3-a385ca4a012f")
+	)
+	(label "BTN_FIX_AX"
+		(at 176.53 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3c156e11-af53-4d63-b708-ae9c2e648505")
+	)
 	(label "MOT_ENN_DEBOUNCED"
 		(at 213.36 367.03 0)
 		(effects
@@ -32795,6 +32785,26 @@
 			(justify left bottom)
 		)
 		(uuid "3d4d5538-218d-433d-bf1c-58582919ca4b")
+	)
+	(label "BTN_OK"
+		(at 176.53 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3d749dd3-13dc-42db-906e-40ff74fbb2de")
+	)
+	(label "BTN_TRACKED_AX"
+		(at 176.53 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3e7d07e0-4b06-4a30-bb4f-8f0f5dc88661")
 	)
 	(label "MOSI_LISTEN"
 		(at 176.53 97.79 0)
@@ -32835,6 +32845,16 @@
 			(justify left bottom)
 		)
 		(uuid "41ebaafd-d9ac-416e-86c1-0812c5ef8b8c")
+	)
+	(label "BTN_FREE_MOOVE"
+		(at 97.79 191.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4603a41c-b1ab-4732-99fe-e1591e1c8168")
 	)
 	(label "SPI_MISO"
 		(at 176.53 233.68 0)
@@ -32986,6 +33006,16 @@
 		)
 		(uuid "62b898ca-79ac-4bb8-9ad0-113c7f66f14d")
 	)
+	(label "BTN_SET"
+		(at 176.53 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "63fa14fc-32d6-486e-a280-a63e7a88e2df")
+	)
 	(label "BTN_ONBRD_EXTRA3"
 		(at 176.53 175.26 0)
 		(effects
@@ -33056,16 +33086,6 @@
 		)
 		(uuid "700d9bbc-208f-4cd4-9dc5-d0c85f11cda4")
 	)
-	(label "BTN_TRACKED_AX"
-		(at 176.53 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "75c87d39-01a9-4b19-8af4-ae882c34f729")
-	)
 	(label "NSS_LISTEN_EXTERNAL"
 		(at 521.97 100.33 0)
 		(effects
@@ -33096,15 +33116,25 @@
 		)
 		(uuid "78ec8b72-6c65-400e-b716-13f33aa54418")
 	)
-	(label "BTN_EXTERNAL_EXTRA"
-		(at 176.53 167.64 0)
+	(label "BTN_FIX_AX"
+		(at 97.79 181.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "79d21c3b-9a4f-45f5-b5f3-b8b393685494")
+		(uuid "79d2434c-c5a1-4d62-a985-78a33cea6c41")
+	)
+	(label "BTN_TRACKED_AX"
+		(at 97.79 189.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7b1bef3b-6d1f-4fcd-8369-c676569bb46c")
 	)
 	(label "CLK_LISTEN"
 		(at 448.31 107.95 180)
@@ -33115,6 +33145,16 @@
 			(justify right bottom)
 		)
 		(uuid "7b3b4e19-20bd-4bcc-b3cb-c393e49bbd38")
+	)
+	(label "BTN_EXTERNAL_EXTRA"
+		(at 176.53 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7bdccc35-6a9a-4c0d-95e0-013348a2ff11")
 	)
 	(label "I2C_SDA"
 		(at 43.18 190.5 180)
@@ -33155,16 +33195,6 @@
 			(justify right bottom)
 		)
 		(uuid "83bc981e-fbbf-4185-9bf1-89abd65165ba")
-	)
-	(label "BTN_OK"
-		(at 97.79 186.69 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "848226ce-36b0-4bb6-a073-adbfe9977983")
 	)
 	(label "MOT_ENN_DEBOUNCED"
 		(at 213.36 306.07 0)
@@ -33226,16 +33256,6 @@
 		)
 		(uuid "950bf75a-9ba5-449e-83da-a96fe71e251a")
 	)
-	(label "BTN_OK"
-		(at 176.53 160.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "95182fb3-2c34-4506-9ce7-d36c22000a2e")
-	)
 	(label "PDN_UART_MOT2"
 		(at 208.28 355.6 0)
 		(effects
@@ -33275,16 +33295,6 @@
 			(justify right bottom)
 		)
 		(uuid "9a7c2bd1-377a-4682-8c25-6c253c90e322")
-	)
-	(label "BTN_SET"
-		(at 176.53 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9ca57db5-c850-4bbc-a03b-8537d80bb82a")
 	)
 	(label "MOT1_MS2"
 		(at 279.4 154.94 0)
@@ -33366,15 +33376,15 @@
 		)
 		(uuid "b6781a63-bb47-4874-bf72-cdd0391c852f")
 	)
-	(label "BTN_EXTERNAL_EXTRA"
-		(at 97.79 194.31 180)
+	(label "BTN_MEMSLOT"
+		(at 97.79 179.07 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "ba65dfd1-fb00-4a84-8b32-f9d7c4dd3825")
+		(uuid "b7e9c3d3-bdf7-4d3c-a5a0-db361d5b192e")
 	)
 	(label "MOT2_INDEX"
 		(at 220.98 383.54 0)
@@ -33506,16 +33516,6 @@
 		)
 		(uuid "d1b2a12a-5286-4233-b432-816336faf1ac")
 	)
-	(label "BTN_FREE_MOOVE"
-		(at 97.79 191.77 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "d290e95e-33be-4210-b2b3-e9da733f3247")
-	)
 	(label "CLK_LISTEN"
 		(at 176.53 115.57 0)
 		(effects
@@ -33536,6 +33536,16 @@
 		)
 		(uuid "d2b91869-cfc1-4ee6-b5ec-e4d148b84395")
 	)
+	(label "BTN_MEMSLOT"
+		(at 176.53 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d81508af-5b17-4d1b-a5e7-734f575d93a4")
+	)
 	(label "PDN_UART_MOT1"
 		(at 208.28 294.64 0)
 		(effects
@@ -33555,6 +33565,16 @@
 			(justify right bottom)
 		)
 		(uuid "dbc41944-6ec6-4cf1-964f-0ef8c7a4785d")
+	)
+	(label "BTN_OK"
+		(at 97.79 186.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ddf70b1d-a29c-46ae-b11d-6d11503b0e5d")
 	)
 	(label "MOSI_LISTEN"
 		(at 448.31 102.87 180)
@@ -33646,16 +33666,6 @@
 		)
 		(uuid "ed6e112e-0ae6-4d55-8061-af634eb2d734")
 	)
-	(label "BTN_MEMSLOT"
-		(at 97.79 184.15 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f13e7c95-323b-4f78-9309-808fc2bee7e5")
-	)
 	(label "SIMU_TRG_RB"
 		(at 427.99 339.09 0)
 		(effects
@@ -33665,16 +33675,6 @@
 			(justify left bottom)
 		)
 		(uuid "f2b23e1d-c35b-4c2d-8017-e8009fed2b60")
-	)
-	(label "BTN_SET"
-		(at 97.79 189.23 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f39d13b1-b08e-4fae-b16b-b4b5a51a6b7d")
 	)
 	(label "NSS_LISTEN"
 		(at 176.53 43.18 0)
