@@ -97,6 +97,8 @@ void Error_Handler(void);
 #define MCO_GPIO_Port GPIOH
 #define RMII_MDC_Pin GPIO_PIN_1
 #define RMII_MDC_GPIO_Port GPIOC
+#define TRG_RB_OUT_Pin GPIO_PIN_2
+#define TRG_RB_OUT_GPIO_Port GPIOC
 #define MOT1_STEP_Pin GPIO_PIN_0
 #define MOT1_STEP_GPIO_Port GPIOA
 #define RMII_REF_CLK_Pin GPIO_PIN_1
@@ -117,8 +119,6 @@ void Error_Handler(void);
 #define LD1_GPIO_Port GPIOB
 #define ENCODER2_CS_Pin GPIO_PIN_11
 #define ENCODER2_CS_GPIO_Port GPIOF
-#define TRG_RB_OUT_Pin GPIO_PIN_12
-#define TRG_RB_OUT_GPIO_Port GPIOF
 #define BTN_FREE_MOOVE_Pin GPIO_PIN_7
 #define BTN_FREE_MOOVE_GPIO_Port GPIOE
 #define BTN_EXTERNAL_EXTRA_Pin GPIO_PIN_8

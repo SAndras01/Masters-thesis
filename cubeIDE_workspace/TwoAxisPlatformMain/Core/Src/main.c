@@ -907,8 +907,10 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOF, MOT1_DIR_Pin|MOT1_SPREAD_Pin|MOT1_MS1_Pin|MOT1_MS2_Pin
                           |MOT2_DIR_Pin|MOT2_SPREAD_Pin|MOT2_MS1_Pin|MOT2_MS2_Pin
-                          |MOT_ENN_Pin|OLED_RES_Pin|ENCODER1_CS_Pin|ENCODER2_CS_Pin
-                          |TRG_RB_OUT_Pin, GPIO_PIN_RESET);
+                          |MOT_ENN_Pin|OLED_RES_Pin|ENCODER1_CS_Pin|ENCODER2_CS_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(TRG_RB_OUT_GPIO_Port, TRG_RB_OUT_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
@@ -933,10 +935,10 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pins : MOT1_DIR_Pin MOT1_SPREAD_Pin MOT1_MS1_Pin MOT1_MS2_Pin
                            MOT2_DIR_Pin MOT2_SPREAD_Pin MOT2_MS1_Pin MOT2_MS2_Pin
-                           MOT_ENN_Pin OLED_RES_Pin TRG_RB_OUT_Pin */
+                           MOT_ENN_Pin OLED_RES_Pin */
   GPIO_InitStruct.Pin = MOT1_DIR_Pin|MOT1_SPREAD_Pin|MOT1_MS1_Pin|MOT1_MS2_Pin
                           |MOT2_DIR_Pin|MOT2_SPREAD_Pin|MOT2_MS1_Pin|MOT2_MS2_Pin
-                          |MOT_ENN_Pin|OLED_RES_Pin|TRG_RB_OUT_Pin;
+                          |MOT_ENN_Pin|OLED_RES_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -948,6 +950,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : TRG_RB_OUT_Pin */
+  GPIO_InitStruct.Pin = TRG_RB_OUT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(TRG_RB_OUT_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LD1_Pin LD3_Pin LD2_Pin */
   GPIO_InitStruct.Pin = LD1_Pin|LD3_Pin|LD2_Pin;
