@@ -12386,7 +12386,7 @@
 		)
 		(uuid "a48a1998-2cd2-4dde-8433-69f2e784a406")
 	)
-	(text "ESP32"
+	(text "STM32"
 		(exclude_from_sim no)
 		(at 137.16 18.415 0)
 		(effects
