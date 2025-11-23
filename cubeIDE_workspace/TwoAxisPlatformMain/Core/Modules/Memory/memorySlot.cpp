@@ -60,7 +60,7 @@ bool MemorySlot::setFixedAx(int axesCodedAsNum)
 	}
 }
 
-
+// todo: Valójábana x és z tud lenni a fix AX
 bool MemorySlot::setTrackedAx(axes trackedAx_p)
 {
 	if(trackedAx_p == fixedAx)

@@ -58,7 +58,7 @@ public:
 class State_Settings : public State
 {
 private:
-	enum SettingSelectState {setDigit1 = 0, setDigit2 = 1, setDigit3 = 2, setFixAx = 4, setTrackAx = 5};
+	enum SettingSelectState {setDigit1 = 0, setDigit2 = 1, setDigit3 = 2, setFixAx = 4, setTrackAx = 5}; //substates
 	SettingSelectState currentSettingState = setDigit1;
 	uint8_t currentDigit;
 	uint8_t numberDigits[3] = {0,0,0};
