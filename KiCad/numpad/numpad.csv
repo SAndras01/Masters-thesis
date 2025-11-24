@@ -1,0 +1,17 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"SW5,SW7,SW3,SW6,SW8,SW2,SW10,SW9,SW4,SW1";"SW_Cherry_MX_1.00u_PCB";10;"Cherry Switch Single";;;
+2;"TP1,TP2";"TestPoint_Pad_D2.0mm";2;"TestPoint";;;
+3;"R12,R13,R15,R10,R9,R16,R14,R17,R1,R18,R20,R11";"R_0603_1608Metric";12;"1k";;;
+4;"R8";"R_0603_1608Metric";1;"7k5";;;
+5;"J1";"JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical";1;"Conn_01x04_Pin";;;
+6;"C2,C1";"C_0603_1608Metric_Pad1.08x0.95mm_HandSolder";2;"C";;;
+7;"R5,R4";"R_0603_1608Metric";2;"0R";;;
+8;"D1";"D_0603_1608Metric";1;"LED";;;
+9;"R7,R6";"R_0603_1608Metric";2;"100R";;;
+10;"U2";"SOIC-8_3.9x4.9mm_P1.27mm";1;"TL431D";;;
+11;"R3";"R_0603_1608Metric";1;"51k";;;
+12;"R2";"R_0603_1608Metric";1;"10k";;;
+13;"R19";"R_0603_1608Metric";1;"100k";;;
+14;"R21";"R_0603_1608Metric";1;"4k7";;;
+15;"U1";"SOIC-8_3.9x4.9mm_P1.27mm";1;"LT1632";;;
+16;"C3";"C_0603_1608Metric";1;"1n";;;

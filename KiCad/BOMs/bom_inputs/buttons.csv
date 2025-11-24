@@ -1,0 +1,6 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"SW2,SW4,SW5,SW7,SW3,SW6,SW1";"SW_Cherry_MX_1.00u_PCB";7;"Cherry Switch Single";;;
+2;"J1";"JST_PH_B9B-PH-K_1x09_P2.00mm_Vertical";1;"Conn_01x09_Pin";;;
+3;"R13,R2,R1,R8,R3,R7,R9";"R_0603_1608Metric";7;"1k";;;
+4;"C2,C3,C6,C1,C4,C7,C5";"C_0603_1608Metric";7;"100n";;;
+5;"R14,R12,R5,R6,R11,R4,R10";"R_0603_1608Metric";7;"10k";;;
