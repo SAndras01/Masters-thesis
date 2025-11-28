@@ -17,7 +17,7 @@
 #include <stdint.h>
 #include "fonts.h"
 #include "test_bitmaps.hpp"
-#include "stm32f4xx_hal.h"
+#include "main.h"
 
 
 // ===========================
@@ -130,7 +130,7 @@ enum DisplayInverseMode
 enum ComOutputScanDirection
 {
 	normalMode = 0xC0,
-	remappedMode= 0xC8
+	remappedMode = 0xC8
 };
 
 enum ColorMode
@@ -153,7 +153,7 @@ enum COMPinConfig
 
 enum EnableCOMRemap
 {
-	enable = 0b00010010,
+	enable = 0b00100010,
 	disable= 0b00000010
 };
 
@@ -179,7 +179,7 @@ private:
     uint8_t commandBuffer[5];
     uint8_t bitmapBuffer[DISPLAY_WIDTH * DISPLAY_HEIGHT / 8];
 
-    uint8_t v_offset = 4;
+    uint8_t v_offset;
 
     HAL_StatusTypeDef SendCommand(uint8_t commandSize);
 
@@ -190,11 +190,18 @@ public:
 				uint8_t width_p,
 				uint8_t height_p);
 
-	bool Init();
+    /**
+	 * @brief Initialise the display with the given orientation.
+	 *
+	 * @param orientation, positive or negative integer.
+	 * @return true if all instructions got successfully sent.
+	 */
+	bool Init(int8_t orientation = 1);
 
 	HAL_StatusTypeDef WriteBitmapToScreen();
 	HAL_StatusTypeDef WriteBitmapToScreen(uint8_t* bitmap, size_t size);
 
+	void FillBitmapBuffer(SSD1305_COLOR color_p);
 	HAL_StatusTypeDef Fill(SSD1305_COLOR color_p);
 
 	bool DrawPixel(uint8_t x, uint8_t y, SSD1305_COLOR color_p);
@@ -202,6 +209,7 @@ public:
 	bool WriteString(const char* str, FontDef Font, SSD1305_COLOR color);
 
 	void SetCursor(uint8_t x, uint8_t y);
+
 
 	uint8_t GetHeight();
 	uint8_t GetWidth();

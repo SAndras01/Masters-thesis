@@ -39,7 +39,7 @@ Core/Modules/ICM2098/ICM2098.o: ../Core/Modules/ICM2098/ICM2098.cpp \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp
 ../Core/Modules/ICM2098/ICM2098.hpp:
 ../Core/Modules/ICM2098/ICM2098_Registers.hpp:
 ../Core/Inc/main.h:
@@ -81,4 +81,4 @@ Core/Modules/ICM2098/ICM2098.o: ../Core/Modules/ICM2098/ICM2098.cpp \
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pcd_ex.h:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/TwoAxisPlatformMain/Core/Modules/Accelerometer/accelerometer.hpp:

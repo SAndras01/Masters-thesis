@@ -1,4 +1,4 @@
-../Drivers/Commander-API-3.0.0/src/Commander-Autocomplete.cpp:39:1:AutoComplete::AutoComplete(TrieElement_t*)	24	static
+../Drivers/Commander-API-3.0.0/src/Commander-Autocomplete.cpp:39:1:AutoComplete::AutoComplete(AutoComplete::TrieElement_t*)	24	static
 ../Drivers/Commander-API-3.0.0/src/Commander-Autocomplete.cpp:47:6:void AutoComplete::searchRecursive(int, char*, int)	40	static
 ../Drivers/Commander-API-3.0.0/src/Commander-Autocomplete.cpp:112:5:int AutoComplete::searchLastMatchingNode(const char*)	40	static
 ../Drivers/Commander-API-3.0.0/src/Commander-Autocomplete.cpp:156:5:int AutoComplete::generateHint(const char*, char*, int)	40	static

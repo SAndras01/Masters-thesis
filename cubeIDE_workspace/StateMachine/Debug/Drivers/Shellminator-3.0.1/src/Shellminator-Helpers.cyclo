@@ -1,5 +1,5 @@
-../Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.cpp:36:5:int indexOf(const char*, char)	3
-../Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.cpp:49:6:bool startsWith(const char*, const char*)	4
-../Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.cpp:73:6:void shiftStringLeft(char*)	3
-../Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.cpp:88:5:int strcicmp(const char*, const char*)	3
-../Drivers/Shellminator-3.0.1/src/Shellminator-Helpers.cpp:111:6:void tailEnd(char*)	4
+Shellminator-Helpers.cpp:36:5:int indexOf(const char*, char)	3
+Shellminator-Helpers.cpp:49:6:bool startsWith(const char*, const char*)	4
+Shellminator-Helpers.cpp:73:6:void shiftStringLeft(char*)	3
+Shellminator-Helpers.cpp:88:5:int strcicmp(const char*, const char*)	3
+Shellminator-Helpers.cpp:111:6:void tailEnd(char*)	4

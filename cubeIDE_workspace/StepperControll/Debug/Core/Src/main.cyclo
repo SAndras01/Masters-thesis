@@ -1,8 +1,8 @@
-../Core/Src/main.cpp:81:5:int main()	4
-../Core/Src/main.cpp:149:6:void SystemClock_Config()	3
-../Core/Src/main.cpp:197:13:void MX_TIM2_Init()	6
-../Core/Src/main.cpp:254:13:void MX_DMA_Init()	1
-../Core/Src/main.cpp:272:13:void MX_GPIO_Init()	1
-../Core/Src/main.cpp:327:6:void Error_Handler()	1
-../Core/Src/main.cpp:336:1:void __static_initialization_and_destruction_0(int, int)	3
-../Core/Src/main.cpp:336:1:cpp)	1
+main.cpp:81:5:int main()	4
+main.cpp:149:6:void SystemClock_Config()	3
+main.cpp:197:13:void MX_TIM2_Init()	6
+main.cpp:254:13:void MX_DMA_Init()	1
+main.cpp:272:13:void MX_GPIO_Init()	1
+main.cpp:327:6:void Error_Handler()	1
+main.cpp:336:1:void __static_initialization_and_destruction_0(int, int)	3
+main.cpp:336:1:cpp)	1

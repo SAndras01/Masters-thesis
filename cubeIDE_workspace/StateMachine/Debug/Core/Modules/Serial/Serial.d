@@ -1,8 +1,8 @@
 Core/Modules/Serial/Serial.o: ../Core/Modules/Serial/Serial.cpp \
  ../Core/Modules/Serial/Serial.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp \
  ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -37,9 +37,9 @@ Core/Modules/Serial/Serial.o: ../Core/Modules/Serial/Serial.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ../Core/Modules/Serial/Serial.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Stream.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Print.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Stream/Printable.hpp:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:

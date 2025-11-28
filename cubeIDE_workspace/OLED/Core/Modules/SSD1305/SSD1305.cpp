@@ -19,9 +19,11 @@ SSD1305::SSD1305(
 	this->height = height_p;
 }
 
-bool SSD1305::Init()
+bool SSD1305::Init(int8_t orientation)
 {
-
+	v_offset = (orientation < 0) ? 4 : 0;
+	ComOutputScanDirection scanDirection = (orientation < 0) ? remappedMode : normalMode;
+	SegmentRemap remap = (orientation < 0) ? columnAddress131toSEG0 : columnAddress0toSEG0;
 
     int status = 0;
 
@@ -31,11 +33,10 @@ bool SSD1305::Init()
 	status += SetDisplayStartLine(0);
 	status += SetColorAndPowerMode(monochromeMode, normalPowerMode);
 	status += SetMemoryAddressingMode(horizontal);
-	status += SetSegmentReMap(columnAddress131toSEG0);
+	status += SetSegmentReMap(remap);
 	status += SetLUT(0x3F, 0x3F, 0x3F, 0x3F);
 	status += SetPrechargePeriod(13, 2);
-	status += SetDisplayOffset(0);
-	status += SetComOutputScanDirection(remappedMode);
+	status += SetComOutputScanDirection(scanDirection);
 	status += SetNormalInverse(normal);
 
     status += SetColumnAddress(v_offset, (width - 1) + v_offset);
@@ -88,6 +89,16 @@ HAL_StatusTypeDef SSD1305::WriteBitmapToScreen(uint8_t* bitmap, size_t size)
     {
 		return HAL_I2C_Mem_Write(hi2c, address<<1, DATA_ADDRESS, 1, bitmap, size, size*10);
     }
+}
+
+void SSD1305::FillBitmapBuffer(SSD1305_COLOR color_p)
+{
+	uint8_t data = (color_p == Black) ? 0x00 : 0xFF;
+
+	for(int i = 0; i<(width * height) / 8; i++)
+	{
+		bitmapBuffer[i] = data;
+	}
 }
 
 HAL_StatusTypeDef SSD1305::Fill(SSD1305_COLOR color_p)

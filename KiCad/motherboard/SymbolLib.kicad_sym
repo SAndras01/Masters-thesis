@@ -364,7 +364,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "LSF0204QPWRQ1"
 			(at 0 0 0)
 			(effects
 				(font

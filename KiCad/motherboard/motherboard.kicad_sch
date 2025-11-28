@@ -7225,7 +7225,7 @@
 					)
 				)
 			)
-			(property "Value" ""
+			(property "Value" "LSF0204QPWRQ1"
 				(at 0 0 0)
 				(effects
 					(font
@@ -39269,7 +39269,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical"
+		(property "Footprint" "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical"
 			(at 513.08 165.1 0)
 			(effects
 				(font
@@ -41721,7 +41721,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "150R"
 			(at 170.18 279.3999 0)
 			(effects
 				(font
@@ -64040,7 +64040,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "LSF0204QPWRQ1"
 			(at 494.03 93.98 0)
 			(effects
 				(font
@@ -77556,7 +77556,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical"
+		(property "Footprint" "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical"
 			(at 443.23 162.56 0)
 			(effects
 				(font

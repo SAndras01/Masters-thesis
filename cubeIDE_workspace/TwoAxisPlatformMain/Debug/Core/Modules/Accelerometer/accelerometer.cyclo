@@ -1,1 +1,1 @@
-../Core/Modules/Accelerometer/accelerometer.cpp:10:8:virtual float* Accelerometer::getRefAccels()	1
+accelerometer.cpp:10:8:virtual float* Accelerometer::getRefAccels()	1

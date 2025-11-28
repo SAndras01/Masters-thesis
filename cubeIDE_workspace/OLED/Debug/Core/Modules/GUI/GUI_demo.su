@@ -1,0 +1,8 @@
+../Core/Modules/GUI/GUI_demo.cpp:10:6:void DrawGUI(SSD1305*, float, float, float, bool, bool, bool)	40	static
+../Core/Modules/GUI/GUI_demo.cpp:53:6:void DrawYline(SSD1305*, uint8_t, SSD1305_COLOR)	24	static
+../Core/Modules/GUI/GUI_demo.cpp:61:6:void DisplayMemslot(SSD1305*, uint8_t, bool)	32	static
+../Core/Modules/GUI/GUI_demo.cpp:70:6:void DisplayFixedAx(SSD1305*, axes, bool)	32	static
+../Core/Modules/GUI/GUI_demo.cpp:93:6:void DisplayTrackedAx(SSD1305*, axes, bool)	32	static
+../Core/Modules/GUI/GUI_demo.cpp:115:6:void DisplaySetAngle(SSD1305*, uint16_t, int)	48	static
+../Core/Modules/GUI/GUI_demo.cpp:138:6:void DisplaySetAngle(SSD1305*, uint8_t*, int)	48	static
+../Core/Modules/GUI/GUI_demo.cpp:155:6:void DisplayRefDegs(SSD1305*, float, float, float)	40	static

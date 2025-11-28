@@ -1,6 +1,6 @@
 Core/Modules/ICM2098/ICM2098.o: ../Core/Modules/ICM2098/ICM2098.cpp \
  ../Core/Modules/ICM2098/ICM2098.hpp \
- D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp \
+ C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp \
  ../Core/Modules/ICM2098/ICM2098_Registers.hpp ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
@@ -36,7 +36,7 @@ Core/Modules/ICM2098/ICM2098.o: ../Core/Modules/ICM2098/ICM2098.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ../Core/Modules/ICM2098/ICM2098.hpp:
-D:/Projektek/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp:
+C:/Users/SNA1BP/Documents/Masters-thesis/cubeIDE_workspace/StateMachine/Core/Modules/Accelerometer/accelerometer.hpp:
 ../Core/Modules/ICM2098/ICM2098_Registers.hpp:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
