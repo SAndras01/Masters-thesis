@@ -48915,7 +48915,7 @@
 				)
 			)
 		)
-		(property "Value" "190R"
+		(property "Value" "150R"
 			(at 464.82 273.05 90)
 			(effects
 				(font
@@ -63765,7 +63765,7 @@
 				)
 			)
 		)
-		(property "Value" "190R"
+		(property "Value" "150R"
 			(at 513.08 330.2 90)
 			(effects
 				(font
