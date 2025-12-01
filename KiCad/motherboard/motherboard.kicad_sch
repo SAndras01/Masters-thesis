@@ -12193,7 +12193,7 @@
 		)
 		(uuid "3747a3a0-1534-4899-be02-ffe0e83e605f")
 	)
-	(text "Visszajelző LEDek"
+	(text "Visszajelző LED"
 		(exclude_from_sim no)
 		(at 127.635 259.08 0)
 		(effects
