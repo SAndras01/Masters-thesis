@@ -19,7 +19,7 @@ RM := rm -rf
 -include Core/Modules/SSD1305/subdir.mk
 -include Core/Modules/Numpad/subdir.mk
 -include Core/Modules/Memory/subdir.mk
--include Core/Modules/ICM2098/subdir.mk
+-include Core/Modules/ICM20948/subdir.mk
 -include Core/Modules/GUI/subdir.mk
 -include Core/Modules/GPIO/subdir.mk
 -include Core/Modules/Accelerometer/subdir.mk

@@ -1,10 +1,10 @@
-AS5147U.cpp:12:9:uint8_t AS5x47_CalcCRC8(uint16_t)	4
-AS5147U.cpp:31:6:bool AS5x47_Read16(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t, uint16_t, uint16_t*)	3
-AS5147U.cpp:56:6:bool AS5x47_WriteRegister(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t, uint16_t, uint16_t)	3
-AS5147U.cpp:87:1:AS5147U::AS5147U(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t)	1
-AS5147U.cpp:94:6:bool AS5147U::init()	7
-AS5147U.cpp:118:10:uint16_t AS5147U::getRawAngleData()	1
-AS5147U.cpp:127:7:float AS5147U::getDegrees()	1
-AS5147U.cpp:132:9:uint8_t AS5147U::getAGC()	1
-AS5147U.cpp:141:6:void AS5147U::setZeroOffset(uint16_t)	2
-AS5147U.cpp:152:10:uint16_t AS5147U::getZeroOffset()	1
+AS5147U.cpp:14:9:uint8_t AS5x47_CalcCRC8(uint16_t)	4
+AS5147U.cpp:35:6:bool AS5x47_Read16(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t, uint16_t, uint16_t*)	3
+AS5147U.cpp:63:6:bool AS5x47_WriteRegister(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t, uint16_t, uint16_t)	3
+AS5147U.cpp:94:1:AS5147U::AS5147U(SPI_HandleTypeDef*, GPIO_TypeDef*, uint16_t)	1
+AS5147U.cpp:101:6:bool AS5147U::init()	7
+AS5147U.cpp:128:10:uint16_t AS5147U::getRawAngleData()	1
+AS5147U.cpp:137:7:float AS5147U::getDegrees()	1
+AS5147U.cpp:143:9:uint8_t AS5147U::getAGC()	1
+AS5147U.cpp:152:6:void AS5147U::setZeroOffset(uint16_t)	2
+AS5147U.cpp:163:10:uint16_t AS5147U::getZeroOffset()	1

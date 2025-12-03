@@ -1,3 +1,20 @@
+/**
+ * @file fonts.h
+ * @brief Font definitions for OLED displays.
+ *
+ * @note
+ * This file is copied verbatim from the SSD1306 STM32 HAL library by
+ * Olivier Van den Eede (ovde.be).
+ *
+ * Original repository:
+ * https://github.com/4ilo/ssd1306-stm32HAL
+ *
+ * Licensed under the MIT License.
+ * See LICENSE file for the full license text.
+ *
+ * Copyright (c) 2016 Olivier Van den Eede
+ */
+
 #ifndef _FONTS_H
 #define _FONTS_H
 

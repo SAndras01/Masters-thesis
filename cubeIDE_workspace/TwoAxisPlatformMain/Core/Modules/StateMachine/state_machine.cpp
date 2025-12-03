@@ -129,10 +129,10 @@ void State_Settings::run(StateMachine* master)
     // the invalid 10 should be overwritten only if we are number mode as we want to know no button was pressed in axes mode too
 	currentDigit = adcValue2Digit(); //will be invalid (=10) if no button pressed
 
-	if(HAL_GPIO_ReadPin(PURPLE_BTN_GPIO_Port, PURPLE_BTN_Pin))
+	if(HAL_GPIO_ReadPin(BTN_FIX_AX_GPIO_Port, BTN_FIX_AX_Pin))
 	{
 		HAL_Delay(10);
-		while(HAL_GPIO_ReadPin(PURPLE_BTN_GPIO_Port, PURPLE_BTN_Pin)){__NOP();}
+		while(HAL_GPIO_ReadPin(BTN_FIX_AX_GPIO_Port, BTN_FIX_AX_Pin)){__NOP();}
 		HAL_Delay(10);
 		currentSettingState = setFixAx;
 		//ON ENTER OF SET_FIX_AX SUBSTATE
@@ -141,10 +141,10 @@ void State_Settings::run(StateMachine* master)
 		//ON ENTER OF SET_FIX_AX SUBSTATE
 	}
 
-	if(HAL_GPIO_ReadPin(GREEN_BTN_GPIO_Port, GREEN_BTN_Pin))
+	if(HAL_GPIO_ReadPin(BTN_TRACKED_AX_GPIO_Port, BTN_TRACKED_AX_Pin))
 	{
 		HAL_Delay(10);
-		while(HAL_GPIO_ReadPin(GREEN_BTN_GPIO_Port, GREEN_BTN_Pin)){__NOP();}
+		while(HAL_GPIO_ReadPin(BTN_TRACKED_AX_GPIO_Port, BTN_TRACKED_AX_Pin)){__NOP();}
 		HAL_Delay(10);
 		currentSettingState = setTrackAx;
 		//ON ENTER OF SET_TRACK_AX SUBSTATE
@@ -164,10 +164,10 @@ void State_Settings::run(StateMachine* master)
 		case setDigit1:
 			if(currentDigit == 10) currentDigit = numberDigits[currentSettingState];
 			numberDigits[0] = currentDigit;
-			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+			if(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin))
 			{
 				HAL_Delay(10);
-				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
+				while(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentSettingState = setDigit2;
 			}
@@ -175,10 +175,10 @@ void State_Settings::run(StateMachine* master)
 		case setDigit2:
 			if(currentDigit == 10) currentDigit = numberDigits[currentSettingState];
 			numberDigits[1] = currentDigit;
-			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+			if(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin))
 			{
 				HAL_Delay(10);
-				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
+				while(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentSettingState = setDigit3;
 			}
@@ -186,10 +186,10 @@ void State_Settings::run(StateMachine* master)
 		case setDigit3:
 			if(currentDigit == 10) currentDigit = numberDigits[currentSettingState];
 			numberDigits[2] = currentDigit;
-			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+			if(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin))
 			{
 				HAL_Delay(10);
-				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
+				while(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentSettingState = setDigit1;
 			}
@@ -208,10 +208,10 @@ void State_Settings::run(StateMachine* master)
 			DisplayFixedAx(master->displayHandle, currentMemorySlot.getFixedAx(), true);
 			if(!axUpdate) DisplayTrackedAx(master->displayHandle, currentMemorySlot.getTrackedAx(), false);
 
-			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+			if(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin))
 			{
 				HAL_Delay(10);
-				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
+				while(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentSettingState = setDigit1;
 				//ON EXIT OF SET_FIX_AX SUBSTATE
@@ -237,10 +237,10 @@ void State_Settings::run(StateMachine* master)
 			DisplayTrackedAx(master->displayHandle, currentMemorySlot.getTrackedAx(), true);
 			if(!axUpdate) DisplayFixedAx(master->displayHandle, currentMemorySlot.getFixedAx(), false);
 
-			if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+			if(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin))
 			{
 				HAL_Delay(10);
-				while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
+				while(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin)){__NOP();}
 				HAL_Delay(10);
 				currentSettingState = setDigit1;
 				//ON EXIT OF SET_TRACK_AX SUBSTATE
@@ -264,10 +264,10 @@ void State_Settings::run(StateMachine* master)
 	////////////////////////////////
 	///state changing scenarios/////
 	////////////////////////////////
-	if(HAL_GPIO_ReadPin(BLUE_BTN_GPIO_Port, BLUE_BTN_Pin))
+	if(HAL_GPIO_ReadPin(BTN_MEM_SLOT_GPIO_Port, BTN_MEM_SLOT_Pin))
 	{
 		HAL_Delay(10);
-		while(HAL_GPIO_ReadPin(BLUE_BTN_GPIO_Port, BLUE_BTN_Pin)){__NOP();}
+		while(HAL_GPIO_ReadPin(BTN_MEM_SLOT_GPIO_Port, BTN_MEM_SLOT_Pin)){__NOP();}
 		HAL_Delay(10);
 		master->changeState(master->selectMemory);
 	}
@@ -308,10 +308,10 @@ void State_SelectMemory::run(StateMachine* master)
 
 	previousRegisteredDigit = currentDigit;
 
-	if(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin))
+	if(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin))
 	{
 		HAL_Delay(10);
-		while(HAL_GPIO_ReadPin(PINK_BTN_GPIO_Port, PINK_BTN_Pin)){__NOP();}
+		while(HAL_GPIO_ReadPin(BTN_OK_GPIO_Port, BTN_OK_Pin)){__NOP();}
 		HAL_Delay(10);
 		master->changeState(master->settings);
 	}

@@ -1,3 +1,19 @@
+/**
+ * @file fonts.c
+ * @brief Font bitmap data for OLED displays.
+ *
+ * @note
+ * This file contains font bitmap data copied verbatim from the SSD1306
+ * STM32 HAL library by Olivier Van den Eede (ovde.be).
+ *
+ * Original repository:
+ * https://github.com/4ilo/ssd1306-stm32HAL
+ *
+ * Licensed under the MIT License.
+ * See LICENSE file for the full license text.
+ *
+ * Copyright (c) 2016 Olivier Van den Eede
+ */
 
 #include "fonts.h"
 

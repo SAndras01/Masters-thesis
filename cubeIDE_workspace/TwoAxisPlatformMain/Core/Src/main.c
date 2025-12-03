@@ -26,9 +26,10 @@
 #include "StepperController.hpp"
 #include "numpad.hpp"
 #include "SSD1305.hpp"
-#include "ICM2098.hpp"
 #include "AS5147U.hpp"
 #include "state_machine.hpp"
+
+#include "../Modules/ICM20948/ICM20948.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/

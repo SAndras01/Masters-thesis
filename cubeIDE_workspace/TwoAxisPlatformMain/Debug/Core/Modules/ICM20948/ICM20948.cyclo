@@ -1,0 +1,14 @@
+accelerometer.hpp:13:7:constexpr Accelerometer::Accelerometer()	1
+ICM20948.cpp:16:1:ICM20948::ICM20948(I2C_HandleTypeDef*, uint8_t, AccRange, GyroRange)	1
+ICM20948.cpp:36:19:HAL_StatusTypeDef ICM20948::writeReg(uint8_t, uint8_t)	1
+ICM20948.cpp:48:19:HAL_StatusTypeDef ICM20948::readRegs(uint8_t, uint8_t*, uint8_t)	1
+ICM20948.cpp:59:6:void ICM20948::setBank(uint8_t)	1
+ICM20948.cpp:80:6:bool ICM20948::init(bool)	3
+ICM20948.cpp:127:6:bool ICM20948::initMagnetometer()	1
+ICM20948.cpp:145:6:void ICM20948::setAccRange(AccRange)	5
+ICM20948.cpp:172:6:void ICM20948::setGyroRange(GyroRange)	5
+ICM20948.cpp:201:6:void ICM20948::readAccel(float*, float*, float*)	2
+ICM20948.cpp:226:6:void ICM20948::readGyro(float*, float*, float*)	2
+ICM20948.cpp:250:7:float ICM20948::readTemperature()	1
+ICM20948.cpp:263:8:virtual float* ICM20948::getRefAccels()	1
+ICM20948.cpp:274:6:bool ICM20948::getMagneto(float*, float*, float*)	1

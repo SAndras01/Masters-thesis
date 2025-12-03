@@ -8,7 +8,9 @@
 #include "AS5147U.hpp"
 
 
-// AS5147U CRC8 calculation (AMS polynomial 0x1D)
+/**
+ * @brief Calculates CRC8 checksum for AS5x47 devices.
+ */
 uint8_t AS5x47_CalcCRC8(uint16_t data)
 {
     uint8_t crc = 0xC4;
@@ -27,7 +29,9 @@ uint8_t AS5x47_CalcCRC8(uint16_t data)
     return crc;
 }
 
-
+/**
+ * @brief Reads a 16-bit register value from the AS5147U.
+ */
 bool AS5x47_Read16(SPI_HandleTypeDef *hspi, GPIO_TypeDef *CS_Port, uint16_t CS_Pin, uint16_t address, uint16_t* result)
 {
     uint8_t tx[2];
@@ -53,6 +57,9 @@ bool AS5x47_Read16(SPI_HandleTypeDef *hspi, GPIO_TypeDef *CS_Port, uint16_t CS_P
     return true;
 }
 
+/**
+ * @brief Writes a 16-bit value into an AS5147U register.
+ */
 bool AS5x47_WriteRegister(SPI_HandleTypeDef *hspi, GPIO_TypeDef *CS_Port, uint16_t CS_Pin, uint16_t address, uint16_t data)
 {
     uint8_t frame[3];
@@ -101,7 +108,9 @@ bool AS5147U::init()
 
 	//Set min K value to 0
 	if( !AS5x47_Read16(hspi, CS_Port, CS_Pin, AS5147U_SETTINGS1, &settings1)) return false;
+
 	settings1 |= (0b101 << 3);
+
 	if( !AS5x47_WriteRegister(hspi, CS_Port, CS_Pin, 0x0018, settings1)) return false;
 
 	if( !AS5x47_Read16(hspi, CS_Port, CS_Pin, AS5147U_SETTINGS1, &settings1_check)) return false;
@@ -109,7 +118,8 @@ bool AS5147U::init()
 	if( settings1 != settings1_check) return false;
 
 	if( !AS5x47_Read16(hspi, CS_Port, CS_Pin, AS5147U_ERRFL, &errors)) return false;
-	//todo error management
+
+	/// @todo Implement diagnostic error flag handling
 	if( errors != 0) return false;
 
 	return true;
@@ -126,6 +136,7 @@ uint16_t AS5147U::getRawAngleData()
 
 float AS5147U::getDegrees()
 {
+	///  @todo implemenet zero offset
 	return (float)getRawAngleData()/AS5147U_ANGLE_SCALER * (float)360;
 }
 

@@ -36,7 +36,7 @@ Core/Modules/AS5147U \
 Core/Modules/Accelerometer \
 Core/Modules/GPIO \
 Core/Modules/GUI \
-Core/Modules/ICM2098 \
+Core/Modules/ICM20948 \
 Core/Modules/Memory \
 Core/Modules/Numpad \
 Core/Modules/SSD1305 \

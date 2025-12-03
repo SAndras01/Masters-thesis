@@ -21,7 +21,7 @@ SSD1305::SSD1305(
 
 bool SSD1305::Init(int8_t orientation)
 {
-	v_offset = (orientation < 0) ? 4 : 0;
+	v_offset = (orientation < 0) ? 4 : 0; //Set the offset
 	ComOutputScanDirection scanDirection = (orientation < 0) ? remappedMode : normalMode;
 	SegmentRemap remap = (orientation < 0) ? columnAddress131toSEG0 : columnAddress0toSEG0;
 
