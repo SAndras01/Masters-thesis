@@ -6,6 +6,8 @@
  * device uses the register bank switching mechanism (REG_BANK_SEL).
  *
  * @todo Magnetometer initialization & readout (AK09916) is not fully implemented.
+ *
+ * @author Sásdi András
  */
 
 #include "ICM20948.hpp"

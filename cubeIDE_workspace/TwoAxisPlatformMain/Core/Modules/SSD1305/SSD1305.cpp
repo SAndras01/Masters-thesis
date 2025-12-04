@@ -1,8 +1,21 @@
 /*
+ * This file is part of an SSD1305 display driver.
+ *
+ * Portions of this code are based on work by:
+ *   Olivier Van den Eede - ovde.be
+ * released under the MIT License.
+ *
+ * Modifications and extensions:
+ *   Copyright (c) 2025 SNA1BP
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/*
  * SSD1305.cpp
  *
  *  Created on: 2025. szept. 2.
- *      Author: SNA1BP
+ *      Author: Sásdi András
  */
 
 #include "SSD1305.hpp"

@@ -1,13 +1,13 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
-state_machine.hpp:31:18:virtual void State::onEnter(StateMachine*)	1
-state_machine.hpp:32:18:virtual void State::onExit(StateMachine*)	1
+state_machine.hpp:63:18:virtual void State::onEnter(StateMachine*)	1
+state_machine.hpp:66:18:virtual void State::onExit(StateMachine*)	1
 state_machine.cpp:10:10:uint16_t digits2num(uint8_t*)	2
 state_machine.cpp:21:6:bool getMemorySlotFromEEPROM(MemorySlot*, uint8_t, EEPROMmemory*)	1
 state_machine.cpp:51:6:bool saveMemorySlotToEEPROM(MemorySlot, EEPROMmemory*)	1
 state_machine.cpp:71:1:StateMachine::StateMachine(State*, State_Settings*, State_SelectMemory*, SSD1305*, Accelerometer*, EEPROMmemory*)	1
 state_machine.cpp:85:6:void StateMachine::changeState(State*)	3
 state_machine.cpp:100:6:void StateMachine::run()	2
-state_machine.hpp:28:7:constexpr State::State()	1
+state_machine.hpp:59:7:constexpr State::State()	1
 state_machine.cpp:111:1:State_Settings::State_Settings()	1
 state_machine.cpp:115:6:virtual void State_Settings::onEnter(StateMachine*)	1
 state_machine.cpp:124:6:virtual void State_Settings::run(StateMachine*)	33

@@ -2,7 +2,7 @@
  * test_bitmaps.hpp
  *
  *  Created on: Sep 7, 2025
- *      Author: Andris
+ *      Author: Sásdi András
  */
 
 #ifndef MODULES_SSD1306_TEST_BITMAPS_HPP_

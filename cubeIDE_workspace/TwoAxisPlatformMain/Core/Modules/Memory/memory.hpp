@@ -2,7 +2,7 @@
  * memory.hpp
  *
  *  Created on: 2024. júl. 8.
- *      Author: SNA1BP
+ *      Author: Sásdi András
  */
 
 //TODO: CREATE_I8_ELEMENT to work with array init

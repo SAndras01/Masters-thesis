@@ -2,7 +2,7 @@
  * memory.cpp
  *
  *  Created on: 2024. júl. 8.
- *      Author: SNA1BP
+ *      Author: Sásdi András
  */
 
 

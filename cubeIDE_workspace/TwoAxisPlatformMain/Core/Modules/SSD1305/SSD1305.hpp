@@ -23,7 +23,7 @@
  * SSD1305 Datasheet:
  * https://www.solomon-systech.com/en/product/ssd1305/
  *
- * @author SNA1BP
+ * @author Sásdi András
  * @date 2025-09-02
  */
 

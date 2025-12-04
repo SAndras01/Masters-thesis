@@ -2,7 +2,7 @@
  * memory.hpp
  *
  *  Created on: Sep 17, 2025
- *      Author: SNA1BP
+ *      Author: Sásdi András
  */
 
 #ifndef MODULES_MEMORY_MEMORYSLOT_HPP_

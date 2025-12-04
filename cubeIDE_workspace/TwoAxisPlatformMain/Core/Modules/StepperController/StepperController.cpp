@@ -2,7 +2,7 @@
  * StepperController.cpp
  *
  *  Created on: Aug 21, 2025
- *      Author: SNA1BP
+ *      Author: Sásdi András
  */
 
 #include "StepperController.hpp"

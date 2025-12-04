@@ -22,7 +22,7 @@
  * }
  * \endcode
  *
- * @author Andris
+ * @author Sásdi András
  * @date October 2025
  */
 
