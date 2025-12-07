@@ -286,8 +286,14 @@ int main(void)
 
   State_Settings state_Settings;
   State_SelectMemory state_SelectMemory;
+  State_Moving state_Moving;
+  State_FreeMove state_FreeMove;
+  State_Remote state_Remote;
+
   getMemorySlotFromEEPROM(&state_Settings.currentMemorySlot, 1, &EEPROM);
-  StateMachine machine(&state_SelectMemory, &state_Settings, &state_SelectMemory, &display, &imu, &EEPROM);
+  StateMachine machine(&state_SelectMemory, //<- starting state
+		  	  	  	  &state_Settings, &state_SelectMemory, &state_Moving, &state_FreeMove, state_FreeMove, &state_Remote, //<- states
+		  	  	  	  &display, &imu, &EEPROM); //<- resources
 
 
 

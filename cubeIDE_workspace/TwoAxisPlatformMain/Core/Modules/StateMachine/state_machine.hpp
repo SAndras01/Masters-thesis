@@ -52,7 +52,9 @@ bool saveMemorySlotToEEPROM(MemorySlot memorySlot, EEPROMmemory* eepromHandle);
 class StateMachine;
 class State_SelectMemory;
 class State_Settings;
-
+class State_Moving;
+class State_FreeMove;
+class State_Remote;
 /**
  * @brief Abstract base class for a state in the state machine.
  */
@@ -86,6 +88,9 @@ public:
 
     State_Settings* settings = nullptr;       /**< Pointer to the settings state */
     State_SelectMemory* selectMemory = nullptr; /**< Pointer to the memory selection state */
+    State_Moving* moving = nullptr; /**< Pointer to the moving state */
+    State_FreeMove* freeMove = nullptr; /**< Pointer to the free move selection state */
+    State_Remote* remote = nullptr; /**< Pointer to the remote selection state */
 
     /**
      * @brief Constructs a StateMachine with initial state and resources.
@@ -98,7 +103,7 @@ public:
      * @param eepromHandle Pointer to EEPROM memory.
      */
     StateMachine(State* initial,
-                 State_Settings* settings, State_SelectMemory* selectMemory,
+                 State_Settings* settings, State_SelectMemory* selectMemory, State_Moving* moving, State_FreeMove* freeMove, State_Remote* remote,
                  SSD1305* displayHandle, Accelerometer* referenceAccel, EEPROMmemory* eepromHandle);
 
     /** @brief Changes the current state to the given next state. */
@@ -136,5 +141,32 @@ public:
     void run(StateMachine* master) override;
     void onExit(StateMachine* master) override;
 };
+
+class State_Moving : public State
+{
+	State_Moving();
+    void onEnter(StateMachine* master) override;
+    void run(StateMachine* master) override;
+    void onExit(StateMachine* master) override;
+};
+
+class State_FreeMove : public State
+{
+	State_FreeMove();
+    void onEnter(StateMachine* master) override;
+    void run(StateMachine* master) override;
+    void onExit(StateMachine* master) override;
+};
+
+class State_Remote : public State
+{
+	State_Remote();
+    void onEnter(StateMachine* master) override;
+    void run(StateMachine* master) override;
+    void onExit(StateMachine* master) override;
+};
+
+
+
 
 #endif /* MODULES_STATEMACHINE_STATE_MACHINE_HPP_ */

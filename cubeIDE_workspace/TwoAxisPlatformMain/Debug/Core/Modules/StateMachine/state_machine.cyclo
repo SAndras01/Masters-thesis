@@ -1,21 +1,21 @@
 gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	1
-state_machine.hpp:63:18:virtual void State::onEnter(StateMachine*)	1
-state_machine.hpp:66:18:virtual void State::onExit(StateMachine*)	1
+state_machine.hpp:65:18:virtual void State::onEnter(StateMachine*)	1
+state_machine.hpp:68:18:virtual void State::onExit(StateMachine*)	1
 state_machine.cpp:10:10:uint16_t digits2num(uint8_t*)	2
 state_machine.cpp:21:6:bool getMemorySlotFromEEPROM(MemorySlot*, uint8_t, EEPROMmemory*)	1
 state_machine.cpp:51:6:bool saveMemorySlotToEEPROM(MemorySlot, EEPROMmemory*)	1
-state_machine.cpp:71:1:StateMachine::StateMachine(State*, State_Settings*, State_SelectMemory*, SSD1305*, Accelerometer*, EEPROMmemory*)	1
-state_machine.cpp:85:6:void StateMachine::changeState(State*)	3
-state_machine.cpp:100:6:void StateMachine::run()	2
-state_machine.hpp:59:7:constexpr State::State()	1
-state_machine.cpp:111:1:State_Settings::State_Settings()	1
-state_machine.cpp:115:6:virtual void State_Settings::onEnter(StateMachine*)	1
-state_machine.cpp:124:6:virtual void State_Settings::run(StateMachine*)	33
-state_machine.cpp:276:6:virtual void State_Settings::onExit(StateMachine*)	1
-state_machine.cpp:286:1:State_SelectMemory::State_SelectMemory()	1
-state_machine.cpp:288:6:virtual void State_SelectMemory::onEnter(StateMachine*)	1
-state_machine.cpp:296:6:virtual void State_SelectMemory::run(StateMachine*)	6
-state_machine.cpp:320:6:virtual void State_SelectMemory::onExit(StateMachine*)	1
-state_machine.cpp:323:1:void __static_initialization_and_destruction_0(int, int)	5
-state_machine.cpp:323:1:cpp)	1
-state_machine.cpp:323:1:cpp)	1
+state_machine.cpp:71:1:StateMachine::StateMachine(State*, State_Settings*, State_SelectMemory*, State_Moving*, State_FreeMove*, State_Remote*, SSD1305*, Accelerometer*, EEPROMmemory*)	1
+state_machine.cpp:92:6:void StateMachine::changeState(State*)	3
+state_machine.cpp:107:6:void StateMachine::run()	2
+state_machine.hpp:61:7:constexpr State::State()	1
+state_machine.cpp:118:1:State_Settings::State_Settings()	1
+state_machine.cpp:122:6:virtual void State_Settings::onEnter(StateMachine*)	1
+state_machine.cpp:131:6:virtual void State_Settings::run(StateMachine*)	33
+state_machine.cpp:283:6:virtual void State_Settings::onExit(StateMachine*)	1
+state_machine.cpp:293:1:State_SelectMemory::State_SelectMemory()	1
+state_machine.cpp:295:6:virtual void State_SelectMemory::onEnter(StateMachine*)	1
+state_machine.cpp:303:6:virtual void State_SelectMemory::run(StateMachine*)	6
+state_machine.cpp:327:6:virtual void State_SelectMemory::onExit(StateMachine*)	1
+state_machine.cpp:330:1:void __static_initialization_and_destruction_0(int, int)	5
+state_machine.cpp:330:1:cpp)	1
+state_machine.cpp:330:1:cpp)	1

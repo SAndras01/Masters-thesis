@@ -70,12 +70,19 @@ bool saveMemorySlotToEEPROM(MemorySlot memorySlot, EEPROMmemory* eepromHandle)
 
 StateMachine::StateMachine(
 		State* initial, /*Initial state*/
-		State_Settings* settings, State_SelectMemory* selectMemory, /*States*/
+		State_Settings* settings, State_SelectMemory* selectMemory, State_Moving* moving, State_FreeMove* freeMove, State_Remote* remote, /*States*/
 		SSD1305* displayHandle, Accelerometer* referenceAccel, EEPROMmemory* eepromHandle /*Resources*/
 		)
 {
+	//State pointers
 	this->settings = settings;
 	this->selectMemory = selectMemory;
+	this->moving = moving;
+	this->freeMove = freeMove;
+	this->remote = remote;
+
+
+	//resources
 	this->displayHandle = displayHandle;
 	this->referenceAccel = referenceAccel;
 	this->eepromHandle = eepromHandle;
