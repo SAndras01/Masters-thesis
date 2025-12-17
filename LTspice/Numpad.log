@@ -1,24 +1,22 @@
-LTspice 24.0.9 for Windows
-Circuit: * D:\Projektek\Masters-thesis\LTspice\Numpad.asc
-Start Time: Mon Nov  3 00:32:48 2025
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\SNA1BP\Documents\Masters-thesis\LTspice\Numpad.net
+Start Time: Sun Dec 14 01:49:40 2025
 solver = Normal
 Maximum thread count: 12
+tnom = 27
+temp = 27
+method = modified trap
+WARNING: Node n004 is floating.
+WARNING: Node n008 is floating.
+WARNING: Node n012 is floating.
+WARNING: Node n015 is floating.
+WARNING: Node n018 is floating.
+WARNING: Node n021 is floating.
+WARNING: Node n024 is floating.
+WARNING: Node n027 is floating.
+WARNING: Node n030 is floating.
+WARNING: Node n033 is floating.
 
-
-
-WARNING: Node N006 is floating.
-WARNING: Node N009 is floating.
-WARNING: Node N012 is floating.
-WARNING: Node N015 is floating.
-WARNING: Node N018 is floating.
-WARNING: Node N021 is floating.
-WARNING: Node N024 is floating.
-WARNING: Node N027 is floating.
-WARNING: Node N030 is floating.
-WARNING: Node N033 is floating.
-
-WARNING: Less than two connections to node 3vmeasback.  This node is used by r13.
-WARNING: Less than two connections to node numpadmeasback.  This node is used by r18.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
@@ -35,107 +33,292 @@ vernier = 0.5
 vernier = 0.25
 vernier = 0.125
 vernier = 0.0625
-Gmin = 1.58715e-08
+Gmin = 1.58569e-08
 vernier = 0.03125
 vernier = 0.0416667
-Gmin = 1.47985e-08
+Gmin = 1.47849e-08
 vernier = 0.0555555
 vernier = 0.0277778
-Gmin = 1.38576e-08
+Gmin = 1.38449e-08
 vernier = 0.037037
 vernier = 0.0493827
 vernier = 0.0246913
-Gmin = 1.29517e-08
-vernier = 0.0329218
-vernier = 0.0438957
-Gmin = 1.19732e-08
-vernier = 0.0219478
-vernier = 0.0292638
-Gmin = 1.14394e-08
-vernier = 0.0390184
-vernier = 0.0195092
+vernier = 0.0123457
+vernier = 0.00617283
+Gmin = 1.31e-08
+vernier = 0.00308642
+vernier = 0.00411522
+Gmin = 1.29961e-08
+vernier = 0.00548696
+vernier = 0.00731595
+Gmin = 1.28162e-08
 vernier = 0.00975459
-Gmin = 1.11374e-08
+Gmin = 1.25383e-08
 vernier = 0.0130061
 vernier = 0.0173415
-Gmin = 1.07352e-08
+Gmin = 1.20855e-08
 vernier = 0.023122
 vernier = 0.0308293
-vernier = 0.0154146
-Gmin = 1.0281e-08
+Gmin = 1.13977e-08
+vernier = 0.0411057
 vernier = 0.0205529
-Gmin = 9.82998e-09
-vernier = 0.0274038
+vernier = 0.0102764
+Gmin = 1.09683e-08
 vernier = 0.0137019
 vernier = 0.0182692
-Gmin = 9.52672e-09
+Gmin = 1.05935e-08
 vernier = 0.0243589
-Gmin = 9.02e-09
+Gmin = 1.00301e-08
 vernier = 0.0324786
 vernier = 0.0162393
-vernier = 0.00811964
-vernier = 0.0108262
-Gmin = 8.88087e-09
+vernier = 0.0216524
+Gmin = 9.67102e-09
+vernier = 0.0288698
 vernier = 0.0144349
-Gmin = 8.59753e-09
+Gmin = 9.3458e-09
 vernier = 0.0192465
 vernier = 0.025662
 vernier = 0.012831
-Gmin = 8.30011e-09
+Gmin = 9.0225e-09
 vernier = 0.017108
 vernier = 0.0228107
-Gmin = 7.96747e-09
+Gmin = 8.66091e-09
 vernier = 0.0304143
 vernier = 0.0152071
-Gmin = 7.65647e-09
-vernier = 0.0202762
-vernier = 0.0270349
+vernier = 0.00760356
+Gmin = 8.38622e-09
+vernier = 0.0101381
 vernier = 0.0135174
-Gmin = 7.37153e-09
-vernier = 0.00675872
-vernier = 0.00901162
-Gmin = 7.24406e-09
+Gmin = 8.18522e-09
+vernier = 0.0180232
+Gmin = 7.86941e-09
+vernier = 0.024031
 vernier = 0.0120155
 vernier = 0.0160207
-Gmin = 7.02651e-09
+Gmin = 7.65606e-09
 vernier = 0.0213609
 vernier = 0.0106804
-Gmin = 6.8417e-09
+Gmin = 7.45468e-09
 vernier = 0.0142406
 vernier = 0.0189874
-Gmin = 6.5853e-09
+Gmin = 7.17531e-09
 vernier = 0.0253166
-vernier = 0.0337554
-Gmin = 6.19891e-09
-vernier = 0.0450072
-Gmin = 5.62045e-09
-vernier = 0.0600096
-vernier = 0.0800128
-Gmin = 4.78966e-09
-vernier = 0.106684
-vernier = 0.142245
-Gmin = 3.72166e-09
-vernier = 0.18966
-Gmin = 2.47893e-09
-vernier = 0.25288
-vernier = 0.337173
-Gmin = 1.28519e-09
-vernier = 0.449564
-vernier = 0.599418
-Gmin = 4.62742e-10
-vernier = 0.799224
-Gmin = 9.25912e-11
+vernier = 0.0126583
+vernier = 0.00632914
+Gmin = 7.02949e-09
+vernier = 0.00843885
+vernier = 0.0112518
+Gmin = 6.87204e-09
+vernier = 0.0150024
+vernier = 0.0200032
+Gmin = 6.62987e-09
+vernier = 0.0100016
+vernier = 0.0133355
+Gmin = 6.49332e-09
+vernier = 0.0177806
+vernier = 0.0237075
+vernier = 0.0118537
+Gmin = 6.28085e-09
+vernier = 0.015805
+Gmin = 6.06778e-09
+vernier = 0.0210733
+vernier = 0.0105366
+vernier = 0.00526832
+vernier = 0.00702443
+Gmin = 5.99373e-09
+vernier = 0.0093659
+Gmin = 5.8723e-09
+vernier = 0.0124879
+vernier = 0.0166505
+vernier = 0.00832524
+Gmin = 5.73809e-09
+vernier = 0.0111003
+Gmin = 5.59673e-09
+vernier = 0.0148004
+vernier = 0.0197339
+vernier = 0.00986695
+vernier = 0.00493347
+vernier = 0.00246674
+Gmin = 5.47407e-09
+vernier = 0.00123337
+vernier = 0.000616684
+vernier = 0.000822246
+Gmin = 5.46648e-09
+vernier = 0.00109633
+vernier = 0.00146177
+Gmin = 5.45214e-09
+vernier = 0.00194903
+Gmin = 5.42895e-09
+vernier = 0.0025987
+vernier = 0.00346493
+Gmin = 5.39118e-09
+vernier = 0.00461991
+vernier = 0.00615988
+Gmin = 5.33187e-09
+vernier = 0.00821317
+Gmin = 5.23702e-09
+vernier = 0.0109509
+vernier = 0.0146012
+Gmin = 5.08536e-09
+vernier = 0.0194682
+vernier = 0.00973411
+Gmin = 4.96932e-09
+vernier = 0.0129788
+vernier = 0.0173051
+vernier = 0.00865254
+vernier = 0.00432627
+Gmin = 4.8684e-09
+vernier = 0.00576836
+Gmin = 4.80566e-09
+vernier = 0.00769114
+vernier = 0.0102549
+Gmin = 4.70219e-09
+vernier = 0.0136731
+vernier = 0.00683657
+vernier = 0.00911542
+Gmin = 4.62785e-09
+vernier = 0.0121539
+Gmin = 4.50659e-09
+vernier = 0.0162052
+vernier = 0.00810259
+vernier = 0.0040513
+vernier = 0.00540173
+Gmin = 4.46423e-09
+vernier = 0.0072023
+Gmin = 4.3945e-09
+vernier = 0.00960307
+vernier = 0.0128041
+vernier = 0.00640204
+Gmin = 4.31703e-09
+vernier = 0.00853606
+Gmin = 4.23499e-09
+vernier = 0.0113814
+vernier = 0.0151752
+vernier = 0.0075876
+vernier = 0.0037938
+Gmin = 4.15946e-09
+vernier = 0.0050584
+Gmin = 4.11242e-09
+vernier = 0.00674453
+vernier = 0.00899271
+Gmin = 4.03465e-09
+vernier = 0.0119903
+vernier = 0.00599514
+vernier = 0.00799351
+Gmin = 3.97865e-09
+vernier = 0.010658
+Gmin = 3.88708e-09
+vernier = 0.0142107
+vernier = 0.00710534
+vernier = 0.00947379
+Gmin = 3.82436e-09
+vernier = 0.0126317
+vernier = 0.00631586
+vernier = 0.00315793
+Gmin = 3.77938e-09
+vernier = 0.00421057
+vernier = 0.00561409
+Gmin = 3.73917e-09
+vernier = 0.00748545
+Gmin = 3.67678e-09
+vernier = 0.0099806
+vernier = 0.0133075
+vernier = 0.00665373
+Gmin = 3.61019e-09
+vernier = 0.00887164
+vernier = 0.0118289
+Gmin = 3.53435e-09
+vernier = 0.00591443
+vernier = 0.0078859
+Gmin = 3.4911e-09
+vernier = 0.0105145
+vernier = 0.00525726
+vernier = 0.00700968
+Gmin = 3.44857e-09
+vernier = 0.00934624
+Gmin = 3.37885e-09
+vernier = 0.0124617
+vernier = 0.00623083
+vernier = 0.00311541
+vernier = 0.00415388
+Gmin = 3.35439e-09
+vernier = 0.00553851
+Gmin = 3.31402e-09
+vernier = 0.00738468
+vernier = 0.00984624
+vernier = 0.00492312
+Gmin = 3.26899e-09
+vernier = 0.00656416
+Gmin = 3.2211e-09
+vernier = 0.00875221
+vernier = 0.0043761
+vernier = 0.0058348
+Gmin = 3.18956e-09
+vernier = 0.00777973
+vernier = 0.010373
+Gmin = 3.13072e-09
+vernier = 0.00518649
+vernier = 0.00259324
+vernier = 0.00345766
+Gmin = 3.12058e-09
+vernier = 0.00461021
+vernier = 0.00614694
+Gmin = 3.08633e-09
+vernier = 0.00819592
+Gmin = 3.03153e-09
+vernier = 0.0109279
+vernier = 0.00546395
+vernier = 0.00728526
+Gmin = 2.99384e-09
+vernier = 0.00971368
+vernier = 0.00485684
+Gmin = 2.95774e-09
+vernier = 0.00647579
+vernier = 0.00863438
+vernier = 0.00431719
+Gmin = 2.92246e-09
+vernier = 0.00575625
+Gmin = 2.88488e-09
+vernier = 0.007675
+vernier = 0.0102333
+Gmin = 2.82289e-09
+vernier = 0.0136444
+vernier = 0.0181926
+Gmin = 2.72684e-09
+vernier = 0.0242568
+Gmin = 2.5824e-09
+vernier = 0.0323423
+vernier = 0.0431231
+Gmin = 2.35728e-09
+vernier = 0.0574975
+vernier = 0.0766633
+Gmin = 2.039e-09
+vernier = 0.102218
+Gmin = 1.62437e-09
+vernier = 0.13629
+vernier = 0.18172
+Gmin = 1.11224e-09
+vernier = 0.242294
+vernier = 0.323058
+Gmin = 6.12214e-10
+vernier = 0.430744
+Gmin = 2.42929e-10
+vernier = 0.574325
+vernier = 0.765767
+Gmin = 5.38996e-11
 vernier = 1
-Gmin = 1.03578e-11
-Gmin = 1.11216e-12
-Gmin = 1.19418e-13
+Gmin = 6.3703e-12
+Gmin = 6.84006e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 .step x=0
-tnom = 27
-temp = 27
-method = modified trap
 .step x=1
-Total elapsed time: 0.772 seconds.
+Total elapsed time: 2.897 seconds.
+
+Files loaded:
+C:\Users\SNA1BP\Documents\Masters-thesis\LTspice\Numpad.net
+C:\Users\SNA1BP\AppData\Local\LTspice\lib\sub\opamp.sub
+C:\Users\SNA1BP\AppData\Local\LTspice\lib\sub\LTC.lib
+C:\Users\SNA1BP\Documents\Masters-thesis\LTspice\TL431\TL431.mod
 
