@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "c14c77e6-5108-4122-81fc-9f298705addb")
 	(paper "A4")
+	(title_block
+		(title "OLED modul")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x05_Pin"
 			(pin_names
