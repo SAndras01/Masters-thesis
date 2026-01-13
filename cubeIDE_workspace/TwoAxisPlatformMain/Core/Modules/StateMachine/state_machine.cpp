@@ -328,3 +328,22 @@ void State_SelectMemory::onExit(StateMachine* master)
 {
 
 }
+
+
+
+
+
+State_Moving::State_Moving(){};
+void State_Moving::onEnter(StateMachine* master){};
+void State_Moving::run(StateMachine* master){};
+void State_Moving::onExit(StateMachine* master){};
+
+State_FreeMove::State_FreeMove(){};
+void State_FreeMove::onEnter(StateMachine* master){};
+void State_FreeMove::run(StateMachine* master){};
+void State_FreeMove::onExit(StateMachine* master){};
+
+State_Remote::State_Remote(){};
+void State_Remote::onEnter(StateMachine* master){};
+void State_Remote::run(StateMachine* master){};
+void State_Remote::onExit(StateMachine* master){};

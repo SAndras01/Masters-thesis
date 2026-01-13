@@ -16,6 +16,18 @@ c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.external
 ../Core/Modules/StateMachine/state_machine.cpp:295:6:virtual void State_SelectMemory::onEnter(StateMachine*)	32	static
 ../Core/Modules/StateMachine/state_machine.cpp:303:6:virtual void State_SelectMemory::run(StateMachine*)	32	static,ignoring_inline_asm
 ../Core/Modules/StateMachine/state_machine.cpp:327:6:virtual void State_SelectMemory::onExit(StateMachine*)	16	static
-../Core/Modules/StateMachine/state_machine.cpp:330:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Modules/StateMachine/state_machine.cpp:330:1:cpp)	8	static
-../Core/Modules/StateMachine/state_machine.cpp:330:1:cpp)	8	static
+../Core/Modules/StateMachine/state_machine.cpp:336:1:State_Moving::State_Moving()	16	static
+../Core/Modules/StateMachine/state_machine.cpp:337:6:virtual void State_Moving::onEnter(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:338:6:virtual void State_Moving::run(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:339:6:virtual void State_Moving::onExit(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:341:1:State_FreeMove::State_FreeMove()	16	static
+../Core/Modules/StateMachine/state_machine.cpp:342:6:virtual void State_FreeMove::onEnter(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:343:6:virtual void State_FreeMove::run(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:344:6:virtual void State_FreeMove::onExit(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:346:1:State_Remote::State_Remote()	16	static
+../Core/Modules/StateMachine/state_machine.cpp:347:6:virtual void State_Remote::onEnter(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:348:6:virtual void State_Remote::run(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:349:6:virtual void State_Remote::onExit(StateMachine*)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:349:50:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Modules/StateMachine/state_machine.cpp:349:50:cpp)	8	static
+../Core/Modules/StateMachine/state_machine.cpp:349:50:cpp)	8	static

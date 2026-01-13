@@ -144,6 +144,8 @@ public:
 
 class State_Moving : public State
 {
+public:
+
 	State_Moving();
     void onEnter(StateMachine* master) override;
     void run(StateMachine* master) override;
@@ -152,6 +154,8 @@ class State_Moving : public State
 
 class State_FreeMove : public State
 {
+public:
+
 	State_FreeMove();
     void onEnter(StateMachine* master) override;
     void run(StateMachine* master) override;
@@ -160,6 +164,8 @@ class State_FreeMove : public State
 
 class State_Remote : public State
 {
+public:
+
 	State_Remote();
     void onEnter(StateMachine* master) override;
     void run(StateMachine* master) override;
