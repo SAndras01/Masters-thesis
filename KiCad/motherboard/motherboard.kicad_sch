@@ -12141,7 +12141,7 @@
 		)
 		(uuid "1f120729-6b31-40e6-9333-e1e3aeb2d25e")
 	)
-	(text "ENCODER 1"
+	(text "ENCODER 2"
 		(exclude_from_sim no)
 		(at 75.565 206.375 0)
 		(effects
